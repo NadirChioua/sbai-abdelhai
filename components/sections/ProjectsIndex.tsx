@@ -67,6 +67,7 @@ export default function ProjectsIndex() {
                   href={`/projets/${p.slug}`}
                   image={p.hero.poster}
                   imageAlt={t(`projects.items.${p.id}.heroAlt`)}
+                  video={p.hero.video}
                   title={t(`projects.items.${p.id}.name`)}
                   location={t(`projects.items.${p.id}.location`)}
                   tagline={t(`projects.items.${p.id}.tagline`)}

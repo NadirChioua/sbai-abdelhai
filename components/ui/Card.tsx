@@ -1,11 +1,20 @@
-import type { ReactNode } from "react";
+"use client";
+
+import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import { useReducedMotion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
 
 /**
- * Project card — full-bleed image, charcoal gradient for legibility,
+ * Project card — full-bleed poster, charcoal gradient for legibility,
  * micro-label location + Marcellus title. Whole card is one link.
+ *
+ * When `video` is supplied, the clip plays muted on hover (and on keyboard
+ * focus) over the poster. It is only fetched at that moment (`preload="none"`),
+ * so the grid still costs three JPEGs on load. Touch devices and
+ * prefers-reduced-motion keep the still image — autoplaying three heroes on a
+ * phone would be both jarring and expensive on Moroccan mobile data.
  */
 export function ProjectCard({
   href,
@@ -15,6 +24,7 @@ export function ProjectCard({
   location,
   tagline,
   badge,
+  video,
   sizes = "(max-width: 768px) 100vw, 33vw",
   className = "",
   priority = false,
@@ -26,14 +36,52 @@ export function ProjectCard({
   location: string;
   tagline?: string;
   badge?: string;
+  video?: string;
   sizes?: string;
   className?: string;
   priority?: boolean;
 }) {
+  const prefersReduced = useReducedMotion();
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [canHover, setCanHover] = useState(false);
+  const [playing, setPlaying] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(hover: hover) and (pointer: fine)");
+    const update = () => setCanHover(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+
+  const enabled = Boolean(video) && canHover && !prefersReduced;
+
+  const start = useCallback(() => {
+    if (!enabled) return;
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = true;
+    v.play()
+      .then(() => setPlaying(true))
+      .catch(() => setPlaying(false));
+  }, [enabled]);
+
+  const stop = useCallback(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.pause();
+    v.currentTime = 0;
+    setPlaying(false);
+  }, []);
+
   return (
     <Link
       href={href}
       className={`group relative block overflow-hidden bg-charcoal ${className}`}
+      onMouseEnter={start}
+      onMouseLeave={stop}
+      onFocus={start}
+      onBlur={stop}
     >
       <Image
         src={image}
@@ -41,8 +89,27 @@ export function ProjectCard({
         fill
         sizes={sizes}
         priority={priority}
-        className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+        className={`object-cover transition-all duration-700 ease-out group-hover:scale-[1.04] ${
+          playing ? "opacity-0" : "opacity-100"
+        }`}
       />
+
+      {enabled && (
+        <video
+          ref={videoRef}
+          src={video}
+          muted
+          loop
+          playsInline
+          preload="none"
+          aria-hidden="true"
+          tabIndex={-1}
+          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
+            playing ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      )}
+
       <div
         aria-hidden
         className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/20 to-transparent"
