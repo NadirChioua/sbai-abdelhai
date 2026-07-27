@@ -1,0 +1,54 @@
+{
+  "_translation_status": "MACHINE_TRANSLATED — awaiting review. Toutes les chaînes de ce fichier sont une traduction machine première passe (FR → AR) à faire relire par un locuteur natif avant mise en production.",
+  "metadata": {
+    "title": "سباعي العقارية — مطوّر عقاري في طنجة منذ 1973",
+    "description": "مجموعة السباعي عبد الحي وشركاؤه، رائدة العقار في طنجة. 53 سنة من الخبرة وأكثر من 50 مشروعاً منجزاً. الأبراج الثلاثة، فيلات الهضبة، إقامة ديل كوستا."
+  },
+  "common": {
+    "brand": "سباعي العقارية",
+    "brandFull": "السباعي عبد الحي وشركاؤه",
+    "tagline": "رائدة العقار",
+    "since": "منذ 1973",
+    "yearsOfHeritage": "53 سنة من العراقة",
+    "cta": {
+      "enquire": "احجز زيارة",
+      "contact": "اتصل بنا",
+      "whatsapp": "واتساب",
+      "call": "اتصل بنا هاتفياً",
+      "discover": "اكتشف",
+      "viewAllProjects": "جميع المشاريع",
+      "learnMore": "اعرف المزيد",
+      "play": "تشغيل الفيديو",
+      "pause": "إيقاف مؤقت",
+      "mute": "كتم الصوت",
+      "unmute": "تفعيل الصوت"
+    }
+  },
+  "nav": {
+    "home": "الرئيسية",
+    "projects": "مشاريعنا",
+    "history": "تاريخنا",
+    "mre": "فضاء مغاربة العالم",
+    "contact": "اتصل بنا",
+    "openMenu": "فتح القائمة",
+    "closeMenu": "إغلاق القائمة",
+    "switchLocale": "Français"
+  },
+  "footer": {
+    "projects": "المشاريع",
+    "company": "الشركة",
+    "contact": "اتصل بنا",
+    "legal": "إشعارات قانونية",
+    "rights": "جميع الحقوق محفوظة.",
+    "address": "طنجة، المغرب"
+  },
+  "founder": {
+    "sectionTitle": "الرجل وراء 53 سنة من التاريخ",
+    "quote": "TODO(client) — الاقتباس النهائي في انتظار استخراجه من مقابلة المؤسس. اقتراح مؤقت: «منذ 1973، نحن لا نبيع أمتاراً مربعة — بل ننقل إرثاً.»",
+    "name": "السباعي عبد الحي",
+    "role": "مؤسس مجموعة عبد الحي السباعي"
+  },
+  "home": {
+    "heroPlaceholder": "رائدة العقار في طنجة"
+  }
+}

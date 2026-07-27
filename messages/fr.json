@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "title": "SBAI Immobilier — Promoteur immobilier à Tanger depuis 1973",
+    "description": "SBAI Abdelhai & Associés, le fleuron de l'immobilier à Tanger. 53 ans d'expérience, plus de 50 projets réalisés. Triple Towers, Les Villas de la Colline, Résidence Del Costa."
+  },
+  "common": {
+    "brand": "SBAI Immobilier",
+    "brandFull": "SBAI Abdelhai & Associés",
+    "tagline": "Le Fleuron de l'immobilier",
+    "since": "Depuis 1973",
+    "yearsOfHeritage": "53 ans d'héritage",
+    "cta": {
+      "enquire": "Réservez une visite",
+      "contact": "Contactez-nous",
+      "whatsapp": "WhatsApp",
+      "call": "Appelez-nous",
+      "discover": "Découvrir",
+      "viewAllProjects": "Voir tous les projets",
+      "learnMore": "En savoir plus",
+      "play": "Lire la vidéo",
+      "pause": "Mettre en pause",
+      "mute": "Couper le son",
+      "unmute": "Activer le son"
+    }
+  },
+  "nav": {
+    "home": "Accueil",
+    "projects": "Nos projets",
+    "history": "Notre histoire",
+    "mre": "Espace MRE",
+    "contact": "Contact",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "switchLocale": "العربية"
+  },
+  "footer": {
+    "projects": "Projets",
+    "company": "La société",
+    "contact": "Contact",
+    "legal": "Mentions légales",
+    "rights": "Tous droits réservés.",
+    "address": "Tanger, Maroc"
+  },
+  "founder": {
+    "sectionTitle": "L'homme derrière 53 ans d'histoire",
+    "quote": "TODO(client) — Citation exacte à extraire de l'interview du fondateur. Proposition en attente : « Depuis 1973, nous ne vendons pas des mètres carrés — nous transmettons un patrimoine. »",
+    "name": "Sbai Abdelhai",
+    "role": "Fondateur du Groupe Abdelhai Sbai"
+  },
+  "home": {
+    "heroPlaceholder": "Le Fleuron de l'immobilier à Tanger"
+  }
+}
