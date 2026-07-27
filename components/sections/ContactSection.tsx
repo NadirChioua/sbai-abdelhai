@@ -15,7 +15,12 @@ import RevealOnScroll from "@/components/motion/RevealOnScroll";
 type Status = "idle" | "sending" | "sent" | "error";
 
 /** "Réservez une visite" — the qualifying lead form (strategy Pilier 2). */
-export default function ContactSection() {
+export default function ContactSection({
+  defaultProject = "autre",
+}: {
+  /** Preselects the project dropdown when embedded on a project page. */
+  defaultProject?: ContactPayload["project"];
+} = {}) {
   const t = useTranslations("contactForm");
   const tc = useTranslations("common");
   const [status, setStatus] = useState<Status>("idle");
@@ -27,7 +32,7 @@ export default function ContactSection() {
     formState: { errors },
   } = useForm<ContactPayload>({
     resolver: zodResolver(contactSchema),
-    defaultValues: { project: "autre", budget: "nd", email: "", message: "" },
+    defaultValues: { project: defaultProject, budget: "nd", email: "", message: "" },
   });
 
   async function onSubmit(data: ContactPayload) {

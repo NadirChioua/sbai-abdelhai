@@ -151,19 +151,245 @@
         "name": "Triple Towers",
         "location": "Tanger — Front de mer",
         "tagline": "25 étages face à la Méditerranée : climatisation intégrée, double vitrage, marbre et vue panoramique.",
-        "heroAlt": "Les Triple Towers en construction face à la baie de Tanger, vue drone"
+        "heroAlt": "Les Triple Towers en construction face à la baie de Tanger, vue drone",
+        "metaTitle": "Triple Towers — Appartements neufs face à la mer, Tanger",
+        "metaDescription": "Triple Towers : 25 étages face à la Méditerranée à Tanger. Climatisation intégrée, double vitrage, marbre et vue panoramique. Réservez votre visite.",
+        "presentationTitle": "Le projet qui fait notre fierté",
+        "description1": "Triple Towers est l'aboutissement de cinq décennies de métier. Vingt-cinq étages qui s'élèvent face à la Méditerranée, sur le front de mer de Tanger, là où la ville regarde l'Europe. Chaque appartement a été pensé pour que la vue ne soit jamais un supplément, mais le point de départ.",
+        "description2": "À l'intérieur, nous avons retenu les produits les plus performants : climatisation intégrée, double vitrage, marbre. Ce sont des choix qui ne se voient pas sur une plaquette mais qui se vivent chaque jour — le silence quand la ville s'agite, la fraîcheur en août, la lumière qui entre sans la chaleur. C'est notre définition du confort : ce dont on ne parle plus une fois qu'on y habite.",
+        "locationTitle": "Sur le front de mer, à Tanger",
+        "locationBody": "Le quartier Malabata concentre ce qui fait la valeur d'un bien à Tanger : la mer en face, le centre-ville à quelques minutes, et une dynamique de quartier portée par les grands chantiers de la ville. C'est l'une des zones les plus recherchées du marché tangérois.",
+        "stickyDetail": "25 étages · Front de mer · En cours",
+        "facts": {
+          "floors": {
+            "label": "Hauteur",
+            "value": "25 étages"
+          },
+          "typologies": {
+            "label": "Typologies",
+            "value": "Appartements 2 à 4 pièces"
+          },
+          "delivery": {
+            "label": "Livraison",
+            "value": "Chantier en cours d'achèvement"
+          },
+          "price": {
+            "label": "Prix",
+            "value": "Sur demande"
+          }
+        },
+        "videos": {
+          "interior": {
+            "title": "Visite de l'appartement témoin des Triple Towers",
+            "caption": "Visite de l'appartement témoin"
+          },
+          "reel": {
+            "title": "Les Triple Towers en images",
+            "caption": "La tour, vue du sol"
+          },
+          "ugc": {
+            "title": "Visite guidée du chantier des Triple Towers",
+            "caption": "Visite guidée sur place"
+          }
+        },
+        "gallery": {
+          "g1": "Les Triple Towers en construction, vue aérienne rapprochée",
+          "g2": "Les Triple Towers face à la baie de Tanger, vue drone",
+          "g3": "Séjour de l'appartement témoin, canapé et cuisine ouverte",
+          "g4": "Coin salon de l'appartement témoin des Triple Towers",
+          "g5": "Cuisine équipée de l'appartement témoin",
+          "g6": "Cuisine et entrée de l'appartement témoin",
+          "g7": "La tour des Triple Towers vue depuis la rue",
+          "g8": "Chambre de l'appartement témoin des Triple Towers"
+        },
+        "faq": {
+          "q1": {
+            "q": "Où se situent exactement les Triple Towers ?",
+            "a": "Sur le front de mer de Tanger, dans le secteur de Malabata, à quelques minutes du centre-ville. Nous organisons les visites sur place et pouvons vous y accompagner le jour qui vous arrange."
+          },
+          "q2": {
+            "q": "Quelles typologies d'appartements sont disponibles ?",
+            "a": "Des appartements de deux à quatre pièces, répartis sur vingt-cinq étages. Les disponibilités évoluent régulièrement : contactez-nous pour connaître les lots encore ouverts à la réservation."
+          },
+          "q3": {
+            "q": "Quel est le prix d'un appartement ?",
+            "a": "Les prix dépendent de l'étage, de la typologie et de l'orientation. Nous les communiquons sur demande, avec le détail du plan de paiement — appelez-nous ou écrivez-nous sur WhatsApp."
+          },
+          "q4": {
+            "q": "Quelles prestations sont incluses ?",
+            "a": "Climatisation intégrée, double vitrage et marbre font partie du standard du projet, avec ascenseurs, parking et sécurité. La vue panoramique est offerte par la hauteur de la tour."
+          },
+          "q5": {
+            "q": "Puis-je acheter depuis l'étranger ?",
+            "a": "Oui. Nous accompagnons les Marocains résidant à l'étranger à chaque étape : visite en visioconférence, dossier à distance, et signature lors de votre passage au Maroc. Une procuration notariale est également possible."
+          },
+          "q6": {
+            "q": "Peut-on visiter un appartement témoin ?",
+            "a": "Oui, un appartement témoin est aménagé et se visite sur rendez-vous. Vous pouvez aussi en faire le tour en vidéo sur cette page avant de vous déplacer."
+          }
+        }
       },
       "villasColline": {
         "name": "Les Villas de la Colline",
         "location": "Tanger — Les hauteurs",
         "tagline": "Villas avec piscines et jardins, sur les hauteurs qui dominent la baie de Tanger.",
-        "heroAlt": "Les Villas de la Colline et leurs jardins, vue drone sur la baie de Tanger"
+        "heroAlt": "Les Villas de la Colline et leurs jardins, vue drone sur la baie de Tanger",
+        "metaTitle": "Les Villas de la Colline — Villas avec piscine, Tanger",
+        "metaDescription": "Les Villas de la Colline : villas livrées avec piscines et jardins, sur les hauteurs de Tanger. Un projet SBAI Immobilier. Visite sur rendez-vous.",
+        "presentationTitle": "Vivre en hauteur, à dix minutes de tout",
+        "description1": "Les Villas de la Colline occupent l'une des plus belles positions de Tanger : une colline qui domine la baie, assez haute pour que le bruit de la ville ne monte pas, assez proche pour que tout reste accessible. Le projet est livré et habité — c'est un quartier vivant, pas une promesse sur plan.",
+        "description2": "Chaque villa dispose de son jardin, et le complexe s'organise autour de ses piscines et de ses allées plantées. Nous avons dessiné les implantations pour que personne ne regarde chez son voisin : les vues portent sur la mer, la colline ou les jardins. C'est un projet pensé pour les familles qui veulent de l'espace sans quitter Tanger.",
+        "locationTitle": "Sur les hauteurs de Tanger",
+        "locationBody": "Le secteur des collines, vers Cap Spartel, offre le meilleur compromis de la ville : le calme et les vues d'un environnement résidentiel, avec le centre de Tanger accessible en quelques minutes de voiture.",
+        "stickyDetail": "Villas avec piscines · Livré",
+        "facts": {
+          "typology": {
+            "label": "Typologie",
+            "value": "Villas individuelles"
+          },
+          "surface": {
+            "label": "Extérieurs",
+            "value": "Jardin privatif et piscines"
+          },
+          "status": {
+            "label": "Statut",
+            "value": "Projet livré et habité"
+          },
+          "price": {
+            "label": "Prix",
+            "value": "Sur demande"
+          }
+        },
+        "videos": {
+          "interior": {
+            "title": "Visite intérieure d'une villa de la Colline",
+            "caption": "L'intérieur d'une villa"
+          },
+          "poolGarden": {
+            "title": "Les piscines et les jardins des Villas de la Colline",
+            "caption": "Piscines et jardins du complexe"
+          }
+        },
+        "gallery": {
+          "g1": "Allée privée et végétation des Villas de la Colline",
+          "g2": "Vue aérienne des Villas de la Colline et de leurs toitures en tuiles",
+          "g3": "Les villas et leurs jardins vus du ciel",
+          "g4": "Piscine du complexe entourée de villas",
+          "g5": "Vue aérienne sur une piscine des Villas de la Colline",
+          "g6": "Le complexe des Villas de la Colline vu du ciel",
+          "g7": "Chambre principale d'une villa de la Colline",
+          "g8": "Chambre d'enfants d'une villa de la Colline",
+          "g9": "Séjour lumineux d'une villa de la Colline"
+        },
+        "faq": {
+          "q1": {
+            "q": "Le projet est-il déjà livré ?",
+            "a": "Oui. Les Villas de la Colline sont livrées et habitées. Vous pouvez visiter le complexe et vous faire une idée réelle du voisinage, des espaces communs et de l'entretien."
+          },
+          "q2": {
+            "q": "Chaque villa a-t-elle son jardin ?",
+            "a": "Oui, chaque villa dispose de son espace extérieur privatif, en complément des piscines et des allées paysagères partagées par le complexe."
+          },
+          "q3": {
+            "q": "À quelle distance se trouve le centre de Tanger ?",
+            "a": "Quelques minutes en voiture. C'est ce qui fait l'intérêt de l'emplacement : le calme des hauteurs sans l'éloignement."
+          },
+          "q4": {
+            "q": "Y a-t-il encore des villas disponibles ?",
+            "a": "Les disponibilités évoluent. Contactez-nous pour connaître les biens actuellement proposés à la vente ou à la revente au sein du complexe."
+          },
+          "q5": {
+            "q": "Le complexe est-il sécurisé ?",
+            "a": "Oui, l'accès au complexe est contrôlé et les espaces communs sont entretenus, ce qui compte particulièrement pour les propriétaires qui ne résident pas à Tanger toute l'année."
+          },
+          "q6": {
+            "q": "Est-ce adapté à une résidence secondaire ?",
+            "a": "C'est l'un des usages les plus fréquents dans ce projet, notamment pour les familles résidant en Europe. Nous pouvons vous orienter sur la gestion du bien en votre absence."
+          }
+        }
       },
       "delCosta": {
         "name": "Résidence Del Costa",
         "location": "Tanger",
         "tagline": "Résidence sécurisée avec piscine, garage privé et contrôle d'accès.",
-        "heroAlt": "Vue extérieure de la Résidence Del Costa à Tanger"
+        "heroAlt": "Vue extérieure de la Résidence Del Costa à Tanger",
+        "metaTitle": "Résidence Del Costa — Appartements avec piscine, Tanger",
+        "metaDescription": "Résidence Del Costa à Tanger : résidence sécurisée avec piscine, jardins, garage privé et aire de jeux. Un projet livré par SBAI Immobilier.",
+        "presentationTitle": "Une résidence pensée pour les familles",
+        "description1": "Del Costa est une résidence fermée, blanche et basse, posée dans un grand jardin. L'architecture reprend le vocabulaire du Nord marocain — arcades, moucharabiehs, patios — sans jamais tomber dans le pastiche. Le projet est livré et habité depuis plusieurs années.",
+        "description2": "Ce qui fait la valeur de Del Costa au quotidien, c'est ce qui l'entoure : la piscine et sa plage, les pelouses ombragées, l'aire de jeux pour les enfants, le garage en sous-sol et l'accès contrôlé. Pour une famille qui vit à l'étranger une partie de l'année, cette combinaison — sécurité, entretien, vie de résidence — est décisive.",
+        "locationTitle": "Aux portes de Tanger",
+        "locationBody": "La résidence bénéficie d'un environnement dégagé, à proximité immédiate des axes qui mènent au centre de Tanger et à la côte, dans un secteur résidentiel calme et arboré.",
+        "stickyDetail": "Résidence sécurisée · Livré",
+        "facts": {
+          "typology": {
+            "label": "Typologie",
+            "value": "Appartements en résidence fermée"
+          },
+          "surface": {
+            "label": "Espaces communs",
+            "value": "Piscine, jardins, aire de jeux"
+          },
+          "status": {
+            "label": "Statut",
+            "value": "Projet livré et habité"
+          },
+          "price": {
+            "label": "Prix",
+            "value": "Sur demande"
+          }
+        },
+        "videos": {
+          "interior": {
+            "title": "Visite intérieure d'un appartement de la Résidence Del Costa",
+            "caption": "L'intérieur d'un appartement"
+          },
+          "pool": {
+            "title": "La piscine de la Résidence Del Costa",
+            "caption": "La piscine et ses abords"
+          },
+          "security": {
+            "title": "Le garage et les accès sécurisés de la Résidence Del Costa",
+            "caption": "Garage en sous-sol et accès contrôlé"
+          }
+        },
+        "gallery": {
+          "g1": "Façade de la Résidence Del Costa et ses jardins",
+          "g2": "La piscine de la Résidence Del Costa et ses parasols",
+          "g3": "Vue d'ensemble de la Résidence Del Costa",
+          "g4": "La piscine bordée par les bâtiments de la résidence",
+          "g5": "Séjour d'un appartement de la Résidence Del Costa",
+          "g6": "Pièce de vie avec baie vitrée donnant sur les jardins",
+          "g7": "Chambre d'un appartement de la Résidence Del Costa",
+          "g8": "Garage en sous-sol de la Résidence Del Costa",
+          "g9": "Façade blanche et balcons de la Résidence Del Costa"
+        },
+        "faq": {
+          "q1": {
+            "q": "La résidence est-elle sécurisée ?",
+            "a": "Oui. L'accès à la résidence est contrôlé et le stationnement se fait dans un garage en sous-sol. C'est un point que nous soignons particulièrement pour les propriétaires absents une partie de l'année."
+          },
+          "q2": {
+            "q": "Quels sont les espaces communs ?",
+            "a": "Une piscine avec ses abords aménagés, de vastes jardins plantés et une aire de jeux pour les enfants, entretenus par la résidence."
+          },
+          "q3": {
+            "q": "Le projet est-il déjà livré ?",
+            "a": "Oui, la Résidence Del Costa est livrée et habitée. Vous pouvez la visiter et rencontrer la vie réelle de la résidence avant de vous décider."
+          },
+          "q4": {
+            "q": "Y a-t-il des appartements disponibles ?",
+            "a": "Les disponibilités évoluent au fil des ventes et des reventes. Écrivez-nous sur WhatsApp pour connaître l'état actuel des biens proposés."
+          },
+          "q5": {
+            "q": "Est-ce adapté à un investissement locatif ?",
+            "a": "La combinaison piscine, jardins et sécurité rend la résidence attractive à la location, en particulier sur la saison estivale. Nous pouvons vous partager notre lecture du marché local."
+          },
+          "q6": {
+            "q": "Puis-je visiter depuis l'étranger ?",
+            "a": "Oui, nous organisons des visites en visioconférence, caméra à la main, et nous vous envoyons toutes les photos et documents nécessaires avant votre venue."
+          }
+        }
       }
     }
   },
@@ -204,5 +430,59 @@
     "successBody": "Merci ! Un conseiller SBAI vous contactera sous 24 h. Pour une réponse immédiate, écrivez-nous sur WhatsApp.",
     "sendAnother": "Envoyer une autre demande",
     "errorBody": "L'envoi a échoué. Réessayez, ou contactez-nous directement sur WhatsApp."
+  },
+  "projectPage": {
+    "scrollCue": "Découvrir le projet",
+    "status": {
+      "ongoing": "En cours de réalisation",
+      "delivered": "Livré"
+    },
+    "presentationLabel": "Le projet",
+    "amenitiesLabel": "Prestations",
+    "amenitiesTitle": "Ce qui fait la différence, au quotidien",
+    "galleryLabel": "Galerie",
+    "galleryTitle": "Le projet en images",
+    "galleryOpen": "Agrandir la photo",
+    "galleryClose": "Fermer la galerie",
+    "galleryPrev": "Photo précédente",
+    "galleryNext": "Photo suivante",
+    "videosLabel": "En vidéo",
+    "videosTitle": "Prenez le temps de visiter",
+    "locationLabel": "Emplacement",
+    "faqLabel": "Questions fréquentes",
+    "faqTitle": "Tout ce que vous voulez savoir",
+    "mapTitle": "Carte de localisation — {project}"
+  },
+  "amenities": {
+    "airConditioning": "Climatisation intégrée",
+    "doubleGlazing": "Double vitrage",
+    "marble": "Marbre",
+    "seaView": "Vue mer",
+    "elevator": "Ascenseurs",
+    "parking": "Parking",
+    "security": "Sécurité 24/7",
+    "terrace": "Terrasse",
+    "pool": "Piscine",
+    "garden": "Jardins paysagers",
+    "quiet": "Cadre calme",
+    "nearCity": "Proche du centre",
+    "privateGarage": "Garage privé",
+    "playground": "Aire de jeux",
+    "concierge": "Conciergerie",
+    "nearBeach": "Proche de la plage"
+  },
+  "projectsIndex": {
+    "metaTitle": "Nos projets immobiliers à Tanger",
+    "metaDescription": "Découvrez les réalisations SBAI Immobilier à Tanger : Triple Towers, Les Villas de la Colline et la Résidence Del Costa. Plus de 200 immeubles livrés depuis 1973.",
+    "label": "Nos réalisations",
+    "title": "Cinq décennies de projets, à Tanger",
+    "intro": "Depuis 1973, nous construisons pour des familles qui restent. Lotissements, immeubles de haut et moyen standing, logements sociaux : plus de 200 immeubles portent notre signature. Voici les projets que vous pouvez visiter aujourd'hui.",
+    "filterLabel": "Filtrer les projets",
+    "filters": {
+      "all": "Tous",
+      "ongoing": "En cours",
+      "delivered": "Livrés"
+    },
+    "count": "{count} projets affichés"
   }
 }

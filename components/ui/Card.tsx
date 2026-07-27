@@ -14,6 +14,7 @@ export function ProjectCard({
   title,
   location,
   tagline,
+  badge,
   sizes = "(max-width: 768px) 100vw, 33vw",
   className = "",
   priority = false,
@@ -24,6 +25,7 @@ export function ProjectCard({
   title: string;
   location: string;
   tagline?: string;
+  badge?: string;
   sizes?: string;
   className?: string;
   priority?: boolean;
@@ -45,6 +47,11 @@ export function ProjectCard({
         aria-hidden
         className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/20 to-transparent"
       />
+      {badge && (
+        <span className="micro-label absolute top-5 rounded-full border border-white/50 bg-charcoal/40 px-3 py-1.5 text-[9px] text-white backdrop-blur-sm ltr:left-5 rtl:right-5">
+          {badge}
+        </span>
+      )}
       <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
         <p className="micro-label text-gold">{location}</p>
         <h3 className="heading-display mt-2 text-xl text-white md:text-2xl">

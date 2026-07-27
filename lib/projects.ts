@@ -1,34 +1,189 @@
 /**
- * Project registry — slugs, media paths and i18n keys.
+ * Project registry — slugs, media manifests and amenity keys.
  * All localized copy lives in messages/{fr,ar}.json under `projects.items.*`.
+ * Every video listed here is rendered by a <VideoPlayer /> on the project page.
  */
 export type ProjectId = "tripleTowers" | "villasColline" | "delCosta";
+
+export type ProjectStatus = "ongoing" | "delivered";
+
+export type GalleryItem = { src: string; altKey: string };
+
+export type ProjectVideo = {
+  src: string;
+  poster: string;
+  /** i18n key under projects.items.<id>.videos */
+  key: string;
+  mode: "ambient" | "feature";
+};
 
 export type Project = {
   id: ProjectId;
   slug: string;
-  heroVideo: string;
-  heroPoster: string;
+  status: ProjectStatus;
+  hero: { video: string; poster: string };
+  /** Secondary videos shown in the "découvrir" / amenities blocks */
+  videos: ProjectVideo[];
+  gallery: GalleryItem[];
+  amenities: string[];
+  facts: string[];
+  faq: string[];
+  /** Google Maps place query — no API key needed for the embed */
+  mapQuery: string;
 };
 
 export const projects: Project[] = [
   {
     id: "tripleTowers",
     slug: "triple-towers",
-    heroVideo: "/videos/triple-towers/hero-drone.mp4",
-    heroPoster: "/images/posters/tt-hero.jpg",
+    status: "ongoing",
+    hero: {
+      video: "/videos/triple-towers/hero-drone.mp4",
+      poster: "/images/posters/tt-hero.jpg",
+    },
+    videos: [
+      {
+        key: "interior",
+        src: "/videos/triple-towers/interior.mp4",
+        poster: "/images/posters/tt-interior.jpg",
+        mode: "feature",
+      },
+      {
+        key: "reel",
+        src: "/videos/triple-towers/reel.mp4",
+        poster: "/images/posters/tt-reel.jpg",
+        mode: "ambient",
+      },
+      {
+        key: "ugc",
+        src: "/videos/triple-towers/ugc.mp4",
+        poster: "/images/posters/tt-ugc.jpg",
+        mode: "feature",
+      },
+    ],
+    gallery: [
+      { src: "/images/triple-towers/drone-1.jpg", altKey: "g1" },
+      { src: "/images/triple-towers/drone-2.jpg", altKey: "g2" },
+      { src: "/images/triple-towers/interieur-1.jpg", altKey: "g3" },
+      { src: "/images/triple-towers/interieur-2.jpg", altKey: "g4" },
+      { src: "/images/triple-towers/interieur-3.jpg", altKey: "g5" },
+      { src: "/images/triple-towers/interieur-4.jpg", altKey: "g6" },
+      { src: "/images/triple-towers/reel-1.jpg", altKey: "g7" },
+      { src: "/images/triple-towers/reel-2.jpg", altKey: "g8" },
+    ],
+    amenities: [
+      "airConditioning",
+      "doubleGlazing",
+      "marble",
+      "seaView",
+      "elevator",
+      "parking",
+      "security",
+      "terrace",
+    ],
+    facts: ["floors", "typologies", "delivery", "price"],
+    faq: ["q1", "q2", "q3", "q4", "q5", "q6"],
+    mapQuery: "Malabata, Tanger, Maroc",
   },
   {
     id: "villasColline",
     slug: "les-villas-de-la-colline",
-    heroVideo: "/videos/villas-colline/hero-drone.mp4",
-    heroPoster: "/images/posters/vc-hero.jpg",
+    status: "delivered",
+    hero: {
+      video: "/videos/villas-colline/hero-drone.mp4",
+      poster: "/images/posters/vc-hero.jpg",
+    },
+    videos: [
+      {
+        key: "interior",
+        src: "/videos/villas-colline/interior.mp4",
+        poster: "/images/posters/vc-interior.jpg",
+        mode: "feature",
+      },
+      {
+        key: "poolGarden",
+        src: "/videos/villas-colline/pool-garden.mp4",
+        poster: "/images/posters/vc-pool.jpg",
+        mode: "ambient",
+      },
+    ],
+    gallery: [
+      { src: "/images/villas-colline/drone-1.jpg", altKey: "g1" },
+      { src: "/images/villas-colline/drone-2.jpg", altKey: "g2" },
+      { src: "/images/villas-colline/drone-3.jpg", altKey: "g3" },
+      { src: "/images/villas-colline/piscine-1.jpg", altKey: "g4" },
+      { src: "/images/villas-colline/piscine-2.jpg", altKey: "g5" },
+      { src: "/images/villas-colline/piscine-3.jpg", altKey: "g6" },
+      { src: "/images/villas-colline/interieur-1.jpg", altKey: "g7" },
+      { src: "/images/villas-colline/interieur-2.jpg", altKey: "g8" },
+      { src: "/images/villas-colline/interieur-3.jpg", altKey: "g9" },
+    ],
+    amenities: [
+      "pool",
+      "garden",
+      "seaView",
+      "security",
+      "parking",
+      "terrace",
+      "quiet",
+      "nearCity",
+    ],
+    facts: ["typology", "surface", "status", "price"],
+    faq: ["q1", "q2", "q3", "q4", "q5", "q6"],
+    mapQuery: "Cap Spartel, Tanger, Maroc",
   },
   {
     id: "delCosta",
     slug: "del-costa",
-    heroVideo: "/videos/del-costa/hero-exterior.mp4",
-    heroPoster: "/images/posters/dc-hero.jpg",
+    status: "delivered",
+    hero: {
+      video: "/videos/del-costa/hero-exterior.mp4",
+      poster: "/images/posters/dc-hero.jpg",
+    },
+    videos: [
+      {
+        key: "interior",
+        src: "/videos/del-costa/interior.mp4",
+        poster: "/images/posters/dc-interior.jpg",
+        mode: "feature",
+      },
+      {
+        key: "pool",
+        src: "/videos/del-costa/pool.mp4",
+        poster: "/images/posters/dc-pool.jpg",
+        mode: "ambient",
+      },
+      {
+        key: "security",
+        src: "/videos/del-costa/garage-security.mp4",
+        poster: "/images/posters/dc-garage.jpg",
+        mode: "feature",
+      },
+    ],
+    gallery: [
+      { src: "/images/del-costa/exterieur-1.jpg", altKey: "g1" },
+      { src: "/images/del-costa/exterieur-2.jpg", altKey: "g2" },
+      { src: "/images/del-costa/exterieur-3.jpg", altKey: "g3" },
+      { src: "/images/del-costa/piscine-1.jpg", altKey: "g4" },
+      { src: "/images/del-costa/interieur-1.jpg", altKey: "g5" },
+      { src: "/images/del-costa/interieur-2.jpg", altKey: "g6" },
+      { src: "/images/del-costa/interieur-3.jpg", altKey: "g7" },
+      { src: "/images/del-costa/securite-1.jpg", altKey: "g8" },
+      { src: "/images/del-costa/securite-2.jpg", altKey: "g9" },
+    ],
+    amenities: [
+      "pool",
+      "garden",
+      "privateGarage",
+      "security",
+      "playground",
+      "elevator",
+      "concierge",
+      "nearBeach",
+    ],
+    facts: ["typology", "surface", "status", "price"],
+    faq: ["q1", "q2", "q3", "q4", "q5", "q6"],
+    mapQuery: "Route de Rabat, Tanger, Maroc",
   },
 ];
 
