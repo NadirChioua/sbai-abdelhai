@@ -9,11 +9,13 @@ export const site = {
   city: "Tanger",
   country: "MA",
 
-  // Default numbers come from SBAI's own published founder video outro
-  // (06 61 37 37 38). Override via env vars if the client provides others.
-  phone: process.env.NEXT_PUBLIC_PHONE ?? "+212661373738",
-  phoneDisplay: "+212 6 61 37 37 38",
-  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "212661373738",
+  // Confirmed by client (Instagram bio @sbaimmobiliertanger, 2026-07-27):
+  // fixed line 05 39 94 31 12, mobile/WhatsApp 06 61 74 85 47.
+  phone: process.env.NEXT_PUBLIC_PHONE ?? "+212539943112",
+  phoneDisplay: "+212 5 39 94 31 12",
+  mobile: process.env.NEXT_PUBLIC_MOBILE ?? "+212661748547",
+  mobileDisplay: "+212 6 61 74 85 47",
+  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "212661748547",
   // TODO(client): confirm email address before launch
   email: process.env.NEXT_PUBLIC_EMAIL ?? "contact@immobiliersbai.net",
 

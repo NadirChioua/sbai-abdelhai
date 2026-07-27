@@ -187,6 +187,15 @@ export default function Footer() {
             </li>
             <li>
               <a
+                href={`tel:${site.mobile}`}
+                className="flex items-center gap-3 transition-colors hover:text-gold"
+              >
+                <Phone size={14} aria-hidden />
+                <span dir="ltr">{site.mobileDisplay}</span>
+              </a>
+            </li>
+            <li>
+              <a
                 href={`mailto:${site.email}`}
                 className="flex items-center gap-3 transition-colors hover:text-gold"
               >
