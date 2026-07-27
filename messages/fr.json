@@ -20,10 +20,12 @@
       "play": "Lire la vidéo",
       "pause": "Mettre en pause",
       "mute": "Couper le son",
-      "unmute": "Activer le son"
+      "unmute": "Activer le son",
+      "fullscreen": "Plein écran"
     },
     "whatsappMessage": "Bonjour, je m'intéresse à un projet SBAI. Pouvez-vous me contacter ?",
-    "whatsappAria": "Nous contacter sur WhatsApp"
+    "whatsappAria": "Nous contacter sur WhatsApp",
+    "whatsappProjectMessage": "Bonjour, je m'intéresse au projet {project}. Pouvez-vous me contacter ?"
   },
   "nav": {
     "home": "Accueil",
