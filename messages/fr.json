@@ -499,39 +499,57 @@
     "timeline": {
       "m1973": {
         "year": "1973",
-        "title": "Les débuts dans la promotion immobilière",
-        "body": "Le groupe Abdelhai Sbai se tourne vers la promotion immobilière. Les premières années sont difficiles : la commercialisation ne va pas de soi et certains appartements se vendent autour de 30 000 dirhams.",
-        "imageAlt": "Un des premiers immeubles réalisés par SBAI à Tanger"
+        "title": "M. Sbai Abdelhai fonde le groupe",
+        "body": "Le groupe Abdelhai Sbai se tourne vers la promotion immobilière. Les premières années sont rudes : la commercialisation ne va pas de soi et certains appartements se vendent autour de trente mille dirhams. Ce qui se construit alors n'est pas encore un patrimoine — c'est une réputation, immeuble après immeuble.",
+        "imageAlt": "Un des premiers immeubles réalisés par SBAI à Tanger, archives du groupe"
       },
       "m1980": {
-        "year": "Années 80",
-        "title": "Le pari du centre-ville",
-        "body": "SBAI construit le long des grands axes de Tanger. Des immeubles de rapport, des commerces en pied d'immeuble, une ville qui se densifie — et une réputation qui se construit chantier après chantier.",
+        "year": "1980",
+        "title": "Les premiers grands ensembles",
+        "body": "SBAI construit le long des grands axes de Tanger. Immeubles de rapport, commerces en pied d'immeuble, une ville qui se densifie et une entreprise qui apprend son métier à l'échelle du quartier plutôt qu'à celle du bâtiment isolé.",
         "imageAlt": "Immeuble SBAI sur la corniche de Tanger, archives du groupe"
       },
-      "m1995": {
-        "year": "Années 90",
+      "m1990": {
+        "year": "1990",
         "title": "Du logement social au haut standing",
-        "body": "Le groupe élargit son métier : lotissements, immobilier de moyen standing, logements sociaux et programmes haut de gamme. La diversité des programmes devient une force.",
-        "imageAlt": "Tour résidentielle SBAI et fontaines, Tanger"
+        "body": "Le groupe élargit son métier : lotissements, moyen standing, logements sociaux et programmes haut de gamme. Savoir bâtir pour toutes les bourses de la ville devient une compétence — et une position que peu de promoteurs tangérois peuvent revendiquer.",
+        "imageAlt": "Tour résidentielle SBAI et fontaines à Tanger, archives du groupe"
+      },
+      "m2000": {
+        "year": "2000",
+        "title": "L'ancrage dans la ville qui change",
+        "body": "Tanger se transforme : port, zones franches, nouvelles infrastructures. SBAI accompagne ce mouvement sans jamais quitter la ville pour aller construire ailleurs. Cet entêtement local est ce qui permet, encore aujourd'hui, de conseiller un acheteur rue par rue.",
+        "imageAlt": "Immeuble SBAI au centre de Tanger, archives du groupe"
       },
       "m2010": {
-        "year": "Années 2000-2010",
-        "title": "Les villas et les hauteurs",
-        "body": "Avec Les Villas de la Colline, SBAI porte son savoir-faire sur les hauteurs de Tanger : des villas avec jardins et piscines, pensées pour les familles et pour les Marocains du monde.",
-        "imageAlt": "Villas SBAI avec vue sur la baie de Tanger"
+        "year": "2010",
+        "title": "La Résidence Del Costa est livrée",
+        "body": "Une résidence fermée, blanche et basse, posée dans un grand jardin : piscine, aire de jeux, garage en sous-sol, accès contrôlé. Pour les familles installées à l'étranger une partie de l'année, cette combinaison devient un argument décisif — et le restera.",
+        "imageAlt": "Façade et jardins de la Résidence Del Costa à Tanger"
       },
       "m2020": {
-        "year": "Années 2010-2020",
-        "title": "Plus de 200 immeubles",
-        "body": "Le cap des deux cents immeubles réalisés est franchi. La Résidence Del Costa illustre cette maturité : une résidence fermée, sécurisée, avec piscine et jardins, livrée et habitée.",
-        "imageAlt": "Immeuble SBAI au centre de Tanger"
+        "year": "2020",
+        "title": "Les Villas de la Colline",
+        "body": "Le savoir-faire monte sur les hauteurs. Des villas avec jardins et piscines, implantées pour que personne ne regarde chez son voisin : les vues portent sur la mer, la colline ou les jardins. Le projet est livré, habité, et se visite encore.",
+        "imageAlt": "Vue aérienne des Villas de la Colline et de leurs jardins"
+      },
+      "m2024": {
+        "year": "2024",
+        "title": "Triple Towers, vingt-cinq étages",
+        "body": "Sur le front de mer, la tour qui fait notre fierté s'élève : climatisation intégrée, double vitrage, marbre, vue panoramique sur toute la hauteur. C'est l'aboutissement technique de cinq décennies de chantiers.",
+        "imageAlt": "Les Triple Towers face à la baie de Tanger, vue aérienne"
       },
       "m2026": {
         "year": "2026",
-        "title": "Triple Towers et la troisième génération",
-        "body": "Vingt-cinq étages sur le front de mer, à la veille d'un Mondial qui va transformer la ville. La troisième génération de la famille prend le relais avec la même exigence.",
-        "imageAlt": "Les Triple Towers face à la baie de Tanger"
+        "title": "Cinquante-trois ans, et une ville hôte",
+        "body": "Plus de deux cents immeubles réalisés, trois générations à la barre, et une ville qui s'apprête à recevoir le Mondial 2030. Tanger n'a jamais eu autant besoin de promoteurs qui pensent en décennies plutôt qu'en saisons.",
+        "imageAlt": "Villas SBAI dominant la baie de Tanger"
+      },
+      "vision": {
+        "year": "2030",
+        "title": "Devenir la référence du Nord",
+        "body": "Notre ambition n'est pas de construire davantage, mais de rester ceux dont on dit qu'ils tiennent parole. Le quiet luxury n'est pas une esthétique : c'est la promesse qu'un logement livré aujourd'hui tiendra encore quand une autre génération y vivra.",
+        "imageAlt": ""
       }
     },
     "valuesLabel": "Ce qui nous tient",
@@ -549,7 +567,10 @@
         "title": "Ancrage",
         "body": "Nous ne construisons qu'à Tanger. Nous connaissons ses quartiers, ses sols, ses vents et ses familles. Cet ancrage est ce qui nous permet de conseiller honnêtement, y compris quand cela nous coûte une vente."
       }
-    }
+    },
+    "chapter": "Chapitre {n}",
+    "progressLabel": "Progression dans la chronologie",
+    "timelineIntro": "Une entreprise ne dure pas cinquante-trois ans par hasard. Elle dure parce qu'à chaque décennie, quelqu'un a refusé de livrer moins bien que la fois précédente. Voici les neuf chapitres de cette obstination."
   },
   "mre": {
     "metaTitle": "Espace MRE — Investir à Tanger depuis l'étranger",

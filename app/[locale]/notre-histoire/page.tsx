@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import PageHero from "@/components/sections/PageHero";
-import Timeline, { type Milestone } from "@/components/sections/Timeline";
+import StackingTimeline, { type Chapter } from "@/components/sections/StackingTimeline";
 import FounderSection from "@/components/sections/FounderSection";
 import RevealOnScroll from "@/components/motion/RevealOnScroll";
 import ContactSection from "@/components/sections/ContactSection";
@@ -20,16 +20,17 @@ export async function generateMetadata({
   return { title: t("metaTitle"), description: t("metaDescription") };
 }
 
-const MILESTONE_KEYS = ["m1973", "m1980", "m1995", "m2010", "m2020", "m2026"] as const;
-
-const MILESTONE_IMAGES: Partial<Record<(typeof MILESTONE_KEYS)[number], string>> = {
-  m1973: "/images/heritage/building-1980s.jpg",
-  m1980: "/images/heritage/corniche.jpg",
-  m1995: "/images/heritage/towers-fountain.jpg",
-  m2010: "/images/heritage/villas-bay.jpg",
-  m2020: "/images/heritage/tower-centre.jpg",
-  m2026: "/images/posters/tt-hero.jpg",
-};
+const CHAPTERS = [
+  { key: "m1973", numeral: "I", image: "/images/heritage/building-1980s.jpg" },
+  { key: "m1980", numeral: "II", image: "/images/heritage/corniche.jpg" },
+  { key: "m1990", numeral: "III", image: "/images/heritage/towers-fountain.jpg" },
+  { key: "m2000", numeral: "IV", image: "/images/heritage/tower-centre.jpg" },
+  { key: "m2010", numeral: "V", image: "/images/del-costa/exterieur-1.jpg" },
+  { key: "m2020", numeral: "VI", image: "/images/villas-colline/drone-2.jpg" },
+  { key: "m2024", numeral: "VII", image: "/images/posters/tt-hero.jpg" },
+  { key: "m2026", numeral: "VIII", image: "/images/heritage/villas-bay.jpg" },
+  { key: "vision", numeral: "IX", image: undefined },
+] as const;
 
 export default async function Page({
   params,
@@ -38,12 +39,14 @@ export default async function Page({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "history" });
 
-  const milestones: Milestone[] = MILESTONE_KEYS.map((k) => ({
-    year: t(`timeline.${k}.year`),
-    title: t(`timeline.${k}.title`),
-    body: t(`timeline.${k}.body`),
-    image: MILESTONE_IMAGES[k]
-      ? { src: MILESTONE_IMAGES[k]!, alt: t(`timeline.${k}.imageAlt`) }
+  const chapters: Chapter[] = CHAPTERS.map((c, i) => ({
+    year: t(`timeline.${c.key}.year`),
+    numeral: c.numeral,
+    label: t("chapter", { n: i + 1 }),
+    title: t(`timeline.${c.key}.title`),
+    body: t(`timeline.${c.key}.body`),
+    image: c.image
+      ? { src: c.image, alt: t(`timeline.${c.key}.imageAlt`) }
       : undefined,
   }));
 
@@ -57,18 +60,32 @@ export default async function Page({
         intro={t("intro")}
       />
 
-      <Timeline
-        label={t("timelineLabel")}
-        title={t("timelineTitle")}
-        milestones={milestones}
+      <section className="bg-ivory">
+        <div className="mx-auto max-w-screen-2xl px-4 pt-20 text-center md:px-8 md:pt-28">
+          <p className="eyebrow">{t("timelineLabel")}</p>
+          <h2 className="heading-display mx-auto mt-4 max-w-2xl text-h2 text-foreground">
+            {t("timelineTitle")}
+          </h2>
+          <p className="drop-cap mx-auto mt-8 max-w-2xl text-start text-body font-light text-secondary">
+            {t("timelineIntro")}
+          </p>
+          <div aria-hidden className="rule-diamond mt-14">
+            <span className="text-caption">◆</span>
+          </div>
+        </div>
+      </section>
+
+      <StackingTimeline
+        chapters={chapters}
+        progressLabel={t("progressLabel")}
       />
 
       <FounderSection />
 
       <section className="bg-ivory-dark">
-        <div className="mx-auto max-w-screen-2xl px-4 py-24 md:px-8 md:py-28">
+        <div className="section-y mx-auto max-w-screen-2xl px-4 md:px-8">
           <RevealOnScroll>
-            <p className="eyebrow text-gold-dark">{t("valuesLabel")}</p>
+            <p className="eyebrow">{t("valuesLabel")}</p>
             <h2 className="heading-display mt-3 max-w-xl text-h2 text-foreground">
               {t("valuesTitle")}
             </h2>
