@@ -484,5 +484,251 @@
       "delivered": "Livrés"
     },
     "count": "{count} projets affichés"
+  },
+  "history": {
+    "metaTitle": "Notre histoire — 53 ans d'immobilier à Tanger",
+    "metaDescription": "De 1973 à aujourd'hui : l'histoire du groupe Abdelhai Sbai, plus de 200 immeubles réalisés à Tanger et trois générations au service du patrimoine des familles.",
+    "label": "Notre histoire",
+    "title": "Cinquante-trois ans à bâtir Tanger",
+    "intro": "Une entreprise familiale née dans les années 70, devenue l'une des signatures de référence du Nord du Maroc. Voici ce qui s'est passé entre-temps.",
+    "heroImageAlt": "Immeuble SBAI face aux fontaines à Tanger, photographie d'archives",
+    "timelineLabel": "Chronologie",
+    "timelineTitle": "De 1973 à aujourd'hui",
+    "timeline": {
+      "m1973": {
+        "year": "1973",
+        "title": "Les débuts dans la promotion immobilière",
+        "body": "Le groupe Abdelhai Sbai se tourne vers la promotion immobilière. Les premières années sont difficiles : la commercialisation ne va pas de soi et certains appartements se vendent autour de 30 000 dirhams.",
+        "imageAlt": "Un des premiers immeubles réalisés par SBAI à Tanger"
+      },
+      "m1980": {
+        "year": "Années 80",
+        "title": "Le pari du centre-ville",
+        "body": "SBAI construit le long des grands axes de Tanger. Des immeubles de rapport, des commerces en pied d'immeuble, une ville qui se densifie — et une réputation qui se construit chantier après chantier.",
+        "imageAlt": "Immeuble SBAI sur la corniche de Tanger, archives du groupe"
+      },
+      "m1995": {
+        "year": "Années 90",
+        "title": "Du logement social au haut standing",
+        "body": "Le groupe élargit son métier : lotissements, immobilier de moyen standing, logements sociaux et programmes haut de gamme. La diversité des programmes devient une force.",
+        "imageAlt": "Tour résidentielle SBAI et fontaines, Tanger"
+      },
+      "m2010": {
+        "year": "Années 2000-2010",
+        "title": "Les villas et les hauteurs",
+        "body": "Avec Les Villas de la Colline, SBAI porte son savoir-faire sur les hauteurs de Tanger : des villas avec jardins et piscines, pensées pour les familles et pour les Marocains du monde.",
+        "imageAlt": "Villas SBAI avec vue sur la baie de Tanger"
+      },
+      "m2020": {
+        "year": "Années 2010-2020",
+        "title": "Plus de 200 immeubles",
+        "body": "Le cap des deux cents immeubles réalisés est franchi. La Résidence Del Costa illustre cette maturité : une résidence fermée, sécurisée, avec piscine et jardins, livrée et habitée.",
+        "imageAlt": "Immeuble SBAI au centre de Tanger"
+      },
+      "m2026": {
+        "year": "2026",
+        "title": "Triple Towers et la troisième génération",
+        "body": "Vingt-cinq étages sur le front de mer, à la veille d'un Mondial qui va transformer la ville. La troisième génération de la famille prend le relais avec la même exigence.",
+        "imageAlt": "Les Triple Towers face à la baie de Tanger"
+      }
+    },
+    "valuesLabel": "Ce qui nous tient",
+    "valuesTitle": "Trois principes, jamais négociés",
+    "values": {
+      "heritage": {
+        "title": "Héritage",
+        "body": "Nous ne vendons pas des mètres carrés : nous transmettons un patrimoine. Ce que nous livrons aujourd'hui doit encore tenir dans trente ans, quand une autre génération y vivra."
+      },
+      "trust": {
+        "title": "Confiance",
+        "body": "« Le client est toujours satisfait par nos engagements, lesquels nous respectons à la lettre. » Cette phrase du fondateur est la seule règle commerciale que nous ayons jamais eu besoin d'écrire."
+      },
+      "roots": {
+        "title": "Ancrage",
+        "body": "Nous ne construisons qu'à Tanger. Nous connaissons ses quartiers, ses sols, ses vents et ses familles. Cet ancrage est ce qui nous permet de conseiller honnêtement, y compris quand cela nous coûte une vente."
+      }
+    }
+  },
+  "mre": {
+    "metaTitle": "Espace MRE — Investir à Tanger depuis l'étranger",
+    "metaDescription": "Marocains résidant à l'étranger : achetez à Tanger sans vous déplacer. Visites en visioconférence, procuration notariale, aide Daam Sakane et accompagnement aux horaires européens.",
+    "label": "Espace MRE",
+    "title": "Achetez à Tanger sans vous déplacer",
+    "intro": "Vous vivez en France, en Belgique, aux Pays-Bas, en Espagne ou en Italie. Votre projet est ici. Nous avons construit un accompagnement fait pour la distance — parce que 53 ans d'expérience valent surtout quand on ne peut pas passer sur le chantier le samedi matin.",
+    "heroImageAlt": "Villas SBAI dominant la baie de Tanger",
+    "whatsappCta": "Parler à un conseiller",
+    "whatsappMessage": "Bonjour, je suis MRE et je souhaite être accompagné pour un achat à Tanger.",
+    "processLabel": "Comment ça se passe",
+    "processTitle": "Cinq étapes, aucune surprise",
+    "process": {
+      "s1": {
+        "title": "Premier échange",
+        "body": "Un appel ou un message WhatsApp pour comprendre votre projet, votre budget et vos délais. En français, en arabe ou en darija."
+      },
+      "s2": {
+        "title": "Sélection à distance",
+        "body": "Nous vous envoyons les biens qui correspondent réellement, avec photos, vidéos et plans. Pas de catalogue générique."
+      },
+      "s3": {
+        "title": "Visite en direct",
+        "body": "Un conseiller se rend sur place, caméra à la main, et vous fait visiter en visioconférence. Vous posez vos questions en temps réel."
+      },
+      "s4": {
+        "title": "Réservation et dossier",
+        "body": "Constitution du dossier à distance, explication du plan de paiement et des aides mobilisables, dont Daam Sakane."
+      },
+      "s5": {
+        "title": "Signature",
+        "body": "Chez le notaire lors de votre passage au Maroc, ou par procuration notariale si vous ne pouvez pas vous déplacer."
+      }
+    },
+    "trust": {
+      "years": {
+        "value": "53 ans",
+        "label": "d'expérience à Tanger"
+      },
+      "delivered": {
+        "value": "+200",
+        "label": "immeubles réalisés"
+      },
+      "response": {
+        "value": "24 h",
+        "label": "délai de réponse annoncé"
+      },
+      "languages": {
+        "value": "FR · AR · Darija",
+        "label": "langues parlées par l'équipe"
+      }
+    },
+    "faqLabel": "Questions fréquentes",
+    "faqTitle": "Ce que les MRE nous demandent le plus",
+    "faq": {
+      "q1": {
+        "q": "Puis-je acheter sans venir au Maroc ?",
+        "a": "Oui. La visite se fait en visioconférence et le dossier se constitue à distance. Pour la signature, deux options : votre passage au Maroc, ou une procuration notariale donnée à une personne de confiance."
+      },
+      "q2": {
+        "q": "Comment fonctionne la procuration notariale ?",
+        "a": "Vous la faites établir au consulat du Maroc de votre pays de résidence ou chez un notaire local avec les légalisations requises. Elle désigne la personne autorisée à signer en votre nom. Nous vous indiquons les pièces à fournir au cas par cas."
+      },
+      "q3": {
+        "q": "Qu'est-ce que Daam Sakane et y ai-je droit ?",
+        "a": "C'est le programme d'aide directe de l'État marocain à l'acquisition d'un logement, pouvant aller jusqu'à 100 000 dirhams. Il est accessible aux Marocains résidant à l'étranger sous conditions. Nous vérifions votre éligibilité avant toute réservation."
+      },
+      "q4": {
+        "q": "Comment transférer les fonds depuis l'Europe ?",
+        "a": "Le transfert se fait par virement bancaire vers un compte en dirhams convertibles, ce qui préserve votre droit au transfert du produit d'une revente future. Nous vous orientons vers les bonnes démarches auprès de votre banque et de l'Office des changes."
+      },
+      "q5": {
+        "q": "Quelle fiscalité s'applique à un MRE ?",
+        "a": "L'acquisition suit le régime marocain de droit commun (droits d'enregistrement, conservation foncière, honoraires notariaux). Chaque situation dépend de votre pays de résidence et des conventions fiscales : nous vous mettons en relation avec un notaire pour un avis précis."
+      },
+      "q6": {
+        "q": "Qui s'occupe du bien quand je ne suis pas là ?",
+        "a": "Nos résidences livrées disposent d'un accès contrôlé et d'espaces communs entretenus. Pour la gestion locative ou l'entretien du logement, nous vous orientons vers des interlocuteurs locaux que nous connaissons."
+      }
+    },
+    "guide": {
+      "label": "Guide pratique",
+      "title": "Recevez le guide MRE",
+      "body": "Achat à distance, procuration, Daam Sakane, transfert de fonds, fiscalité : l'essentiel réuni dans un document clair, sans jargon.",
+      "emailLabel": "Votre adresse e-mail",
+      "submit": "Recevoir le guide",
+      "sending": "Envoi en cours…",
+      "successTitle": "Demande enregistrée",
+      "successBody": "Merci. Nous vous envoyons le guide par e-mail dès sa mise à disposition, et un conseiller reste joignable sur WhatsApp entre-temps.",
+      "error": "L'envoi a échoué. Réessayez ou écrivez-nous sur WhatsApp.",
+      "note": "Nous n'utilisons votre adresse que pour vous envoyer ce guide et vous répondre."
+    }
+  },
+  "contactPage": {
+    "metaTitle": "Contact — SBAI Immobilier Tanger",
+    "metaDescription": "Contactez SBAI Immobilier à Tanger : téléphone, WhatsApp, e-mail et formulaire de demande de visite. Réponse sous 24 h, en français, arabe et darija.",
+    "label": "Contact",
+    "title": "Parlons de votre projet",
+    "intro": "Une question sur un projet, une demande de visite, un dossier MRE : écrivez-nous ou appelez-nous. Nous répondons sous 24 heures, et bien plus vite sur WhatsApp.",
+    "addressLabel": "Adresse",
+    "phoneLabel": "Téléphone",
+    "emailLabel": "E-mail",
+    "hoursLabel": "Horaires",
+    "hours": "Lundi au vendredi, 9h – 18h30 · Samedi, 9h – 13h",
+    "languages": "Français, arabe et darija",
+    "mapLabel": "Nous trouver",
+    "mapTitle": "Nos bureaux à Tanger",
+    "mapBody": "Nous recevons sur rendez-vous, afin qu'un conseiller soit disponible pour vous et puisse préparer les documents des projets qui vous intéressent.",
+    "mapEmbedTitle": "Carte de localisation des bureaux SBAI Immobilier à Tanger"
+  },
+  "legal": {
+    "metaTitle": "Mentions légales",
+    "metaDescription": "Mentions légales du site SBAI Immobilier.",
+    "label": "Informations légales",
+    "title": "Mentions légales",
+    "intro": "Cette page rassemble les informations légales relatives à l'éditeur et à l'hébergement de ce site, ainsi qu'au traitement des données personnelles.",
+    "todo": "[À compléter par le client]",
+    "lastUpdate": "Dernière mise à jour : à définir lors de la mise en ligne.",
+    "sections": {
+      "company": {
+        "title": "Éditeur du site",
+        "body": "Le présent site est édité par la société SBAI Abdelhai & Associés, promoteur immobilier à Tanger, Maroc.",
+        "fields": [
+          "Dénomination sociale",
+          "Forme juridique",
+          "Capital social",
+          "Siège social",
+          "Registre de commerce (RC)",
+          "Identifiant Commun de l'Entreprise (ICE)",
+          "Identifiant fiscal (IF)",
+          "Numéro de patente"
+        ]
+      },
+      "publication": {
+        "title": "Directeur de la publication",
+        "body": "Le directeur de la publication est le représentant légal de la société.",
+        "fields": [
+          "Nom et qualité du directeur de la publication",
+          "Adresse de contact"
+        ]
+      },
+      "hosting": {
+        "title": "Hébergement",
+        "body": "Le site est hébergé sur une infrastructure cloud. Les informations exactes de l'hébergeur seront précisées à la mise en ligne.",
+        "fields": [
+          "Nom de l'hébergeur",
+          "Adresse de l'hébergeur",
+          "Contact de l'hébergeur"
+        ]
+      },
+      "ip": {
+        "title": "Propriété intellectuelle",
+        "body": "L'ensemble des contenus de ce site — textes, photographies, vidéos, logotype et éléments graphiques — est protégé. Toute reproduction, même partielle, est soumise à autorisation préalable écrite.",
+        "fields": [
+          "Mention de réserve de droits définitive",
+          "Crédits photo et vidéo"
+        ]
+      },
+      "data": {
+        "title": "Données personnelles (loi 09-08 / CNDP)",
+        "body": "Les données transmises via les formulaires de ce site sont utilisées uniquement pour traiter votre demande. Conformément à la loi 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel, vous disposez d'un droit d'accès, de rectification et d'opposition.",
+        "fields": [
+          "Numéro de déclaration ou d'autorisation CNDP",
+          "Durée de conservation des données",
+          "Destinataires des données",
+          "Coordonnées du responsable de traitement"
+        ]
+      },
+      "cookies": {
+        "title": "Cookies et mesure d'audience",
+        "body": "Ce site ne dépose aucun cookie publicitaire. Si un outil de mesure d'audience est ajouté ultérieurement, cette section précisera sa finalité et les moyens de s'y opposer.",
+        "fields": [
+          "Outils de mesure d'audience utilisés",
+          "Modalités de consentement"
+        ]
+      },
+      "contact": {
+        "title": "Nous contacter",
+        "body": "Pour toute question relative à ces mentions légales ou à l'exercice de vos droits sur vos données :",
+        "fields": []
+      }
+    }
   }
 }
