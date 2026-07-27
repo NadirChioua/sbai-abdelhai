@@ -19,7 +19,7 @@ import {
 export type Tone = "light" | "dark";
 
 const base =
-  "w-full text-sm font-light px-4 focus:outline-none focus:border-gold aria-[invalid=true]:border-red-600";
+  "w-full text-caption font-light px-4 focus:outline-none focus:border-gold aria-[invalid=true]:border-red-600";
 
 const tones: Record<Tone, string> = {
   light: "border border-sand bg-white text-foreground placeholder:text-muted",
@@ -28,7 +28,7 @@ const tones: Record<Tone, string> = {
 
 const labelTones: Record<Tone, string> = {
   light: "text-secondary",
-  dark: "text-on-dark/70",
+  dark: "text-on-dark-muted",
 };
 
 function FieldShell({
@@ -46,14 +46,14 @@ function FieldShell({
 }) {
   return (
     <div>
-      <label htmlFor={id} className={`micro-label mb-2 block ${labelTones[tone]}`}>
+      <label htmlFor={id} className={`eyebrow mb-2 block ${labelTones[tone]}`}>
         {label}
       </label>
       {children}
       {error && (
         <p
           role="alert"
-          className={`mt-1.5 text-xs ${tone === "dark" ? "text-red-300" : "text-red-700"}`}
+          className={`mt-1.5 text-caption ${tone === "dark" ? "text-red-300" : "text-red-700"}`}
         >
           {error}
         </p>

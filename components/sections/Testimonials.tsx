@@ -19,8 +19,8 @@ export default function Testimonials() {
     <section className="bg-ivory-dark">
       <div className="mx-auto max-w-screen-2xl px-4 py-24 md:px-8 md:py-32">
         <RevealOnScroll>
-          <p className="micro-label text-gold-dark">{t("label")}</p>
-          <h2 className="heading-display mt-3 max-w-xl text-2xl text-foreground md:text-3xl">
+          <p className="eyebrow text-gold-dark">{t("label")}</p>
+          <h2 className="heading-display mt-3 max-w-xl text-h2 text-foreground">
             {t("title")}
           </h2>
         </RevealOnScroll>
@@ -37,19 +37,19 @@ export default function Testimonials() {
                 className="aspect-[9/16] w-full"
               />
             </div>
-            <p className="micro-label mt-4 text-secondary">{t("videoCaption")}</p>
+            <p className="eyebrow mt-4 text-secondary">{t("videoCaption")}</p>
           </RevealOnScroll>
 
           <div className="flex flex-col gap-6 lg:col-span-2">
             {(["quote1", "quote2"] as const).map((k, i) => (
               <RevealOnScroll key={k} delay={0.1 + i * 0.1} className="flex-1">
                 <Card className="flex h-full flex-col justify-center p-8 md:p-12">
-                  <p className="font-display text-lg leading-relaxed text-foreground md:text-xl">
+                  <p className="font-display text-h3 leading-relaxed text-foreground">
                     {`« ${t(`${k}.text`)} »`}
                   </p>
                   <footer className="mt-6">
-                    <p className="text-sm font-medium">{t(`${k}.author`)}</p>
-                    <p className="micro-label mt-1 text-[10px] text-muted">
+                    <p className="text-caption font-medium">{t(`${k}.author`)}</p>
+                    <p className="eyebrow mt-1 text-muted">
                       {t(`${k}.context`)}
                     </p>
                   </footer>

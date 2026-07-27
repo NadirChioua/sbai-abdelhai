@@ -23,17 +23,17 @@ export default function FounderSection() {
     >
       <div className="mx-auto grid max-w-screen-2xl items-center gap-14 px-4 py-24 md:px-8 md:py-32 lg:grid-cols-2 lg:gap-10">
         <RevealOnScroll>
-          <p className="micro-label text-gold">{t("sectionTitle")}</p>
+          <p className="eyebrow text-gold">{t("sectionTitle")}</p>
           <h2 className="heading-display mt-6 max-w-xl text-3xl leading-tight text-white md:text-4xl">
             {t("headline")}
           </h2>
           <blockquote className="mt-10 border-s-2 border-gold ps-6">
-            <p className="font-display max-w-md text-lg leading-relaxed text-on-dark md:text-xl">
+            <p className="font-display max-w-md text-h3 leading-relaxed text-on-dark">
               {`« ${t("quote")} »`}
             </p>
             <footer className="mt-6">
-              <p className="text-sm font-medium text-white">{t("name")}</p>
-              <p className="micro-label mt-1 text-[10px] text-muted">
+              <p className="text-caption font-medium text-white">{t("name")}</p>
+              <p className="eyebrow mt-1 text-muted">
                 {t("role")}
               </p>
             </footer>

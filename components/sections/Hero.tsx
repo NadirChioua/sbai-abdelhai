@@ -33,13 +33,13 @@ export default function Hero() {
       />
 
       <div className="relative mx-auto w-full max-w-screen-2xl px-4 pb-20 text-center md:px-8 md:pb-24">
-        <p className="micro-label text-shadow-hero text-gold">
+        <p className="eyebrow text-shadow-hero text-gold">
           {t("common.since")}
         </p>
-        <h1 className="heading-display text-shadow-hero mx-auto mt-5 max-w-4xl text-3xl text-white md:text-5xl">
+        <h1 className="heading-display text-shadow-hero mx-auto mt-5 max-w-4xl text-display text-on-dark">
           {t("home.heroTitle")}
         </h1>
-        <p className="text-shadow-hero mx-auto mt-5 max-w-xl text-sm font-light leading-relaxed text-white/85 md:text-base">
+        <p className="text-shadow-hero mx-auto mt-5 max-w-xl text-body font-light text-on-dark">
           {t("home.heroSubtitle")}
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
@@ -53,7 +53,7 @@ export default function Hero() {
         <a
           href="#heritage"
           aria-label={t("home.scrollCue")}
-          className="mt-12 inline-flex animate-bounce text-white/70 transition-colors hover:text-gold motion-reduce:animate-none"
+          className="mt-12 inline-flex animate-bounce text-on-dark-muted transition-colors hover:text-gold motion-reduce:animate-none"
         >
           <ChevronDown size={26} aria-hidden />
         </a>

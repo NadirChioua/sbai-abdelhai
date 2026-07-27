@@ -139,6 +139,47 @@ testés individuellement : logo → accueil, carte projet, lien footer, CTA hero
 bascule de langue (`/fr/projets/triple-towers` → `/ar/projets/triple-towers`, page conservée),
 barre CTA sticky visible. Débordement horizontal = 0 px sur les 8 pages.
 
+## Conformité & vie privée (loi 09-08 / CNDP) — livrable juridique
+
+**Risque identifié en Phase 7 et corrigé le 2026-07-27.** L'audit UX a révélé que l'iframe Google
+Maps déclenchait **plus de 40 requêtes tierces** (dont `fonts.googleapis.com` et
+`fonts.gstatic.com`) et déposait des identifiants Google **avant toute interaction du visiteur** —
+en contradiction directe avec la page Mentions légales du site et avec la loi 09-08 relative à la
+protection des données à caractère personnel (sanctions jusqu'à 300 000 MAD).
+
+### Ce qui a été fait
+
+| Mesure | État |
+|---|---|
+| Suppression de **toutes** les iframes Google Maps | ✅ |
+| Cartes remplacées par des **images statiques auto-hébergées**, générées au build depuis les tuiles OpenStreetMap (`public/images/maps/`) | ✅ |
+| Lien « Voir sur Google Maps » en nouvel onglet — le départ vers Google devient un **acte volontaire** de l'utilisateur | ✅ |
+| Attribution « Fond de carte © OpenStreetMap » affichée (obligation ODbL) | ✅ |
+| Polices auto-hébergées — **vérifié** : aucune requête vers `googleapis.com` / `gstatic.com` | ✅ |
+| Aucune iframe YouTube / réseau social sur le site | ✅ |
+| Bandeau de consentement, **« Accepter » et « Refuser » de poids visuel strictement identique** (160×44 px chacun), choix mémorisé en `localStorage` | ✅ |
+| Garde `lib/consent.ts` : tout script tiers futur doit appeler `hasConsent()` — refus par défaut | ✅ |
+| Section « Données personnelles » et « Cookies » des Mentions légales réécrites en contenu réel (responsable, finalité, droits, absence de tiers) | ✅ |
+| Numéro de déclaration CNDP | ⚠️ `[EN COURS D'ENREGISTREMENT]` — à obtenir auprès du client |
+
+### Vérification (Playwright, contexte vierge, 6 pages parcourues)
+
+```
+THIRD-PARTY REQUESTS: NONE
+COOKIES SET: localhost NEXT_LOCALE
+```
+
+Le seul cookie déposé est **`NEXT_LOCALE`**, first-party et strictement nécessaire (il mémorise
+la langue choisie). À ce titre il est exempté de consentement préalable, comme un cookie de
+session — ce point est expliqué dans les Mentions légales.
+
+### À faire côté client
+
+1. Obtenir le **numéro de déclaration CNDP** et remplacer le marqueur.
+2. Fournir la **durée de conservation** des demandes et le nom du **responsable de traitement**.
+3. Si un outil de mesure d'audience est souhaité plus tard, il devra passer par `hasConsent()` —
+   ne jamais l'insérer directement dans le layout.
+
 ## Journal
 
 - **2026-07-27** — Phase 6 : correction des 3 problèmes ci-dessus + **8 pages complètes** FR/AR

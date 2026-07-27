@@ -73,7 +73,7 @@ export default function MobileMenu({
           aria-label={t("nav.openMenu")}
         >
           <div className="flex h-[68px] items-center justify-between px-4 md:px-8">
-            <p className="micro-label text-gold">{t("common.brand")}</p>
+            <p className="eyebrow text-gold">{t("common.brand")}</p>
             <button
               ref={closeRef}
               type="button"
@@ -120,14 +120,14 @@ export default function MobileMenu({
                 href={whatsappLink(t("common.whatsappMessage"))}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="micro-label flex items-center gap-3 text-gold"
+                className="eyebrow flex items-center gap-3 text-gold"
               >
                 <WhatsAppIcon size={16} />
                 {t("common.cta.whatsapp")}
               </a>
               <a
                 href={`tel:${site.phone}`}
-                className="micro-label flex items-center gap-3"
+                className="eyebrow flex items-center gap-3"
               >
                 <Phone size={14} aria-hidden />
                 <span dir="ltr">{site.phoneDisplay}</span>

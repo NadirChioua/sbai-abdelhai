@@ -10,14 +10,14 @@ export default function CdM2030() {
   const t = useTranslations("home.cdm");
 
   return (
-    <section className="bg-teal text-teal-on">
+    <section className="bg-teal text-on-dark">
       <div className="mx-auto max-w-screen-2xl px-4 py-24 md:px-8 md:py-32">
         <RevealOnScroll className="max-w-2xl">
-          <p className="micro-label text-gold">{t("label")}</p>
-          <h2 className="heading-display mt-3 text-2xl text-white md:text-3xl">
+          <p className="eyebrow text-gold">{t("label")}</p>
+          <h2 className="heading-display mt-3 text-h2 text-on-dark">
             {t("title")}
           </h2>
-          <p className="mt-5 text-sm font-light leading-relaxed text-teal-on/85 md:text-base">
+          <p className="mt-5 text-body font-light text-on-dark">
             {t("body")}
           </p>
         </RevealOnScroll>
@@ -28,7 +28,7 @@ export default function CdM2030() {
               <dd className="heading-display text-3xl text-gold md:text-4xl">
                 {t(`stats.${k}.value`)}
               </dd>
-              <dt className="micro-label mt-3 max-w-[22ch] text-[10px] leading-relaxed text-teal-on/80">
+              <dt className="eyebrow mt-3 max-w-[22ch] leading-relaxed text-on-dark-muted">
                 {t(`stats.${k}.label`)}
               </dt>
             </RevealOnScroll>

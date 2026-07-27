@@ -22,8 +22,8 @@ export default function Timeline({
     <section className="bg-ivory">
       <div className="mx-auto max-w-screen-2xl px-4 py-24 md:px-8 md:py-28">
         <RevealOnScroll>
-          <p className="micro-label text-gold-dark">{label}</p>
-          <h2 className="heading-display mt-3 max-w-2xl text-2xl text-foreground md:text-3xl">
+          <p className="eyebrow text-gold-dark">{label}</p>
+          <h2 className="heading-display mt-3 max-w-2xl text-h2 text-foreground">
             {title}
           </h2>
         </RevealOnScroll>
@@ -38,13 +38,13 @@ export default function Timeline({
                 />
                 <div className="grid gap-6 md:grid-cols-3 md:gap-10">
                   <div className="md:col-span-2">
-                    <p className="heading-display text-2xl text-gold-dark md:text-3xl">
+                    <p className="heading-display text-h2 text-gold-dark">
                       {m.year}
                     </p>
-                    <h3 className="font-display mt-3 text-lg text-foreground md:text-xl">
+                    <h3 className="font-display mt-3 text-h3 text-foreground">
                       {m.title}
                     </h3>
-                    <p className="mt-3 max-w-xl text-sm font-light leading-relaxed text-secondary">
+                    <p className="mt-3 max-w-xl text-body font-light text-secondary">
                       {m.body}
                     </p>
                   </div>

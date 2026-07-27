@@ -44,8 +44,8 @@ export default function GuideForm() {
   if (status === "sent") {
     return (
       <div role="status" className="border border-gold/40 p-8">
-        <p className="heading-display text-lg text-gold">{t("successTitle")}</p>
-        <p className="mt-3 text-sm font-light text-on-dark/80">
+        <p className="heading-display text-h3 text-gold">{t("successTitle")}</p>
+        <p className="mt-3 text-caption font-light text-on-dark-muted">
           {t("successBody")}
         </p>
       </div>
@@ -68,7 +68,7 @@ export default function GuideForm() {
         {status === "sending" ? t("sending") : t("submit")}
       </Button>
       {status === "error" && (
-        <p role="alert" className="mt-3 text-sm text-red-300">
+        <p role="alert" className="mt-3 text-caption text-red-300">
           {t("error")}
         </p>
       )}

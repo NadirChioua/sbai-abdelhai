@@ -34,12 +34,12 @@ export default function PageHero({
         className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/50 to-charcoal/30"
       />
       <div className="relative mx-auto w-full max-w-screen-2xl px-4 py-16 md:px-8 md:py-20">
-        <p className="micro-label text-gold">{label}</p>
-        <h1 className="heading-display mt-4 max-w-3xl text-3xl text-white md:text-5xl">
+        <p className="eyebrow text-gold">{label}</p>
+        <h1 className="heading-display mt-4 max-w-3xl text-display text-on-dark">
           {title}
         </h1>
         {intro && (
-          <p className="mt-5 max-w-2xl text-sm font-light leading-relaxed text-on-dark/80 md:text-base">
+          <p className="mt-5 max-w-2xl text-body font-light text-on-dark-muted">
             {intro}
           </p>
         )}

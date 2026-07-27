@@ -21,7 +21,8 @@ export const site = {
   // TODO(client): exact street address needed for the footer, contact page,
   // map pin and schema.org LocalBusiness.
   address: process.env.NEXT_PUBLIC_ADDRESS ?? "Tanger, Maroc",
-  mapQuery: process.env.NEXT_PUBLIC_MAP_QUERY ?? "Tanger, Maroc",
+  mapQuery: process.env.NEXT_PUBLIC_MAP_QUERY ?? "SBAI Immobilier, Tanger, Maroc",
+  mapImage: "/images/maps/tanger-centre.jpg",
 
   social: {
     instagram: "https://www.instagram.com/sbaimmobiliertanger",

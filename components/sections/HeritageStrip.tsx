@@ -27,10 +27,10 @@ export default function HeritageStrip() {
             >
               1973
             </p>
-            <h2 className="heading-display -mt-6 max-w-xl text-2xl text-foreground md:text-3xl lg:-mt-10">
+            <h2 className="heading-display -mt-6 max-w-xl text-h2 text-foreground lg:-mt-10">
               {t("title")}
             </h2>
-            <p className="mt-5 max-w-lg text-sm font-light leading-relaxed text-secondary md:text-base">
+            <p className="mt-5 max-w-lg text-body font-light text-secondary">
               {t("body")}
             </p>
           </RevealOnScroll>
@@ -39,12 +39,12 @@ export default function HeritageStrip() {
             <dl className="grid grid-cols-3 gap-4 border-s-2 border-gold ps-5 md:gap-6 md:ps-8">
               {(["years", "buildings", "generations"] as const).map((k) => (
                 <div key={k}>
-                  <dd className="heading-display text-2xl text-gold-dark sm:text-3xl md:text-4xl">
+                  <dd className="heading-display text-h2 text-gold-dark">
                     {t(`stats.${k}.value`)}
                   </dd>
                   {/* Micro-label tracking is generous by design; it must relax
                       on narrow screens or the labels overflow their column. */}
-                  <dt className="micro-label mt-2 text-[9px] tracking-[0.1em] text-secondary md:text-[11px] md:tracking-[0.32em]">
+                  <dt className="eyebrow mt-2 tracking-[0.12em] text-secondary md:tracking-[0.32em]">
                     {t(`stats.${k}.label`)}
                   </dt>
                 </div>

@@ -32,8 +32,8 @@ export default function VideoShowcase({
     <section className={className}>
       <div className="mx-auto max-w-screen-2xl px-4 py-24 md:px-8 md:py-28">
         <RevealOnScroll>
-          <p className="micro-label text-gold">{label}</p>
-          <h2 className="heading-display mt-3 max-w-xl text-2xl text-white md:text-3xl">
+          <p className="eyebrow text-gold">{label}</p>
+          <h2 className="heading-display mt-3 max-w-xl text-h2 text-on-dark">
             {title}
           </h2>
         </RevealOnScroll>
@@ -49,7 +49,7 @@ export default function VideoShowcase({
               className="aspect-video w-full"
             />
           </div>
-          <p className="micro-label mt-4 text-on-dark/60">{lead.caption}</p>
+          <p className="eyebrow mt-4 text-on-dark-muted">{lead.caption}</p>
         </RevealOnScroll>
 
         {rest.length > 0 && (
@@ -67,7 +67,7 @@ export default function VideoShowcase({
                     className="aspect-video w-full"
                   />
                 </div>
-                <p className="micro-label mt-4 text-on-dark/60">{v.caption}</p>
+                <p className="eyebrow mt-4 text-on-dark-muted">{v.caption}</p>
               </RevealOnScroll>
             ))}
           </div>

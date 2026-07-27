@@ -56,8 +56,8 @@ export default function Gallery({
     <section className="bg-ivory">
       <div className="mx-auto max-w-screen-2xl px-4 py-24 md:px-8 md:py-28">
         <RevealOnScroll>
-          <p className="micro-label text-gold-dark">{label}</p>
-          <h2 className="heading-display mt-3 max-w-xl text-2xl text-foreground md:text-3xl">
+          <p className="eyebrow text-gold-dark">{label}</p>
+          <h2 className="heading-display mt-3 max-w-xl text-h2 text-foreground">
             {title}
           </h2>
         </RevealOnScroll>
@@ -144,9 +144,9 @@ export default function Gallery({
                   className="object-contain"
                 />
               </div>
-              <figcaption className="mt-5 max-w-2xl text-center text-sm font-light text-on-dark/80">
+              <figcaption className="mt-5 max-w-2xl text-center text-caption font-light text-on-dark-muted">
                 {photos[index].alt}
-                <span className="micro-label ms-3 text-[10px] text-muted">
+                <span className="eyebrow ms-3 text-muted">
                   {index + 1}/{photos.length}
                 </span>
               </figcaption>

@@ -17,7 +17,7 @@ export default function LocaleSwitcher({
     <Link
       href={pathname}
       locale={other}
-      className={`micro-label transition-colors hover:text-gold ${className}`}
+      className={`eyebrow transition-colors hover:text-gold ${className}`}
       // Announce the switch in the target language
       lang={other}
       dir={other === "ar" ? "rtl" : "ltr"}

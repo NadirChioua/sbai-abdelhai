@@ -8,7 +8,7 @@ import { Link } from "@/i18n/navigation";
 
 /**
  * Project card — full-bleed poster, charcoal gradient for legibility,
- * micro-label location + Marcellus title. Whole card is one link.
+ * eyebrow location + Marcellus title. Whole card is one link.
  *
  * When `video` is supplied the clip autoplays, muted and looping, as soon as the
  * card scrolls into view — desktop and mobile alike — and pauses when it leaves.
@@ -124,17 +124,17 @@ export function ProjectCard({
         className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/20 to-transparent"
       />
       {badge && (
-        <span className="micro-label absolute top-5 rounded-full border border-white/50 bg-charcoal/40 px-3 py-1.5 text-[9px] text-white backdrop-blur-sm ltr:left-5 rtl:right-5">
+        <span className="eyebrow absolute top-5 rounded-full border border-white/50 bg-charcoal/40 px-3 py-1.5 text-white backdrop-blur-sm ltr:left-5 rtl:right-5">
           {badge}
         </span>
       )}
       <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
-        <p className="micro-label text-gold">{location}</p>
-        <h3 className="heading-display mt-2 text-xl text-white md:text-2xl">
+        <p className="eyebrow text-gold">{location}</p>
+        <h3 className="heading-display mt-2 text-h3 text-on-dark">
           {title}
         </h3>
         {tagline && (
-          <p className="mt-2 text-sm font-light text-white/75">{tagline}</p>
+          <p className="mt-2 text-caption font-light text-on-dark-muted">{tagline}</p>
         )}
         <span className="mt-4 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/40 text-white transition-colors duration-300 group-hover:border-gold group-hover:text-gold rtl:-scale-x-100">
           <ArrowUpRight size={18} aria-hidden />

@@ -55,11 +55,11 @@ export default function ContactSection({
     <section id="contact" className="bg-charcoal text-on-dark">
       <div className="mx-auto grid max-w-screen-2xl gap-14 px-4 py-24 md:px-8 md:py-32 lg:grid-cols-5">
         <RevealOnScroll className="lg:col-span-2">
-          <p className="micro-label text-gold">{t("label")}</p>
-          <h2 className="heading-display mt-3 text-2xl text-white md:text-3xl">
+          <p className="eyebrow text-gold">{t("label")}</p>
+          <h2 className="heading-display mt-3 text-h2 text-on-dark">
             {t("title")}
           </h2>
-          <p className="mt-5 max-w-md text-sm font-light leading-relaxed text-on-dark/75">
+          <p className="mt-5 max-w-md text-body font-light text-on-dark-muted">
             {t("body")}
           </p>
           <div className="mt-10 space-y-4">
@@ -73,10 +73,10 @@ export default function ContactSection({
               <WhatsAppIcon size={15} />
               {t("whatsappCta")}
             </ButtonAnchor>
-            <p className="text-xs font-light text-on-dark/60">{t("orCall")}</p>
+            <p className="text-caption font-light text-on-dark-muted">{t("orCall")}</p>
             <a
               href={`tel:${site.phone}`}
-              className="flex items-center gap-3 text-sm text-on-dark transition-colors hover:text-gold"
+              className="flex items-center gap-3 text-caption text-on-dark transition-colors hover:text-gold"
             >
               <Phone size={15} aria-hidden />
               <span dir="ltr">{site.phoneDisplay}</span>
@@ -90,10 +90,10 @@ export default function ContactSection({
               role="status"
               className="flex h-full min-h-72 flex-col items-center justify-center border border-gold/40 p-10 text-center"
             >
-              <p className="heading-display text-xl text-gold">
+              <p className="heading-display text-h3 text-gold">
                 {t("successTitle")}
               </p>
-              <p className="mt-4 max-w-sm text-sm font-light text-on-dark/80">
+              <p className="mt-4 max-w-sm text-caption font-light text-on-dark-muted">
                 {t("successBody")}
               </p>
               <Button
@@ -108,7 +108,7 @@ export default function ContactSection({
             <form
               onSubmit={handleSubmit(onSubmit)}
               noValidate
-              className="grid gap-6 [&_label]:text-on-dark/70 sm:grid-cols-2"
+              className="grid gap-6 [&_label]:text-on-dark-muted sm:grid-cols-2"
             >
               <Input
                 label={t("fields.name")}
@@ -189,7 +189,7 @@ export default function ContactSection({
                   {status === "sending" ? t("sending") : t("submit")}
                 </Button>
                 {status === "error" && (
-                  <p role="alert" className="mt-4 text-sm text-red-400">
+                  <p role="alert" className="mt-4 text-caption text-red-400">
                     {t("errorBody")}
                   </p>
                 )}

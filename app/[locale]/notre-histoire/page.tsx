@@ -68,8 +68,8 @@ export default async function Page({
       <section className="bg-ivory-dark">
         <div className="mx-auto max-w-screen-2xl px-4 py-24 md:px-8 md:py-28">
           <RevealOnScroll>
-            <p className="micro-label text-gold-dark">{t("valuesLabel")}</p>
-            <h2 className="heading-display mt-3 max-w-xl text-2xl text-foreground md:text-3xl">
+            <p className="eyebrow text-gold-dark">{t("valuesLabel")}</p>
+            <h2 className="heading-display mt-3 max-w-xl text-h2 text-foreground">
               {t("valuesTitle")}
             </h2>
           </RevealOnScroll>
@@ -77,10 +77,10 @@ export default async function Page({
             {(["heritage", "trust", "roots"] as const).map((k, i) => (
               <RevealOnScroll key={k} delay={i * 0.1}>
                 <Card className="h-full p-8 md:p-10">
-                  <p className="heading-display text-lg text-gold-dark">
+                  <p className="heading-display text-h3 text-gold-dark">
                     {t(`values.${k}.title`)}
                   </p>
-                  <p className="mt-4 text-sm font-light leading-relaxed text-secondary">
+                  <p className="mt-4 text-body font-light text-secondary">
                     {t(`values.${k}.body`)}
                   </p>
                 </Card>

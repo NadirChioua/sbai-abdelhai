@@ -12,10 +12,10 @@ export default function ProjectsGrid() {
       <div className="mx-auto max-w-screen-2xl px-4 py-24 md:px-8 md:py-32">
         <RevealOnScroll className="flex flex-wrap items-end justify-between gap-6">
           <div>
-            <p className="micro-label text-gold-dark">
+            <p className="eyebrow text-gold-dark">
               {t("home.projects.label")}
             </p>
-            <h2 className="heading-display mt-3 max-w-xl text-2xl text-foreground md:text-3xl">
+            <h2 className="heading-display mt-3 max-w-xl text-h2 text-foreground">
               {t("home.projects.title")}
             </h2>
           </div>

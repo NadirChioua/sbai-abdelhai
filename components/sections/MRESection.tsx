@@ -32,11 +32,11 @@ export default function MRESection() {
         </RevealOnScroll>
 
         <RevealOnScroll delay={0.1}>
-          <p className="micro-label text-gold-dark">{t("label")}</p>
-          <h2 className="heading-display mt-3 max-w-xl text-2xl text-foreground md:text-3xl">
+          <p className="eyebrow text-gold-dark">{t("label")}</p>
+          <h2 className="heading-display mt-3 max-w-xl text-h2 text-foreground">
             {t("title")}
           </h2>
-          <p className="mt-5 max-w-lg text-sm font-light leading-relaxed text-secondary md:text-base">
+          <p className="mt-5 max-w-lg text-body font-light text-secondary">
             {t("body")}
           </p>
           <ul className="mt-8 space-y-4">
@@ -45,7 +45,7 @@ export default function MRESection() {
                 <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold/15 text-gold-dark">
                   <Check size={13} aria-hidden />
                 </span>
-                <span className="text-sm font-light leading-relaxed text-foreground">
+                <span className="text-body font-light text-foreground">
                   {t(`points.${k}`)}
                 </span>
               </li>

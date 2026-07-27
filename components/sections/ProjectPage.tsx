@@ -96,9 +96,12 @@ export default async function ProjectPage({
         label={tp("locationLabel")}
         title={t("locationTitle")}
         body={t("locationBody")}
-        query={project.mapQuery}
-        mapTitle={tp("mapTitle", { project: t("name") })}
+        mapImage={project.mapImage}
+        mapQuery={project.mapQuery}
+        mapAlt={tp("mapTitle", { project: t("name") })}
         address={t("location")}
+        externalLabel={tp("openInMaps")}
+        attribution={tp("mapAttribution")}
       />
 
       <FAQ label={tp("faqLabel")} title={tp("faqTitle")} items={faqItems} />

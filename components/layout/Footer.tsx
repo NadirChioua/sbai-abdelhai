@@ -31,7 +31,7 @@ export default function Footer() {
             <h2 className="heading-display text-xl text-white">
               {t("footer.newsletterTitle")}
             </h2>
-            <p className="mt-2 text-sm font-light text-on-dark/70">
+            <p className="mt-2 text-caption font-light text-on-dark-muted">
               {t("footer.newsletterHint")}
             </p>
           </div>
@@ -46,11 +46,11 @@ export default function Footer() {
               required
               autoComplete="email"
               placeholder={t("footer.newsletterPlaceholder")}
-              className="h-12 w-full border border-on-dark/20 bg-transparent px-4 text-sm font-light text-white placeholder:text-on-dark/50 focus:border-gold focus:outline-none"
+              className="h-12 w-full border border-on-dark/20 bg-transparent px-4 text-caption font-light text-white placeholder:text-on-dark-muted focus:border-gold focus:outline-none"
             />
             <button
               type="submit"
-              className="micro-label h-12 shrink-0 bg-gold px-6 text-gold-on transition-colors hover:bg-gold-dark hover:text-ivory"
+              className="eyebrow h-12 shrink-0 bg-gold px-6 text-gold-on transition-colors hover:bg-gold-dark hover:text-ivory"
             >
               {t("footer.newsletterSubmit")}
             </button>
@@ -68,7 +68,7 @@ export default function Footer() {
             height={45}
             className="h-auto w-44"
           />
-          <p className="mt-4 max-w-xs text-sm font-light leading-relaxed text-on-dark/70">
+          <p className="mt-4 max-w-xs text-body font-light text-on-dark-muted">
             {t("footer.blurb")}
           </p>
           <div className="mt-6 flex items-center gap-4">
@@ -112,8 +112,8 @@ export default function Footer() {
         </div>
 
         <nav aria-label={t("footer.projects")}>
-          <h3 className="micro-label text-gold">{t("footer.projects")}</h3>
-          <ul className="mt-5 space-y-3 text-sm font-light">
+          <h3 className="eyebrow text-gold">{t("footer.projects")}</h3>
+          <ul className="mt-5 space-y-3 text-caption font-light">
             {PROJECT_LINKS.map(({ label, href }) => (
               <li key={href}>
                 <Link
@@ -136,8 +136,8 @@ export default function Footer() {
         </nav>
 
         <nav aria-label={t("footer.company")}>
-          <h3 className="micro-label text-gold">{t("footer.company")}</h3>
-          <ul className="mt-5 space-y-3 text-sm font-light">
+          <h3 className="eyebrow text-gold">{t("footer.company")}</h3>
+          <ul className="mt-5 space-y-3 text-caption font-light">
             <li>
               <Link
                 href="/notre-histoire"
@@ -174,8 +174,8 @@ export default function Footer() {
         </nav>
 
         <div>
-          <h3 className="micro-label text-gold">{t("footer.contact")}</h3>
-          <ul className="mt-5 space-y-3 text-sm font-light">
+          <h3 className="eyebrow text-gold">{t("footer.contact")}</h3>
+          <ul className="mt-5 space-y-3 text-caption font-light">
             <li>
               <a
                 href={`tel:${site.phone}`}
@@ -214,7 +214,7 @@ export default function Footer() {
                 {t("common.cta.whatsapp")}
               </a>
             </li>
-            <li className="flex items-center gap-3 text-on-dark/70">
+            <li className="flex items-center gap-3 text-on-dark-muted">
               <MapPin size={14} aria-hidden />
               {t("footer.address")}
             </li>
@@ -224,7 +224,7 @@ export default function Footer() {
 
       {/* Bottom strip */}
       <div className="border-t border-on-dark/10">
-        <div className="mx-auto flex max-w-screen-2xl flex-col items-center justify-between gap-4 px-4 py-6 text-[11px] font-light text-on-dark/60 md:flex-row md:px-8">
+        <div className="mx-auto flex max-w-screen-2xl flex-col items-center justify-between gap-4 px-4 py-6 text-caption font-light text-on-dark-muted md:flex-row md:px-8">
           <p>
             © {year} {t("common.brandFull")} — {t("footer.rights")}
           </p>
@@ -241,7 +241,7 @@ export default function Footer() {
             >
               {t("footer.privacy")}
             </Link>
-            <LocaleSwitcher className="text-[10px] text-on-dark/60" />
+            <LocaleSwitcher className="text-on-dark-muted" />
           </div>
         </div>
       </div>

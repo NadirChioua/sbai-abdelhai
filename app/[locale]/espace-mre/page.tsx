@@ -62,8 +62,8 @@ export default async function Page({ params }: PageProps<"/[locale]/espace-mre">
       <section className="bg-ivory">
         <div className="mx-auto max-w-screen-2xl px-4 py-24 md:px-8 md:py-28">
           <RevealOnScroll>
-            <p className="micro-label text-gold-dark">{t("processLabel")}</p>
-            <h2 className="heading-display mt-3 max-w-xl text-2xl text-foreground md:text-3xl">
+            <p className="eyebrow text-gold-dark">{t("processLabel")}</p>
+            <h2 className="heading-display mt-3 max-w-xl text-h2 text-foreground">
               {t("processTitle")}
             </h2>
           </RevealOnScroll>
@@ -73,10 +73,10 @@ export default async function Page({ params }: PageProps<"/[locale]/espace-mre">
                 <p className="heading-display text-3xl text-gold/50">
                   {String(i + 1).padStart(2, "0")}
                 </p>
-                <h3 className="font-display mt-3 text-base text-foreground">
+                <h3 className="font-display mt-3 text-body text-foreground">
                   {t(`process.${k}.title`)}
                 </h3>
-                <p className="mt-2 text-sm font-light leading-relaxed text-secondary">
+                <p className="mt-2 text-body font-light text-secondary">
                   {t(`process.${k}.body`)}
                 </p>
               </RevealOnScroll>
@@ -86,7 +86,7 @@ export default async function Page({ params }: PageProps<"/[locale]/espace-mre">
       </section>
 
       {/* Trust signals */}
-      <section className="bg-teal text-teal-on">
+      <section className="bg-teal text-on-dark">
         <div className="mx-auto max-w-screen-2xl px-4 py-20 md:px-8">
           <dl className="grid grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-4">
             {TRUST.map(({ key, Icon }, i) => (
@@ -94,10 +94,10 @@ export default async function Page({ params }: PageProps<"/[locale]/espace-mre">
                 <span className="block text-gold">
                   <Icon size={26} strokeWidth={1.5} aria-hidden />
                 </span>
-                <dd className="heading-display mt-4 text-2xl text-white md:text-3xl">
+                <dd className="heading-display mt-4 text-h2 text-on-dark">
                   {t(`trust.${key}.value`)}
                 </dd>
-                <dt className="micro-label mt-2 text-[10px] text-teal-on/80">
+                <dt className="eyebrow mt-2 text-on-dark-muted">
                   {t(`trust.${key}.label`)}
                 </dt>
               </RevealOnScroll>
@@ -119,17 +119,17 @@ export default async function Page({ params }: PageProps<"/[locale]/espace-mre">
       <section className="bg-charcoal text-on-dark">
         <div className="mx-auto grid max-w-screen-2xl gap-10 px-4 py-20 md:grid-cols-2 md:px-8">
           <RevealOnScroll>
-            <p className="micro-label text-gold">{t("guide.label")}</p>
-            <h2 className="heading-display mt-3 text-2xl text-white md:text-3xl">
+            <p className="eyebrow text-gold">{t("guide.label")}</p>
+            <h2 className="heading-display mt-3 text-h2 text-on-dark">
               {t("guide.title")}
             </h2>
-            <p className="mt-4 max-w-md text-sm font-light leading-relaxed text-on-dark/75">
+            <p className="mt-4 max-w-md text-body font-light text-on-dark-muted">
               {t("guide.body")}
             </p>
           </RevealOnScroll>
           <RevealOnScroll delay={0.1}>
             <GuideForm />
-            <p className="mt-6 text-xs font-light text-on-dark/50">
+            <p className="mt-6 text-caption font-light text-on-dark-muted">
               {t("guide.note")}
             </p>
             <ButtonAnchor

@@ -25,8 +25,8 @@ export default function FAQ({
       <div className="mx-auto max-w-screen-2xl px-4 py-24 md:px-8 md:py-28">
         <div className="grid gap-10 lg:grid-cols-3">
           <RevealOnScroll>
-            <p className="micro-label text-gold-dark">{label}</p>
-            <h2 className="heading-display mt-3 text-2xl text-foreground md:text-3xl">
+            <p className="eyebrow text-gold-dark">{label}</p>
+            <h2 className="heading-display mt-3 text-h2 text-foreground">
               {title}
             </h2>
           </RevealOnScroll>
@@ -45,7 +45,7 @@ export default function FAQ({
                       id={`faq-trigger-${i}`}
                       className="flex w-full items-start justify-between gap-6 py-6 text-start transition-colors hover:text-gold-dark"
                     >
-                      <span className="font-display text-base md:text-lg">
+                      <span className="font-display text-body-lg">
                         {item.question}
                       </span>
                       <Plus
@@ -62,7 +62,7 @@ export default function FAQ({
                     role="region"
                     aria-labelledby={`faq-trigger-${i}`}
                     hidden={!isOpen}
-                    className="pb-6 pe-10 text-sm font-light leading-relaxed text-secondary"
+                    className="pb-6 pe-10 text-body font-light text-secondary"
                   >
                     {item.answer}
                   </dd>

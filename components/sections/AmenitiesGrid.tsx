@@ -53,8 +53,8 @@ export default function AmenitiesGrid({
     <section className="bg-ivory-dark">
       <div className="mx-auto max-w-screen-2xl px-4 py-24 md:px-8 md:py-28">
         <RevealOnScroll>
-          <p className="micro-label text-gold-dark">{label}</p>
-          <h2 className="heading-display mt-3 max-w-xl text-2xl text-foreground md:text-3xl">
+          <p className="eyebrow text-gold-dark">{label}</p>
+          <h2 className="heading-display mt-3 max-w-xl text-h2 text-foreground">
             {title}
           </h2>
         </RevealOnScroll>
@@ -67,7 +67,7 @@ export default function AmenitiesGrid({
                 <span className="block text-gold-dark">
                   <Icon size={30} strokeWidth={1.5} aria-hidden />
                 </span>
-                <p className="micro-label mt-4 text-secondary">
+                <p className="eyebrow mt-4 text-secondary">
                   {labelFor(key)}
                 </p>
               </RevealOnScroll>

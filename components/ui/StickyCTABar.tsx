@@ -35,11 +35,11 @@ export default function StickyCTABar({
     <div className="fixed inset-x-0 bottom-0 z-40 border-t border-sand bg-ivory/97 pb-[env(safe-area-inset-bottom)] shadow-[0_-2px_14px_rgba(92,89,78,0.12)]">
       <div className="mx-auto flex h-[76px] max-w-screen-2xl items-center justify-between gap-4 px-4 md:px-8">
         <div className="min-w-0">
-          <p className="heading-display truncate text-sm text-foreground md:text-base">
+          <p className="heading-display truncate text-caption text-foreground">
             {projectName}
           </p>
           {detail && (
-            <p className="micro-label mt-0.5 hidden text-[10px] text-secondary sm:block">
+            <p className="eyebrow mt-0.5 hidden text-secondary sm:block">
               {detail}
             </p>
           )}

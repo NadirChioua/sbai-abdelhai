@@ -22,8 +22,8 @@ const variants: Record<Variant, string> = {
 };
 
 const sizes: Record<Size, string> = {
-  md: "h-11 px-6 text-[11px] tracking-[0.14em]",
-  lg: "h-13 px-8 py-4 text-xs tracking-[0.16em]",
+  md: "h-11 px-6 text-caption tracking-[0.14em]",
+  lg: "h-13 px-8 py-4 text-caption tracking-[0.16em]",
 };
 
 function cls(variant: Variant, size: Size, className: string) {

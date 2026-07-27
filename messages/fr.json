@@ -451,7 +451,9 @@
     "locationLabel": "Emplacement",
     "faqLabel": "Questions fréquentes",
     "faqTitle": "Tout ce que vous voulez savoir",
-    "mapTitle": "Carte de localisation — {project}"
+    "mapTitle": "Carte de localisation — {project}",
+    "openInMaps": "Voir sur Google Maps",
+    "mapAttribution": "Fond de carte © OpenStreetMap"
   },
   "amenities": {
     "airConditioning": "Climatisation intégrée",
@@ -656,7 +658,9 @@
     "mapLabel": "Nous trouver",
     "mapTitle": "Nos bureaux à Tanger",
     "mapBody": "Nous recevons sur rendez-vous, afin qu'un conseiller soit disponible pour vous et puisse préparer les documents des projets qui vous intéressent.",
-    "mapEmbedTitle": "Carte de localisation des bureaux SBAI Immobilier à Tanger"
+    "mapEmbedTitle": "Carte de localisation des bureaux SBAI Immobilier à Tanger",
+    "openInMaps": "Voir sur Google Maps",
+    "mapAttribution": "Fond de carte © OpenStreetMap"
   },
   "legal": {
     "metaTitle": "Mentions légales",
@@ -707,22 +711,18 @@
         ]
       },
       "data": {
-        "title": "Données personnelles (loi 09-08 / CNDP)",
-        "body": "Les données transmises via les formulaires de ce site sont utilisées uniquement pour traiter votre demande. Conformément à la loi 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel, vous disposez d'un droit d'accès, de rectification et d'opposition.",
+        "title": "Données personnelles et vie privée",
+        "body": "Responsable du traitement : SBAI Abdelhai & Associés, promoteur immobilier à Tanger. Les données que vous nous transmettez via les formulaires de ce site (nom, téléphone, e-mail, projet et budget indicatifs, message) sont collectées dans une seule finalité : traiter votre demande et vous recontacter. Elles ne sont ni vendues, ni louées, ni transmises à des tiers à des fins commerciales. Conformément à la loi 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel, vous disposez d'un droit d'accès, de rectification et d'opposition, que vous pouvez exercer à tout moment en nous écrivant.",
         "fields": [
-          "Numéro de déclaration ou d'autorisation CNDP",
-          "Durée de conservation des données",
-          "Destinataires des données",
-          "Coordonnées du responsable de traitement"
+          "Numéro de déclaration CNDP — [EN COURS D'ENREGISTREMENT]",
+          "Durée de conservation des demandes",
+          "Personne responsable du traitement au sein de la société"
         ]
       },
       "cookies": {
-        "title": "Cookies et mesure d'audience",
-        "body": "Ce site ne dépose aucun cookie publicitaire. Si un outil de mesure d'audience est ajouté ultérieurement, cette section précisera sa finalité et les moyens de s'y opposer.",
-        "fields": [
-          "Outils de mesure d'audience utilisés",
-          "Modalités de consentement"
-        ]
+        "title": "Cookies, mesure d'audience et services tiers",
+        "body": "Ce site ne dépose aucun cookie publicitaire et n'utilise à ce jour aucun outil de mesure d'audience. Aucune ressource n'est chargée depuis un serveur tiers : les polices de caractères sont hébergées sur notre propre domaine, les fonds de carte sont des images statiques que nous servons nous-mêmes (© OpenStreetMap), et les vidéos sont diffusées depuis nos serveurs. Aucune donnée n'est donc transmise à Google, à un réseau social ou à un régisseur publicitaire lorsque vous consultez ces pages. Le lien « Voir sur Google Maps » ouvre volontairement un nouvel onglet : c'est vous qui décidez de vous rendre chez Google, et rien n'est envoyé avant ce clic. Si un outil de mesure d'audience venait à être ajouté, il ne serait chargé qu'après votre consentement explicite, révocable à tout moment.",
+        "fields": []
       },
       "contact": {
         "title": "Nous contacter",
@@ -730,5 +730,12 @@
         "fields": []
       }
     }
+  },
+  "consent": {
+    "title": "Vos données, votre choix",
+    "body": "Ce site n'utilise aucun cookie publicitaire et ne charge aucun service tiers : nos polices, nos cartes et nos vidéos sont hébergées sur nos propres serveurs. Votre réponse ne sert qu'à encadrer un éventuel outil de mesure d'audience à l'avenir.",
+    "readMore": "Lire notre politique de confidentialité",
+    "accept": "Accepter",
+    "refuse": "Refuser"
   }
 }

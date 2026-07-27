@@ -31,28 +31,28 @@ export default async function Page({ params }: PageProps<"/[locale]/contact">) {
       <section className="bg-ivory">
         <div className="mx-auto max-w-screen-2xl px-4 pb-6 pt-14 md:px-8 md:pt-20">
           <RevealOnScroll>
-            <p className="micro-label text-gold-dark">{t("label")}</p>
-            <h1 className="heading-display mt-3 max-w-2xl text-3xl text-foreground md:text-4xl">
+            <p className="eyebrow text-gold-dark">{t("label")}</p>
+            <h1 className="heading-display mt-3 max-w-2xl text-h1 text-foreground">
               {t("title")}
             </h1>
-            <p className="mt-5 max-w-2xl text-sm font-light leading-relaxed text-secondary md:text-base">
+            <p className="mt-5 max-w-2xl text-body font-light text-secondary">
               {t("intro")}
             </p>
           </RevealOnScroll>
 
           <div className="mt-12 grid gap-8 border-y border-sand py-10 sm:grid-cols-2 lg:grid-cols-4">
             <RevealOnScroll>
-              <p className="micro-label text-gold-dark">{t("addressLabel")}</p>
-              <p className="mt-3 flex items-start gap-3 text-sm font-light text-foreground">
+              <p className="eyebrow text-gold-dark">{t("addressLabel")}</p>
+              <p className="mt-3 flex items-start gap-3 text-caption font-light text-foreground">
                 <MapPin size={16} aria-hidden className="mt-0.5 shrink-0" />
                 {site.address}
               </p>
             </RevealOnScroll>
             <RevealOnScroll delay={0.06}>
-              <p className="micro-label text-gold-dark">{t("phoneLabel")}</p>
+              <p className="eyebrow text-gold-dark">{t("phoneLabel")}</p>
               <a
                 href={`tel:${site.phone}`}
-                className="mt-3 flex items-center gap-3 text-sm font-light transition-colors hover:text-gold-dark"
+                className="mt-3 flex items-center gap-3 text-caption font-light transition-colors hover:text-gold-dark"
               >
                 <Phone size={16} aria-hidden />
                 <span dir="ltr">{site.phoneDisplay}</span>
@@ -61,29 +61,29 @@ export default async function Page({ params }: PageProps<"/[locale]/contact">) {
                 href={whatsappLink(tc("whatsappMessage"))}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-2 flex items-center gap-3 text-sm font-light transition-colors hover:text-gold-dark"
+                className="mt-2 flex items-center gap-3 text-caption font-light transition-colors hover:text-gold-dark"
               >
                 <WhatsAppIcon size={15} />
                 <span dir="ltr">{site.mobileDisplay}</span>
               </a>
             </RevealOnScroll>
             <RevealOnScroll delay={0.12}>
-              <p className="micro-label text-gold-dark">{t("emailLabel")}</p>
+              <p className="eyebrow text-gold-dark">{t("emailLabel")}</p>
               <a
                 href={`mailto:${site.email}`}
-                className="mt-3 flex items-center gap-3 text-sm font-light transition-colors hover:text-gold-dark"
+                className="mt-3 flex items-center gap-3 text-caption font-light transition-colors hover:text-gold-dark"
               >
                 <Mail size={16} aria-hidden />
                 {site.email}
               </a>
             </RevealOnScroll>
             <RevealOnScroll delay={0.18}>
-              <p className="micro-label text-gold-dark">{t("hoursLabel")}</p>
-              <p className="mt-3 flex items-start gap-3 text-sm font-light text-foreground">
+              <p className="eyebrow text-gold-dark">{t("hoursLabel")}</p>
+              <p className="mt-3 flex items-start gap-3 text-caption font-light text-foreground">
                 <Clock size={16} aria-hidden className="mt-0.5 shrink-0" />
                 {t("hours")}
               </p>
-              <p className="mt-2 flex items-start gap-3 text-sm font-light text-secondary">
+              <p className="mt-2 flex items-start gap-3 text-caption font-light text-secondary">
                 <Languages size={16} aria-hidden className="mt-0.5 shrink-0" />
                 {t("languages")}
               </p>
@@ -98,9 +98,12 @@ export default async function Page({ params }: PageProps<"/[locale]/contact">) {
         label={t("mapLabel")}
         title={t("mapTitle")}
         body={t("mapBody")}
-        query={site.mapQuery}
-        mapTitle={t("mapEmbedTitle")}
+        mapImage={site.mapImage}
+        mapQuery={site.mapQuery}
+        mapAlt={t("mapEmbedTitle")}
         address={site.address}
+        externalLabel={t("openInMaps")}
+        attribution={t("mapAttribution")}
       />
     </main>
   );

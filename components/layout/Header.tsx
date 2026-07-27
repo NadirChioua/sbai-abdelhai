@@ -108,7 +108,7 @@ export default function Header() {
                       <Link
                         href={href}
                         aria-current={active ? "page" : undefined}
-                        className={`micro-label relative py-2 transition-colors hover:text-gold ${
+                        className={`eyebrow relative py-2 transition-colors hover:text-gold ${
                           active ? "text-gold" : ""
                         }`}
                       >

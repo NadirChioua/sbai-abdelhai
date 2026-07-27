@@ -30,7 +30,9 @@ export type Project = {
   amenities: string[];
   facts: string[];
   faq: string[];
-  /** Google Maps place query — no API key needed for the embed */
+  /** Self-hosted static map image (built from OSM tiles at deploy time) */
+  mapImage: string;
+  /** Free-text query used only for the explicit "open in Google Maps" link */
   mapQuery: string;
 };
 
@@ -86,6 +88,7 @@ export const projects: Project[] = [
     ],
     facts: ["floors", "typologies", "delivery", "price"],
     faq: ["q1", "q2", "q3", "q4", "q5", "q6"],
+    mapImage: "/images/maps/malabata.jpg",
     mapQuery: "Malabata, Tanger, Maroc",
   },
   {
@@ -134,6 +137,7 @@ export const projects: Project[] = [
     ],
     facts: ["typology", "surface", "status", "price"],
     faq: ["q1", "q2", "q3", "q4", "q5", "q6"],
+    mapImage: "/images/maps/cap-spartel.jpg",
     mapQuery: "Cap Spartel, Tanger, Maroc",
   },
   {
@@ -188,6 +192,7 @@ export const projects: Project[] = [
     ],
     facts: ["typology", "surface", "status", "price"],
     faq: ["q1", "q2", "q3", "q4", "q5", "q6"],
+    mapImage: "/images/maps/tanger-sud.jpg",
     mapQuery: "Route de Rabat, Tanger, Maroc",
   },
 ];

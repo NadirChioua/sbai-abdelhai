@@ -21,13 +21,13 @@ export default function ProjectsIndex() {
     <>
       <section className="bg-ivory">
         <div className="mx-auto max-w-screen-2xl px-4 pb-6 pt-14 md:px-8 md:pt-20">
-          <p className="micro-label text-gold-dark">
+          <p className="eyebrow text-gold-dark">
             {t("projectsIndex.label")}
           </p>
-          <h1 className="heading-display mt-3 max-w-2xl text-3xl text-foreground md:text-4xl">
+          <h1 className="heading-display mt-3 max-w-2xl text-h1 text-foreground">
             {t("projectsIndex.title")}
           </h1>
-          <p className="mt-5 max-w-2xl text-sm font-light leading-relaxed text-secondary md:text-base">
+          <p className="mt-5 max-w-2xl text-body font-light text-secondary">
             {t("projectsIndex.intro")}
           </p>
 
@@ -44,7 +44,7 @@ export default function ProjectsIndex() {
                   type="button"
                   onClick={() => setFilter(f)}
                   aria-pressed={active}
-                  className={`micro-label h-10 rounded-full border px-5 transition-colors duration-300 ${
+                  className={`eyebrow h-10 rounded-full border px-5 transition-colors duration-300 ${
                     active
                       ? "border-gold bg-gold text-gold-on"
                       : "border-sand text-secondary hover:border-gold hover:text-gold-dark"

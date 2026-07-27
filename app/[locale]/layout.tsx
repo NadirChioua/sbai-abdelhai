@@ -7,6 +7,7 @@ import { routing } from "@/i18n/routing";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
+import ConsentBanner from "@/components/layout/ConsentBanner";
 import "../globals.css";
 
 const marcellus = localFont({
@@ -81,6 +82,7 @@ export default async function LocaleLayout({
           {children}
           <Footer />
           <WhatsAppFloat />
+          <ConsentBanner />
         </NextIntlClientProvider>
       </body>
     </html>
