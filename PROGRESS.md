@@ -55,7 +55,14 @@ Originaux **intouchés** dans les dossiers racine (`triple towers/`, `Les Villas
 | 3 photos client satisfait DC (droits ⚠️) | `images/del-costa/` | Témoignages |
 | logo of sbai.png | `logo/` variantes | Header/footer (variante or/ivoire temporaire) |
 
+## Notes complémentaires Phase 2
+
+- **Vidéo interview fondateur** : sous-titres FR incrustés (jaune) + watermark ancien logo en haut à droite — c'est un montage réseau sociaux, pas un rush brut. Demander le **rush original sans incrustations** au client pour le traitement cinématique prévu. Utilisée en l'état en attendant.
+- **`messages/ar.json`** : le flag "MACHINE_TRANSLATED" par chaîne n'est pas praticable (les valeurs sont affichées telles quelles) → marqueur global `_translation_status` en tête de fichier + cette note. Translittération arabe du nom retenue : **السباعي عبد الحي** (à faire valider).
+- **Fonts finales** : `jost.woff2` (variable 100–900, latin+latin-ext, 36 KB), `marcellus.woff2` (16 KB) — resubsettés depuis les TTF officiels google/fonts (OFL) car les fichiers du brand board étaient découpés par subset. Arabe : Amiri 400/700 + Noto Sans Arabic variable. Zéro appel réseau externe.
+- **Interview fondateur : cap ~12 MB → réel 11,35 MB.** Tous les autres caps tenus (héros ≤10 MB, sections ≤5 MB).
+
 ## Journal
 
 - **2026-07-27** — Phase 1 : lecture contexte complète, résumé exécutif validé par le client.
-- **2026-07-27** — Phase 2 démarrée : npm cache → D:, ffmpeg portable installé, compression des 12 vidéos lancée (two-pass H.264), scaffold Next.js 16 + TS + Tailwind v4, deps installées (framer-motion, next-intl, RHF+Zod, lucide-react).
+- **2026-07-27** — Phase 2 : npm cache → D:, ffmpeg portable sur D:, **12 vidéos compressées** (two-pass H.264, caps respectés) + 12 posters, scaffold Next.js 16.2 (Turbopack) + TS strict + Tailwind v4, deps installées, **fonts self-hostées** (Marcellus/Jost/Amiri/Noto AR — toutes SIL OFL), **tokens brand board** → thème Tailwind, **i18n FR/AR avec RTL** (next-intl 4.13 via proxy.ts Next 16), variantes logo duotone or/charbon/ivoire, build de production vert (`/fr` + `/ar` statiques). 3 commits.
