@@ -1,0 +1,52 @@
+/* ============================================================
+   SBAI Immobilier — Design Tokens
+   Source of truth: context/SBAI Brand Board.html (V2 — July 2026)
+   Radius/spacing/shadow scales adapted from the DAMAC benchmark
+   (rapport-analyse-damacproperties-SBAI.md) recolored to SBAI.
+   ============================================================ */
+
+:root {
+  /* ---- Palette (brand board §03) ---- */
+  --sbai-gold: #c9a24b;          /* SBAI Gold — accent only, never a field */
+  --sbai-gold-dark: #8c6d2c;     /* links on light, hover states */
+  --sbai-green: #2f6b3f;         /* Heritage Green */
+  --sbai-charcoal: #22271f;      /* grounds every dark composition */
+  --sbai-teal: #46626b;          /* Atlantic Teal */
+  --sbai-ivory: #f4f1ea;         /* default paper */
+  --sbai-ivory-dark: #e9e5db;    /* page bg alt */
+  --sbai-white: #ffffff;
+
+  /* ---- Supporting neutrals (brand board usage) ---- */
+  --sbai-text: #22271f;
+  --sbai-text-secondary: #5c594e;
+  --sbai-text-muted: #8a8676;
+  --sbai-border: #e0dacb;
+  --sbai-on-dark: #e9e4d6;       /* light text on charcoal */
+  --sbai-green-on: #eaf2eb;      /* text on Heritage Green */
+  --sbai-teal-on: #eff4f5;       /* text on Atlantic Teal */
+  --sbai-gold-on: #3a2e12;       /* text on SBAI Gold */
+
+  /* ---- Typography ----
+     Marcellus: display & headlines, CAPITALS, generous tracking.
+     Jost 300/400/500/600: body, labels, uppercase micro-labels. */
+  --tracking-label: 0.32em;      /* uppercase micro-labels (couture register) */
+  --tracking-display: 0.12em;    /* Marcellus headlines */
+  --tracking-video: 0.35em;      /* video overlay titles (8px spec) */
+  --tracking-button: 0.14em;
+
+  /* ---- Overlays (video legibility, DAMAC pattern) ---- */
+  --overlay-hero: linear-gradient(
+    rgba(34, 39, 31, 0) 40%,
+    rgba(34, 39, 31, 0.55) 100%
+  );
+
+  /* ---- Shadows (DAMAC scale, SBAI-warmed) ---- */
+  --sbai-shadow-card: 0 2px 14px 0 rgba(92, 89, 78, 0.16);
+  --sbai-shadow-thin: 0 1px 1px 0 rgba(92, 89, 78, 0.24);
+  --sbai-shadow-glow-gold: 0 12px 48px 0 rgba(201, 162, 75, 0.28);
+
+  /* ---- Motion ---- */
+  --ease-reveal: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-reveal: 700ms;
+  --duration-fade: 500ms;        /* video overlay fade 0.5s (brand board) */
+}

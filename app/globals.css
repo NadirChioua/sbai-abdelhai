@@ -1,26 +1,95 @@
 @import "tailwindcss";
+@import "../styles/tokens.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* ============================================================
+   Tailwind v4 theme — every value maps to a brand-board token.
+   Usage: bg-gold, text-charcoal, border-sand, font-display …
+   ============================================================ */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Reset default palette out of the way — brand colors only */
+  --color-gold: var(--sbai-gold);
+  --color-gold-dark: var(--sbai-gold-dark);
+  --color-gold-on: var(--sbai-gold-on);
+  --color-heritage: var(--sbai-green);
+  --color-heritage-on: var(--sbai-green-on);
+  --color-charcoal: var(--sbai-charcoal);
+  --color-teal: var(--sbai-teal);
+  --color-teal-on: var(--sbai-teal-on);
+  --color-ivory: var(--sbai-ivory);
+  --color-ivory-dark: var(--sbai-ivory-dark);
+  --color-foreground: var(--sbai-text);
+  --color-secondary: var(--sbai-text-secondary);
+  --color-muted: var(--sbai-text-muted);
+  --color-sand: var(--sbai-border);
+  --color-on-dark: var(--sbai-on-dark);
+
+  /* Fonts (wired to next/font variables in app/[locale]/layout.tsx) */
+  --font-display: var(--font-marcellus), var(--font-amiri), serif;
+  --font-sans: var(--font-jost), var(--font-noto-arabic), sans-serif;
+
+  /* Shadows */
+  --shadow-card: var(--sbai-shadow-card);
+  --shadow-thin: var(--sbai-shadow-thin);
+  --shadow-glow-gold: var(--sbai-shadow-glow-gold);
+
+  /* Breakpoints: Tailwind defaults match the DAMAC set (768/1024/1280/1536).
+     Extra ultra-wide tier: */
+  --breakpoint-3xl: 120rem; /* 1920px */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ---- Base ---- */
+body {
+  background: var(--sbai-ivory);
+  color: var(--sbai-text);
+  font-family: var(--font-jost), var(--font-noto-arabic), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Display headings: Marcellus, capitals, generous tracking (brand board §02) */
+.heading-display {
+  font-family: var(--font-marcellus), var(--font-amiri), serif;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
+  line-height: 1.15;
+}
+
+/* Uppercase micro-label — the couture register */
+.micro-label {
+  font-family: var(--font-jost), var(--font-noto-arabic), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-label);
+  font-weight: 500;
+  font-size: 0.6875rem; /* 11px */
+}
+
+/* Arabic (RTL): tracking must be neutralized — letterspacing breaks
+   connected Arabic script. Marcellus/Jost have no Arabic glyphs;
+   Amiri/Noto take over via font fallback chain. */
+[dir="rtl"] .heading-display,
+[dir="rtl"] .micro-label,
+[dir="rtl"] .tracking-wide-label {
+  letter-spacing: 0;
+}
+
+/* Focus visible — WCAG: gold ring on every interactive element */
+:focus-visible {
+  outline: 2px solid var(--sbai-gold);
+  outline-offset: 3px;
+}
+
+/* Reduced motion: kill transitions/animations globally */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+::selection {
+  background: var(--sbai-gold);
+  color: var(--sbai-charcoal);
 }
