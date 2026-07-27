@@ -34,7 +34,9 @@ Dernière mise à jour : 2026-07-27 (Phase 2 en cours).
 12. **Guide MRE en PDF** : le formulaire de capture existe et enregistre la demande, mais **le PDF n'existe pas encore**. Le message de confirmation annonce un envoi par e-mail — aucun téléchargement cassé n'est promis.
 13. **Horaires d'ouverture** affichés sur la page Contact (lun-ven 9h-18h30, sam 9h-13h) : à confirmer.
 14. **Photos d'équipe** : non fournies. La section « équipe » de Notre Histoire est volontairement omise plutôt que remplie d'images de banque.
-15. **Carte Google** : l'embed sans clé n'accepte pas de style personnalisé ; la désaturation est obtenue par filtre CSS. Pour une vraie carte stylée (type DAMAC), il faut une clé API Google Maps facturée.
+15. **~~Carte Google~~ — RÉSOLU en Phase 7** : les iframes Google ont été supprimées pour non-conformité CNDP. Cartes désormais statiques et auto-hébergées (OpenStreetMap). Voir « Conformité & vie privée ».
+16. **Numéro CNDP** : marqueur `[EN COURS D'ENREGISTREMENT]` dans les Mentions légales — à remplacer par le vrai numéro de déclaration.
+17. **Adresses exactes pour les épingles de carte** : les cartes sont centrées au niveau du quartier (Malabata, Cap Spartel, Tanger sud, centre-ville). Fournir les adresses précises pour recentrer.
 
 ## Déviations techniques assumées
 
