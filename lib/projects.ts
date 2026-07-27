@@ -22,6 +22,8 @@ export type Project = {
   slug: string;
   status: ProjectStatus;
   hero: { video: string; poster: string };
+  /** 6s silent loop (~150-200 KB) that autoplays inside the project cards. */
+  cardPreview: string;
   /** Secondary videos shown in the "découvrir" / amenities blocks */
   videos: ProjectVideo[];
   gallery: GalleryItem[];
@@ -41,6 +43,7 @@ export const projects: Project[] = [
       video: "/videos/triple-towers/hero-drone.mp4",
       poster: "/images/posters/tt-hero.jpg",
     },
+    cardPreview: "/videos/triple-towers/card-preview.mp4",
     videos: [
       {
         key: "interior",
@@ -93,6 +96,7 @@ export const projects: Project[] = [
       video: "/videos/villas-colline/hero-drone.mp4",
       poster: "/images/posters/vc-hero.jpg",
     },
+    cardPreview: "/videos/villas-colline/card-preview.mp4",
     videos: [
       {
         key: "interior",
@@ -140,6 +144,7 @@ export const projects: Project[] = [
       video: "/videos/del-costa/hero-exterior.mp4",
       poster: "/images/posters/dc-hero.jpg",
     },
+    cardPreview: "/videos/del-costa/card-preview.mp4",
     videos: [
       {
         key: "interior",

@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { useReducedMotion } from "framer-motion";
@@ -10,11 +10,13 @@ import { Link } from "@/i18n/navigation";
  * Project card — full-bleed poster, charcoal gradient for legibility,
  * micro-label location + Marcellus title. Whole card is one link.
  *
- * When `video` is supplied, the clip plays muted on hover (and on keyboard
- * focus) over the poster. It is only fetched at that moment (`preload="none"`),
- * so the grid still costs three JPEGs on load. Touch devices and
- * prefers-reduced-motion keep the still image — autoplaying three heroes on a
- * phone would be both jarring and expensive on Moroccan mobile data.
+ * When `video` is supplied the clip autoplays, muted and looping, as soon as the
+ * card scrolls into view — desktop and mobile alike — and pauses when it leaves.
+ *
+ * Weight is the whole design constraint here: `video` must be a small dedicated
+ * loop (~150-200 KB), never a full hero file. `preload="none"` means nothing is
+ * fetched until the card is actually approached. Playback is skipped entirely
+ * under prefers-reduced-motion or when the browser signals Save-Data.
  */
 export function ProjectCard({
   href,
@@ -43,45 +45,50 @@ export function ProjectCard({
 }) {
   const prefersReduced = useReducedMotion();
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [canHover, setCanHover] = useState(false);
+  const wrapRef = useRef<HTMLAnchorElement>(null);
+  const [allowed, setAllowed] = useState(false);
   const [playing, setPlaying] = useState(false);
 
+  // Decide once on the client whether this card may animate at all.
   useEffect(() => {
-    const mq = window.matchMedia("(hover: hover) and (pointer: fine)");
-    const update = () => setCanHover(mq.matches);
-    update();
-    mq.addEventListener("change", update);
-    return () => mq.removeEventListener("change", update);
-  }, []);
+    const conn = (
+      navigator as Navigator & { connection?: { saveData?: boolean } }
+    ).connection;
+    setAllowed(Boolean(video) && !prefersReduced && !conn?.saveData);
+  }, [video, prefersReduced]);
 
-  const enabled = Boolean(video) && canHover && !prefersReduced;
+  // Autoplay while visible, pause when scrolled away.
+  useEffect(() => {
+    if (!allowed) return;
+    const el = wrapRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        const v = videoRef.current;
+        if (!v) return;
+        if (entry.isIntersecting) {
+          v.muted = true;
+          v.play()
+            .then(() => setPlaying(true))
+            .catch(() => setPlaying(false));
+        } else {
+          v.pause();
+          setPlaying(false);
+        }
+      },
+      { rootMargin: "200px", threshold: 0.25 },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [allowed]);
 
-  const start = useCallback(() => {
-    if (!enabled) return;
-    const v = videoRef.current;
-    if (!v) return;
-    v.muted = true;
-    v.play()
-      .then(() => setPlaying(true))
-      .catch(() => setPlaying(false));
-  }, [enabled]);
-
-  const stop = useCallback(() => {
-    const v = videoRef.current;
-    if (!v) return;
-    v.pause();
-    v.currentTime = 0;
-    setPlaying(false);
-  }, []);
+  const enabled = allowed;
 
   return (
     <Link
+      ref={wrapRef}
       href={href}
       className={`group relative block overflow-hidden bg-charcoal ${className}`}
-      onMouseEnter={start}
-      onMouseLeave={stop}
-      onFocus={start}
-      onBlur={stop}
     >
       <Image
         src={image}
@@ -98,13 +105,15 @@ export function ProjectCard({
         <video
           ref={videoRef}
           src={video}
+          poster={image}
           muted
           loop
+          autoPlay
           playsInline
           preload="none"
           aria-hidden="true"
           tabIndex={-1}
-          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
+          className={`absolute inset-0 h-full w-full object-cover transition-all duration-700 ease-out group-hover:scale-[1.04] ${
             playing ? "opacity-100" : "opacity-0"
           }`}
         />
