@@ -29,7 +29,12 @@ Dernière mise à jour : 2026-07-27 (Phase 2 en cours).
 7. **Contenu arabe** : traduction machine première passe — chaque chaîne de `messages/ar.json` est à faire relire (voir marqueur global `_translation_status`).
 8. **Mentions légales** : structure en place, contenu juridique réel à fournir.
 9. **Envoi des leads** : `/api/contact` valide et journalise les demandes côté serveur, mais **n'envoie encore aucun e-mail**. Fournir une clé Resend (ou SendGrid) + la boîte de réception de destination → branchement en 10 minutes. En attendant, le formulaire met WhatsApp en avant comme canal le plus rapide, donc aucune promesse n'est faite au visiteur.
-10. **Adresse postale exacte** du bureau à Tanger (pour le footer, la page Contact, Google Maps et le schema.org LocalBusiness) — actuellement seulement « Tanger, Maroc ».
+10. **Adresse postale exacte** du bureau à Tanger (footer, page Contact, épingle Google Maps, schema.org LocalBusiness) — actuellement « Tanger, Maroc ». Variables prêtes : `NEXT_PUBLIC_ADDRESS`, `NEXT_PUBLIC_MAP_QUERY`.
+11. **Prix des projets** : aucun prix n'est documenté, donc aucun n'est inventé — toutes les fiches affichent « Sur demande ». Fournir les grilles pour les afficher.
+12. **Guide MRE en PDF** : le formulaire de capture existe et enregistre la demande, mais **le PDF n'existe pas encore**. Le message de confirmation annonce un envoi par e-mail — aucun téléchargement cassé n'est promis.
+13. **Horaires d'ouverture** affichés sur la page Contact (lun-ven 9h-18h30, sam 9h-13h) : à confirmer.
+14. **Photos d'équipe** : non fournies. La section « équipe » de Notre Histoire est volontairement omise plutôt que remplie d'images de banque.
+15. **Carte Google** : l'embed sans clé n'accepte pas de style personnalisé ; la désaturation est obtenue par filtre CSS. Pour une vraie carte stylée (type DAMAC), il faut une clé API Google Maps facturée.
 
 ## Déviations techniques assumées
 
@@ -88,8 +93,58 @@ Originaux **intouchés** dans les dossiers racine (`triple towers/`, `Les Villas
 - **Tailwind v4 — conflits d'utilitaires** : deux bugs réels causés par la même mécanique. (1) Les champs du formulaire s'affichaient en blanc sur charbon : `bg-transparent` passé en `className` perdait contre le `bg-white` de la primitive (Tailwind arbitre par ordre dans la feuille CSS, pas par ordre dans la chaîne de classes) → résolu par une prop `tone="light|dark"` sur `Input`/`Textarea`/`Select`. (2) Les libellés de stats débordaient sur mobile : `.micro-label` était du CSS **non layeré**, donc prioritaire sur *tous* les utilitaires Tailwind → `.heading-display` et `.micro-label` déplacés dans `@layer components`. **Règle : ne jamais surcharger une classe composant par un utilitaire sans vérifier le rendu.**
 - **Posters vidéo** : quasiment toutes les vidéos sources sont sous-titrées en dur du début à la fin. Un script de détection (`bande basse : pixels très clairs / jaunes / verts + gradient`) a été écrit pour trouver les rares fenêtres propres. Timestamps retenus : TT drone 19,1 s · Villas 8,0 s · Del Costa 25,0 s · UGC 78,0 s · Fondateur 32,0 s.
 
+## Phase 6 — revue post-Phase 5 : 3 problèmes corrigés
+
+### Problème 1 — « la vidéo hero ne joue qu'en vue mobile »
+
+**Diagnostic (mesuré, pas supposé).** La vidéo jouait déjà en desktop : `paused=false`,
+`currentTime=3,78 s`, `readyState=4`. Elle était simplement **invisible** (`opacity: 0`).
+Le fondu d'apparition dépendait de `onLoadedData` ; quand `loadeddata` se déclenche **avant
+l'hydratation React**, l'événement est perdu et l'état `ready` ne bascule jamais. Ce n'est pas
+une règle de viewport : l'émulation mobile rechargeait la page avec un timing qui gagnait la
+course. Aucune des 7 causes classiques suspectées n'était en jeu (`muted` et `playsInline` bien
+présents dans le HTML SSR, MIME `video/mp4`, statut 200).
+
+**Correctif.** Lecture directe de `readyState` au montage + `onCanPlay` en second signal ;
+`autoPlay` natif et `preload="auto"` en mode ambient ; `muted` forcé avant `play()` ; **bouton
+de lecture ivoire de repli** si la promesse est refusée (Safari économie d'énergie, extensions) ;
+suppression de `crossOrigin="anonymous"` (inutile en same-origin, force des requêtes CORS).
+
+**Vérification.** Playwright : desktop `paused=false, currentTime=4,98 s, opacity=1`.
+Capture `hero-video-playing-desktop.png` — plan à t≈5 s (gros plan de la tour), visuellement
+distinct du poster (plan large de la baie à t=19,1 s).
+
+### Problème 2 — vidéos non branchées
+
+**Diagnostic.** 5 vidéos sur 12 référencées ; les 7 orphelines appartenaient toutes aux pages
+projet, qui n'existaient pas encore.
+
+**Correctif.** Les 12 vidéos sont rendues par `<VideoPlayer />`. Images de galerie extraites des
+rushes eux-mêmes, filtrées par le détecteur de sous-titres incrustés.
+
+**Vérification.** Audit automatisé → `context/screenshots/phase-6/video-inventory.md` :
+12/12 utilisées, 0 orpheline, 0 MIME incorrect, 0 poster cassé.
+
+### Problème 3 — navigation cassée / pages manquantes
+
+**Diagnostic.** Cause (a) : seul `app/[locale]/page.tsx` existait. Les liens étaient corrects —
+les préchargements en échec visaient déjà `/fr/projets`, donc `<Link>` next-intl fonctionnait ;
+il manquait uniquement les pages.
+
+**Correctif.** 8 pages construites (index projets + 3 fiches + Notre Histoire + Espace MRE +
+Contact + Mentions légales), FR et AR.
+
+**Vérification.** Crawler de liens : **18 pages, 0 cassée, 0 échec de ressource**. Parcours
+testés individuellement : logo → accueil, carte projet, lien footer, CTA hero, menu mobile,
+bascule de langue (`/fr/projets/triple-towers` → `/ar/projets/triple-towers`, page conservée),
+barre CTA sticky visible. Débordement horizontal = 0 px sur les 8 pages.
+
 ## Journal
 
+- **2026-07-27** — Phase 6 : correction des 3 problèmes ci-dessus + **8 pages complètes** FR/AR
+  (443 clés de traduction à parité), galerie masonry CSS-columns avec lightbox accessible
+  (flèches + Échap), accordéon FAQ, carte Google désaturée par filtre CSS, barre CTA sticky,
+  formulaire de contact prérempli selon le projet.
 - **2026-07-27** — Phase 5 : **homepage complète** — 8 sections dans l'ordre imposé (Hero vidéo drone ambient, Heritage 1973 + stats + archives, grille 3 projets, section fondateur cinématique, Espace MRE, CdM 2030, témoignages, formulaire). Contenu FR/AR intégral rédigé (aucun lorem ipsum, chiffres réels du document stratégie + interview). `/api/contact` avec validation Zod partagée client/serveur + honeypot. Formulaire testé de bout en bout (validation FR affichée, soumission → panneau succès). Zéro débordement horizontal sur les 4 viewports FR/AR desktop/mobile.
 - **2026-07-27** — Phase 1 : lecture contexte complète, résumé exécutif validé par le client.
 - **2026-07-27** — Phase 4 : **primitives UI** — `Button` (pill, 4 variantes + déclinaisons Link/Anchor), `ProjectCard`/`Card`, `Input`/`Textarea`/`Select` (RHF-ready, erreurs ARIA), **`VideoPlayer`** (modes ambient/feature, pause hors viewport, poster fade-in, contrôles custom, slot VTT, vignette coin watermark, reduced-motion → jamais d'autoplay), `StickyCTABar` (remonte le float WhatsApp via variable CSS), `RevealOnScroll` + `ParallaxWrapper`. **Sous-titres WebVTT réels FR/AR** de l'interview fondateur générés depuis la transcription (`public/subtitles/`).

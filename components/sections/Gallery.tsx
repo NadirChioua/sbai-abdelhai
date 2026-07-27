@@ -62,9 +62,15 @@ export default function Gallery({
           </h2>
         </RevealOnScroll>
 
-        <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4">
+        {/* CSS columns give true masonry: mixed aspect ratios flow without
+            leaving holes, which a uniform grid cannot avoid. */}
+        <div className="mt-12 columns-2 gap-3 md:columns-3 md:gap-4">
           {photos.map((p, i) => (
-            <RevealOnScroll key={p.src} delay={(i % 3) * 0.08}>
+            <RevealOnScroll
+              key={p.src}
+              delay={(i % 3) * 0.08}
+              className="mb-3 break-inside-avoid md:mb-4"
+            >
               <button
                 type="button"
                 onClick={() => setIndex(i)}
