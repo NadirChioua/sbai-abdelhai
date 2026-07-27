@@ -40,6 +40,7 @@ export default function VideoPlayer({
   title,
   showMuteToggle = mode === "ambient",
   cornerVignette,
+  fullscreenOnMobilePlay = false,
 }: {
   src: string;
   poster: string;
@@ -52,6 +53,8 @@ export default function VideoPlayer({
   showMuteToggle?: boolean;
   /** Softens a burned-in watermark corner (see PROGRESS.md). */
   cornerVignette?: "top-right" | "top-left";
+  /** Feature mode on small screens: entering play opens native fullscreen. */
+  fullscreenOnMobilePlay?: boolean;
 }) {
   const t = useTranslations("common.cta");
   const prefersReduced = useReducedMotion();
@@ -93,10 +96,21 @@ export default function VideoPlayer({
       setStarted(true);
       if (mode === "feature") setMuted(false);
       video.play().catch(() => {});
+      if (
+        fullscreenOnMobilePlay &&
+        typeof window !== "undefined" &&
+        window.matchMedia("(max-width: 767px)").matches
+      ) {
+        const v = video as HTMLVideoElement & {
+          webkitEnterFullscreen?: () => void;
+        };
+        if (v.requestFullscreen) v.requestFullscreen().catch(() => {});
+        else v.webkitEnterFullscreen?.();
+      }
     } else {
       video.pause();
     }
-  }, [mode]);
+  }, [mode, fullscreenOnMobilePlay]);
 
   const toggleMute = useCallback(() => setMuted((m) => !m), []);
 

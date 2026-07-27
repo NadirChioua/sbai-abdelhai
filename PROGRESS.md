@@ -28,6 +28,8 @@ Dernière mise à jour : 2026-07-27 (Phase 2 en cours).
 6. **Photos archives watermarkées** : les **35 fichiers** de `image genrale/` (1.png → 35.png) portent tous le watermark de l'ancien logo SBAI en haut à droite. Demander les versions propres au client. Utilisées en l'état avec TODO en attendant.
 7. **Contenu arabe** : traduction machine première passe — chaque chaîne de `messages/ar.json` est à faire relire (voir marqueur global `_translation_status`).
 8. **Mentions légales** : structure en place, contenu juridique réel à fournir.
+9. **Envoi des leads** : `/api/contact` valide et journalise les demandes côté serveur, mais **n'envoie encore aucun e-mail**. Fournir une clé Resend (ou SendGrid) + la boîte de réception de destination → branchement en 10 minutes. En attendant, le formulaire met WhatsApp en avant comme canal le plus rapide, donc aucune promesse n'est faite au visiteur.
+10. **Adresse postale exacte** du bureau à Tanger (pour le footer, la page Contact, Google Maps et le schema.org LocalBusiness) — actuellement seulement « Tanger, Maroc ».
 
 ## Déviations techniques assumées
 
@@ -81,8 +83,14 @@ Originaux **intouchés** dans les dossiers racine (`triple towers/`, `Les Villas
 - ⚠️ **Disque C: critique : ~20 Mo libres.** Cache npm, ffmpeg, navigateurs Playwright et temp déjà déportés sur D:. **Le client doit libérer de l'espace sur C: (risque de plantage Windows).**
 - Port 3000 occupé par un autre process sur la machine → serveur de test lancé sur 3100.
 
+## Pièges techniques rencontrés (à connaître pour la suite)
+
+- **Tailwind v4 — conflits d'utilitaires** : deux bugs réels causés par la même mécanique. (1) Les champs du formulaire s'affichaient en blanc sur charbon : `bg-transparent` passé en `className` perdait contre le `bg-white` de la primitive (Tailwind arbitre par ordre dans la feuille CSS, pas par ordre dans la chaîne de classes) → résolu par une prop `tone="light|dark"` sur `Input`/`Textarea`/`Select`. (2) Les libellés de stats débordaient sur mobile : `.micro-label` était du CSS **non layeré**, donc prioritaire sur *tous* les utilitaires Tailwind → `.heading-display` et `.micro-label` déplacés dans `@layer components`. **Règle : ne jamais surcharger une classe composant par un utilitaire sans vérifier le rendu.**
+- **Posters vidéo** : quasiment toutes les vidéos sources sont sous-titrées en dur du début à la fin. Un script de détection (`bande basse : pixels très clairs / jaunes / verts + gradient`) a été écrit pour trouver les rares fenêtres propres. Timestamps retenus : TT drone 19,1 s · Villas 8,0 s · Del Costa 25,0 s · UGC 78,0 s · Fondateur 32,0 s.
+
 ## Journal
 
+- **2026-07-27** — Phase 5 : **homepage complète** — 8 sections dans l'ordre imposé (Hero vidéo drone ambient, Heritage 1973 + stats + archives, grille 3 projets, section fondateur cinématique, Espace MRE, CdM 2030, témoignages, formulaire). Contenu FR/AR intégral rédigé (aucun lorem ipsum, chiffres réels du document stratégie + interview). `/api/contact` avec validation Zod partagée client/serveur + honeypot. Formulaire testé de bout en bout (validation FR affichée, soumission → panneau succès). Zéro débordement horizontal sur les 4 viewports FR/AR desktop/mobile.
 - **2026-07-27** — Phase 1 : lecture contexte complète, résumé exécutif validé par le client.
 - **2026-07-27** — Phase 4 : **primitives UI** — `Button` (pill, 4 variantes + déclinaisons Link/Anchor), `ProjectCard`/`Card`, `Input`/`Textarea`/`Select` (RHF-ready, erreurs ARIA), **`VideoPlayer`** (modes ambient/feature, pause hors viewport, poster fade-in, contrôles custom, slot VTT, vignette coin watermark, reduced-motion → jamais d'autoplay), `StickyCTABar` (remonte le float WhatsApp via variable CSS), `RevealOnScroll` + `ParallaxWrapper`. **Sous-titres WebVTT réels FR/AR** de l'interview fondateur générés depuis la transcription (`public/subtitles/`).
 - **2026-07-27** — Phase 3 : **layout shell complet** — TopBar utilitaire (collapse au scroll), Header fixe transparent→ivoire (seuil 80vh, crossfade logo duotone, zéro layout shift), MobileMenu plein écran (Marcellus 32px, stagger, scroll-lock, Échap, reduced-motion), Footer (newsletter, 4 colonnes, réseaux sociaux SVG inline, double switcher langue), WhatsAppFloat (pulse 4s, RTL-aware). Citation fondateur réelle extraite + transcription. Coordonnées réelles récupérées de la vidéo. 8 screenshots FR/AR desktop/mobile validés.

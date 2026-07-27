@@ -62,8 +62,146 @@
     "role": "Fondateur du Groupe Abdelhai Sbai"
   },
   "home": {
-    "heroPlaceholder": "Le Fleuron de l'immobilier à Tanger",
-    "heroAlt": "Vue aérienne des Triple Towers à Tanger au coucher du soleil",
-    "sectionsComing": "Sections en construction — Phase 5"
+    "heroAlt": "Vue aérienne des Triple Towers face à la baie de Tanger",
+    "heroTitle": "Le Fleuron de l'immobilier à Tanger",
+    "heroSubtitle": "Depuis plus de 53 années, notre signature nous engage.",
+    "scrollCue": "Découvrir la suite",
+    "heritage": {
+      "title": "Trois générations au service de votre patrimoine",
+      "body": "Converti à la promotion immobilière au début des années 70, le groupe Abdelhai Sbai a façonné le paysage de Tanger : lotissements, haut standing, moyen standing et logements sociaux. Une histoire de famille devenue une référence du Nord du Maroc.",
+      "stats": {
+        "years": {
+          "value": "53",
+          "label": "ans d'expérience"
+        },
+        "buildings": {
+          "value": "+200",
+          "label": "immeubles réalisés"
+        },
+        "generations": {
+          "value": "3",
+          "label": "générations"
+        }
+      },
+      "photo1Alt": "Immeuble SBAI face aux fontaines, Tanger — archives du groupe",
+      "photo2Alt": "Résidence SBAI sur la corniche de Tanger — archives du groupe",
+      "photo3Alt": "Villas SBAI avec vue sur la baie de Tanger — archives du groupe"
+    },
+    "projects": {
+      "label": "Nos réalisations",
+      "title": "Trois adresses signées SBAI"
+    },
+    "mre": {
+      "label": "Espace MRE",
+      "title": "Investir au pays, en toute confiance",
+      "body": "Vous vivez en France, en Belgique, aux Pays-Bas, en Espagne ? Votre projet immobilier à Tanger se construit à distance, avec un interlocuteur unique qui vous connaît.",
+      "points": {
+        "remote": "Accompagnement 100 % à distance : visites vidéo en direct, dossiers dématérialisés, signature lors de votre passage au Maroc.",
+        "daam": "Programme Daam Sakane : jusqu'à 100 000 MAD d'aide directe de l'État, accessible aussi aux Marocains résidant à l'étranger.",
+        "hours": "Disponibilité aux horaires européens, en français, en arabe et en darija."
+      },
+      "whatsappMessage": "Bonjour, je suis MRE et je souhaite des informations sur vos projets à Tanger.",
+      "imageAlt": "Piscine et palmiers d'une résidence SBAI à Tanger"
+    },
+    "cdm": {
+      "label": "Cap sur 2030",
+      "title": "Tanger, ville hôte de la Coupe du Monde 2030",
+      "body": "Le Mondial 2030 accélère tout : infrastructures, tourisme, demande locative. Investir à Tanger aujourd'hui, c'est prendre position avant que la ville ne change d'échelle.",
+      "stats": {
+        "stadium": {
+          "value": "75 500",
+          "label": "places au stade Ibn Batouta rénové"
+        },
+        "investment": {
+          "value": "1 300 Mds",
+          "label": "MAD d'investissements prévus au Maroc"
+        },
+        "hotels": {
+          "value": "+150",
+          "label": "nouveaux hôtels à construire d'ici 2030"
+        },
+        "tgv": {
+          "value": "Al Boraq",
+          "label": "le TGV marocain, étendu vers le sud"
+        }
+      },
+      "cta": "Investir avant 2030"
+    },
+    "testimonials": {
+      "label": "Ils nous font confiance",
+      "title": "La parole de ceux qui nous connaissent",
+      "videoTitle": "Témoignage vidéo filmé aux Triple Towers",
+      "videoCaption": "Témoignage filmé — Triple Towers, Tanger",
+      "quote1": {
+        "text": "Le client est toujours satisfait par nos engagements, lesquels nous respectons à la lettre.",
+        "author": "Sbai Abdelhai",
+        "context": "Fondateur — extrait de l'interview filmée"
+      },
+      "quote2": {
+        "text": "Faire du bon travail, avoir des rapports cordiaux avec nos clients : c'est ainsi que nous bâtissons depuis les années 70.",
+        "author": "Sbai Abdelhai",
+        "context": "Fondateur — extrait de l'interview filmée"
+      }
+    }
+  },
+  "projects": {
+    "items": {
+      "tripleTowers": {
+        "name": "Triple Towers",
+        "location": "Tanger — Front de mer",
+        "tagline": "25 étages face à la Méditerranée : climatisation intégrée, double vitrage, marbre et vue panoramique.",
+        "heroAlt": "Les Triple Towers en construction face à la baie de Tanger, vue drone"
+      },
+      "villasColline": {
+        "name": "Les Villas de la Colline",
+        "location": "Tanger — Les hauteurs",
+        "tagline": "Villas avec piscines et jardins, sur les hauteurs qui dominent la baie de Tanger.",
+        "heroAlt": "Les Villas de la Colline et leurs jardins, vue drone sur la baie de Tanger"
+      },
+      "delCosta": {
+        "name": "Résidence Del Costa",
+        "location": "Tanger",
+        "tagline": "Résidence sécurisée avec piscine, garage privé et contrôle d'accès.",
+        "heroAlt": "Vue extérieure de la Résidence Del Costa à Tanger"
+      }
+    }
+  },
+  "contactForm": {
+    "label": "Réservez une visite",
+    "title": "Votre prochain chez-vous commence ici",
+    "body": "Laissez-nous vos coordonnées : un conseiller SBAI vous rappelle sous 24 h pour organiser votre visite — sur place ou en vidéo.",
+    "whatsappCta": "Discuter sur WhatsApp",
+    "orCall": "Ou appelez-nous directement :",
+    "fields": {
+      "name": "Nom complet",
+      "phone": "Téléphone",
+      "email": "E-mail (facultatif)",
+      "project": "Projet qui vous intéresse",
+      "budget": "Budget approximatif",
+      "message": "Votre message (facultatif)"
+    },
+    "projectOptions": {
+      "autre": "Je ne sais pas encore"
+    },
+    "budgetOptions": {
+      "nd": "À définir",
+      "lt1m": "Moins de 1 M MAD",
+      "m1m2": "1 à 2 M MAD",
+      "m2m4": "2 à 4 M MAD",
+      "gt4m": "Plus de 4 M MAD"
+    },
+    "errors": {
+      "name": "Merci d'indiquer votre nom.",
+      "phone": "Merci d'indiquer un numéro de téléphone valide.",
+      "email": "Cette adresse e-mail semble invalide.",
+      "message": "Votre message est trop long (2000 caractères max).",
+      "required": "Ce champ est requis."
+    },
+    "submit": "Envoyer ma demande",
+    "sending": "Envoi en cours…",
+    "successTitle": "Demande bien reçue",
+    "successBody": "Merci ! Un conseiller SBAI vous contactera sous 24 h. Pour une réponse immédiate, écrivez-nous sur WhatsApp.",
+    "sendAnother": "Envoyer une autre demande",
+    "errorBody": "L'envoi a échoué. Réessayez, ou contactez-nous directement sur WhatsApp."
   }
 }

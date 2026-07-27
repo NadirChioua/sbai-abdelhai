@@ -45,21 +45,25 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Display headings: Marcellus, capitals, generous tracking (brand board §02) */
-.heading-display {
-  font-family: var(--font-marcellus), var(--font-amiri), serif;
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-display);
-  line-height: 1.15;
-}
+/* These live in the components layer so Tailwind utilities (a later layer)
+   can override them per-breakpoint. Unlayered CSS would silently win instead. */
+@layer components {
+  /* Display headings: Marcellus, capitals, generous tracking (brand board §02) */
+  .heading-display {
+    font-family: var(--font-marcellus), var(--font-amiri), serif;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-display);
+    line-height: 1.15;
+  }
 
-/* Uppercase micro-label — the couture register */
-.micro-label {
-  font-family: var(--font-jost), var(--font-noto-arabic), sans-serif;
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-label);
-  font-weight: 500;
-  font-size: 0.6875rem; /* 11px */
+  /* Uppercase micro-label — the couture register */
+  .micro-label {
+    font-family: var(--font-jost), var(--font-noto-arabic), sans-serif;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-label);
+    font-weight: 500;
+    font-size: 0.6875rem; /* 11px */
+  }
 }
 
 /* Arabic (RTL): tracking must be neutralized — letterspacing breaks
