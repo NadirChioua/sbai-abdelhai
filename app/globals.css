@@ -93,3 +93,24 @@ body {
   background: var(--sbai-gold);
   color: var(--sbai-charcoal);
 }
+
+/* Legibility shadow for white text over video/photo surfaces */
+.text-shadow-hero {
+  text-shadow: 0 2px 24px rgba(34, 39, 31, 0.55);
+}
+
+/* WhatsApp float: one pulse ring every 4s (killed by reduced-motion above) */
+@keyframes whatsapp-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.45);
+  }
+  18% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+.whatsapp-pulse {
+  animation: whatsapp-pulse 4s ease-out infinite;
+}

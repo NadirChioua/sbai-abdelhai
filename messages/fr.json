@@ -21,7 +21,9 @@
       "pause": "Mettre en pause",
       "mute": "Couper le son",
       "unmute": "Activer le son"
-    }
+    },
+    "whatsappMessage": "Bonjour, je m'intéresse à un projet SBAI. Pouvez-vous me contacter ?",
+    "whatsappAria": "Nous contacter sur WhatsApp"
   },
   "nav": {
     "home": "Accueil",
@@ -31,23 +33,35 @@
     "contact": "Contact",
     "openMenu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu",
-    "switchLocale": "العربية"
+    "switchLocale": "العربية",
+    "search": "Rechercher",
+    "searchSoon": "Recherche — bientôt disponible"
   },
   "footer": {
     "projects": "Projets",
     "company": "La société",
     "contact": "Contact",
     "legal": "Mentions légales",
+    "privacy": "Confidentialité",
     "rights": "Tous droits réservés.",
-    "address": "Tanger, Maroc"
+    "address": "Tanger, Maroc",
+    "blurb": "Promoteur immobilier à Tanger depuis 1973. Trois générations au service de votre patrimoine.",
+    "newsletterTitle": "Restez informé",
+    "newsletterHint": "Nouveaux projets, avancement des chantiers, conseils d'investissement.",
+    "newsletterLabel": "Votre adresse e-mail",
+    "newsletterPlaceholder": "Votre adresse e-mail",
+    "newsletterSubmit": "S'inscrire"
   },
   "founder": {
     "sectionTitle": "L'homme derrière 53 ans d'histoire",
-    "quote": "TODO(client) — Citation exacte à extraire de l'interview du fondateur. Proposition en attente : « Depuis 1973, nous ne vendons pas des mètres carrés — nous transmettons un patrimoine. »",
+    "headline": "53 ans. Trois générations. Une seule promesse.",
+    "quote": "Le client est toujours satisfait par nos engagements, lesquels nous respectons à la lettre.",
     "name": "Sbai Abdelhai",
     "role": "Fondateur du Groupe Abdelhai Sbai"
   },
   "home": {
-    "heroPlaceholder": "Le Fleuron de l'immobilier à Tanger"
+    "heroPlaceholder": "Le Fleuron de l'immobilier à Tanger",
+    "heroAlt": "Vue aérienne des Triple Towers à Tanger au coucher du soleil",
+    "sectionsComing": "Sections en construction — Phase 5"
   }
 }

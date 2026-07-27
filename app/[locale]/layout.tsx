@@ -4,6 +4,9 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import localFont from "next/font/local";
 import { routing } from "@/i18n/routing";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
 import "../globals.css";
 
 const marcellus = localFont({
@@ -73,7 +76,12 @@ export default async function LocaleLayout({
       className={`${marcellus.variable} ${jost.variable} ${amiri.variable} ${notoArabic.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <Header />
+          {children}
+          <Footer />
+          <WhatsAppFloat />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
