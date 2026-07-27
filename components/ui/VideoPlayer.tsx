@@ -67,6 +67,18 @@ export default function VideoPlayer({
   const [muted, setMuted] = useState(true);
   const [ready, setReady] = useState(false); // first frame decoded → fade in
   const [progress, setProgress] = useState(0);
+  const [autoplayBlocked, setAutoplayBlocked] = useState(false);
+
+  // Sync readiness from the DOM on mount.
+  // `loadeddata` can fire before hydration attaches the React handler — the
+  // event is then lost and the fade-in gate would never open, leaving a
+  // playing-but-invisible video. Reading readyState directly closes that race.
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    if (video.readyState >= 2) setReady(true);
+    if (!video.paused) setPlaying(true);
+  }, []);
 
   // Ambient: play/pause with viewport visibility
   useEffect(() => {
@@ -78,7 +90,14 @@ export default function VideoPlayer({
       ([entry]) => {
         if (entry.isIntersecting) {
           setStarted(true);
-          video.play().catch(() => {});
+          video.muted = true; // enforce before play() — autoplay policy
+          const p = video.play();
+          if (p !== undefined) {
+            p.then(() => setAutoplayBlocked(false)).catch(() => {
+              // Safari Low Power Mode, strict policies, extensions…
+              setAutoplayBlocked(true);
+            });
+          }
         } else {
           video.pause();
         }
@@ -142,13 +161,17 @@ export default function VideoPlayer({
         src={src}
         poster={poster}
         muted={muted}
+        autoPlay={ambientAuto}
         loop={mode === "ambient"}
         playsInline
-        preload={mode === "ambient" ? "metadata" : "none"}
-        crossOrigin="anonymous"
+        preload={mode === "ambient" ? "auto" : "none"}
         aria-label={title}
         onLoadedData={() => setReady(true)}
-        onPlay={() => setPlaying(true)}
+        onCanPlay={() => setReady(true)}
+        onPlay={() => {
+          setPlaying(true);
+          setAutoplayBlocked(false);
+        }}
         onPause={() => setPlaying(false)}
         onTimeUpdate={(e) => {
           const v = e.currentTarget;
@@ -266,6 +289,21 @@ export default function VideoPlayer({
           ) : (
             <Volume2 size={17} aria-hidden />
           )}
+        </button>
+      )}
+
+      {/* Autoplay refused despite muted (Safari Low Power Mode, strict
+          policies, extensions): offer an explicit branded play button. */}
+      {mode === "ambient" && ambientAuto && autoplayBlocked && (
+        <button
+          type="button"
+          onClick={togglePlay}
+          aria-label={`${t("play")} — ${title}`}
+          className="absolute inset-0 flex items-center justify-center"
+        >
+          <span className="flex h-20 w-20 items-center justify-center rounded-full bg-ivory text-gold-dark shadow-card transition-transform duration-300 hover:scale-105 md:h-24 md:w-24">
+            <Play size={28} aria-hidden className="ms-1 fill-current" />
+          </span>
         </button>
       )}
 
