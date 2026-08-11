@@ -94,9 +94,16 @@ export const projects: Project[] = [
         mode: "feature",
       },
     ],
-    // The three exterior stills below replace drone-1.jpg, drone-2.jpg and
-    // reel-1.jpg, which all showed the towers in shell state (bare concrete,
-    // crane, no glazing). Those files stay on disk, simply unreferenced.
+    // The two exterior stills below replace drone-1.jpg and drone-2.jpg, which
+    // showed the towers in shell state (bare concrete, crane, no glazing).
+    //
+    // The street-level slot (reel-1.jpg -> gallery-location-1.jpg) is dropped
+    // rather than refilled: triple-towers-location.mp4 is a boulevard flyover,
+    // and every one of its 20 sampled frames contains moving or parked traffic,
+    // so no frame clears the quiet-luxury bar. interior.mp4 is not an
+    // alternative either — every frame carries the old-logo watermark and most
+    // carry burned-in captions. Needs new photography; see PHASE-2A-SUMMARY.md.
+    // All unused files remain on disk.
     gallery: [
       { src: "/images/triple-towers/gallery-cinematic-1.jpg", altKey: "g1" },
       { src: "/images/triple-towers/gallery-cinematic-2.jpg", altKey: "g2" },
@@ -104,7 +111,6 @@ export const projects: Project[] = [
       { src: "/images/triple-towers/interieur-2.jpg", altKey: "g4" },
       { src: "/images/triple-towers/interieur-3.jpg", altKey: "g5" },
       { src: "/images/triple-towers/interieur-4.jpg", altKey: "g6" },
-      { src: "/images/triple-towers/gallery-location-1.jpg", altKey: "g7" },
       { src: "/images/triple-towers/reel-2.jpg", altKey: "g8" },
     ],
     amenities: [
