@@ -24,6 +24,17 @@ export type Project = {
   hero: { video: string; poster: string };
   /** 6s silent loop (~150-200 KB) that autoplays inside the project cards. */
   cardPreview: string;
+  /**
+   * Drone sequence of the surrounding district, rendered full-width just above
+   * the map so the visitor sees the neighbourhood before reading coordinates.
+   * Optional — only projects with location footage get the section.
+   */
+  neighbourhood?: { video: string; poster: string };
+  /**
+   * Short amenity proof shot shown beside the icon grid — an icon says
+   * "ascenseurs", this shows them. Optional.
+   */
+  amenityVideo?: { video: string; poster: string };
   /** Secondary videos shown in the "découvrir" / amenities blocks */
   videos: ProjectVideo[];
   gallery: GalleryItem[];
@@ -41,11 +52,21 @@ export const projects: Project[] = [
     id: "tripleTowers",
     slug: "triple-towers",
     status: "ongoing",
+    // Graded CapCut cinematic (2026-08) replaces the raw drone rush; the old
+    // hero-drone.mp4 stays on disk as a backup but is no longer referenced.
     hero: {
-      video: "/videos/triple-towers/hero-drone.mp4",
-      poster: "/images/posters/tt-hero.jpg",
+      video: "/videos/triple-towers/triple-towers-cinematic.mp4",
+      poster: "/images/posters/tt-cinematic.jpg",
     },
     cardPreview: "/videos/triple-towers/card-preview.mp4",
+    neighbourhood: {
+      video: "/videos/triple-towers/triple-towers-location.mp4",
+      poster: "/images/posters/tt-quartier.jpg",
+    },
+    amenityVideo: {
+      video: "/videos/triple-towers/triple-towers-sensors.mp4",
+      poster: "/images/posters/tt-sensors.jpg",
+    },
     videos: [
       {
         key: "interior",
@@ -144,9 +165,10 @@ export const projects: Project[] = [
     id: "delCosta",
     slug: "del-costa",
     status: "delivered",
+    // Graded CapCut cinematic (2026-08); hero-exterior.mp4 kept on disk unwired.
     hero: {
-      video: "/videos/del-costa/hero-exterior.mp4",
-      poster: "/images/posters/dc-hero.jpg",
+      video: "/videos/del-costa/del-costa-cinematic.mp4",
+      poster: "/images/posters/dc-cinematic.jpg",
     },
     cardPreview: "/videos/del-costa/card-preview.mp4",
     videos: [

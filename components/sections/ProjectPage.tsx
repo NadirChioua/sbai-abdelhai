@@ -6,6 +6,7 @@ import ProjectPresentation from "@/components/sections/ProjectPresentation";
 import AmenitiesGrid from "@/components/sections/AmenitiesGrid";
 import Gallery from "@/components/sections/Gallery";
 import VideoShowcase from "@/components/sections/VideoShowcase";
+import NeighbourhoodVideo from "@/components/sections/NeighbourhoodVideo";
 import LocationMap from "@/components/sections/LocationMap";
 import FAQ from "@/components/sections/FAQ";
 import ContactSection from "@/components/sections/ContactSection";
@@ -74,6 +75,14 @@ export default async function ProjectPage({
         title={tp("amenitiesTitle")}
         amenities={project.amenities}
         labelFor={(key) => ta(key)}
+        video={
+          project.amenityVideo && {
+            src: project.amenityVideo.video,
+            poster: project.amenityVideo.poster,
+            title: t("amenityVideoAlt"),
+            caption: t("amenityVideoCaption"),
+          }
+        }
       />
 
       <Gallery
@@ -91,6 +100,19 @@ export default async function ProjectPage({
         title={tp("videosTitle")}
         videos={videos}
       />
+
+      {/* Neighbourhood footage sits immediately above the map: see the place,
+          then read where it is. */}
+      {project.neighbourhood && (
+        <NeighbourhoodVideo
+          label={tp("neighbourhoodLabel")}
+          title={t("neighbourhoodTitle")}
+          caption={t("neighbourhoodCaption")}
+          video={project.neighbourhood.video}
+          poster={project.neighbourhood.poster}
+          videoTitle={t("neighbourhoodAlt")}
+        />
+      )}
 
       <LocationMap
         label={tp("locationLabel")}
