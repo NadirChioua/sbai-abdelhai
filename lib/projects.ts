@@ -94,14 +94,17 @@ export const projects: Project[] = [
         mode: "feature",
       },
     ],
+    // The three exterior stills below replace drone-1.jpg, drone-2.jpg and
+    // reel-1.jpg, which all showed the towers in shell state (bare concrete,
+    // crane, no glazing). Those files stay on disk, simply unreferenced.
     gallery: [
-      { src: "/images/triple-towers/drone-1.jpg", altKey: "g1" },
-      { src: "/images/triple-towers/drone-2.jpg", altKey: "g2" },
+      { src: "/images/triple-towers/gallery-cinematic-1.jpg", altKey: "g1" },
+      { src: "/images/triple-towers/gallery-cinematic-2.jpg", altKey: "g2" },
       { src: "/images/triple-towers/interieur-1.jpg", altKey: "g3" },
       { src: "/images/triple-towers/interieur-2.jpg", altKey: "g4" },
       { src: "/images/triple-towers/interieur-3.jpg", altKey: "g5" },
       { src: "/images/triple-towers/interieur-4.jpg", altKey: "g6" },
-      { src: "/images/triple-towers/reel-1.jpg", altKey: "g7" },
+      { src: "/images/triple-towers/gallery-location-1.jpg", altKey: "g7" },
       { src: "/images/triple-towers/reel-2.jpg", altKey: "g8" },
     ],
     amenities: [
