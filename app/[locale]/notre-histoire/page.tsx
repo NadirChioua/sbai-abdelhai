@@ -21,6 +21,9 @@ export async function generateMetadata({
 }
 
 const CHAPTERS = [
+  // The "m1973" key predates the founding-date resolution and is kept deliberately:
+  // chapter I now *displays* 1969 (see messages/*.json → history.timeline.m1973.year).
+  // Renaming the key would touch both locale files for no visible gain.
   { key: "m1973", numeral: "I", image: "/images/heritage/building-1980s.jpg" },
   { key: "m1980", numeral: "II", image: "/images/heritage/corniche.jpg" },
   { key: "m1990", numeral: "III", image: "/images/heritage/towers-fountain.jpg" },

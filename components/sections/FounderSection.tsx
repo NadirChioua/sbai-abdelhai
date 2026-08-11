@@ -7,7 +7,7 @@ const NOISE =
   "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E\")";
 
 /**
- * "L'homme derrière 53 ans d'histoire" — the client-approved cinematic
+ * "L'homme derrière 57 ans d'histoire" — the client-approved cinematic
  * treatment for the vertical founder interview: charcoal + grain, Marcellus
  * headline and real quote left, portrait video (max 420px, hairline gold
  * frame) right. Mobile: headline above, full-width video, native fullscreen.

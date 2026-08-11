@@ -5,7 +5,8 @@
 export const site = {
   name: "SBAI Immobilier",
   legalName: "SBAI Abdelhai & Associés",
-  foundingYear: 1973, // FINAL — see PROGRESS.md D1
+  // FINAL — the "SINCE 1969" mark on the logo is the authoritative source (PROGRESS.md D1).
+  foundingYear: 1969,
   city: "Tanger",
   country: "MA",
 

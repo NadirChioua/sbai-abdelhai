@@ -10,7 +10,7 @@ const ARCHIVE_PHOTOS = [
 ] as const;
 
 /**
- * Giant "1973" + signature line + heritage stats over ivory,
+ * Giant "1969" + signature line + heritage stats over ivory,
  * with a strip of archive photos from five decades of building Tanger.
  */
 export default function HeritageStrip() {
@@ -25,7 +25,7 @@ export default function HeritageStrip() {
               aria-hidden
               className="heading-display select-none text-[26vw] leading-[0.85] tracking-tight text-charcoal/[0.07] lg:text-[17rem]"
             >
-              1973
+              1969
             </p>
             <h2 className="heading-display -mt-6 max-w-xl text-h2 text-foreground lg:-mt-10">
               {t("title")}

@@ -1,14 +1,14 @@
 {
   "metadata": {
-    "title": "SBAI Immobilier — Promoteur immobilier à Tanger depuis 1973",
-    "description": "SBAI Abdelhai & Associés, le fleuron de l'immobilier à Tanger. 53 ans d'expérience, plus de 50 projets réalisés. Triple Towers, Les Villas de la Colline, Résidence Del Costa."
+    "title": "SBAI Immobilier — Promoteur immobilier à Tanger depuis 1969",
+    "description": "SBAI Abdelhai & Associés, le fleuron de l'immobilier à Tanger. 57 ans d'expérience, plus de 50 projets réalisés. Triple Towers, Les Villas de la Colline, Résidence Del Costa."
   },
   "common": {
     "brand": "SBAI Immobilier",
     "brandFull": "SBAI Abdelhai & Associés",
     "tagline": "Le Fleuron de l'immobilier",
-    "since": "Depuis 1973",
-    "yearsOfHeritage": "53 ans d'héritage",
+    "since": "Depuis 1969",
+    "yearsOfHeritage": "57 ans d'héritage",
     "cta": {
       "enquire": "Réservez une visite",
       "contact": "Contactez-nous",
@@ -47,7 +47,7 @@
     "privacy": "Confidentialité",
     "rights": "Tous droits réservés.",
     "address": "Tanger, Maroc",
-    "blurb": "Promoteur immobilier à Tanger depuis 1973. Trois générations au service de votre patrimoine.",
+    "blurb": "Promoteur immobilier à Tanger depuis 1969. Trois générations au service de votre patrimoine.",
     "newsletterTitle": "Restez informé",
     "newsletterHint": "Nouveaux projets, avancement des chantiers, conseils d'investissement.",
     "newsletterLabel": "Votre adresse e-mail",
@@ -55,8 +55,8 @@
     "newsletterSubmit": "S'inscrire"
   },
   "founder": {
-    "sectionTitle": "L'homme derrière 53 ans d'histoire",
-    "headline": "53 ans. Trois générations. Une seule promesse.",
+    "sectionTitle": "L'homme derrière 57 ans d'histoire",
+    "headline": "57 ans. Trois générations. Une seule promesse.",
     "quote": "Le client est toujours satisfait par nos engagements, lesquels nous respectons à la lettre.",
     "name": "Sbai Abdelhai",
     "role": "Fondateur du Groupe Abdelhai Sbai",
@@ -65,14 +65,14 @@
   "home": {
     "heroAlt": "Vue aérienne des Triple Towers face à la baie de Tanger",
     "heroTitle": "Le Fleuron de l'immobilier à Tanger",
-    "heroSubtitle": "Depuis plus de 53 années, notre signature nous engage.",
+    "heroSubtitle": "Trois générations. Depuis 1969, notre signature nous engage.",
     "scrollCue": "Découvrir la suite",
     "heritage": {
       "title": "Trois générations au service de votre patrimoine",
-      "body": "Converti à la promotion immobilière au début des années 70, le groupe Abdelhai Sbai a façonné le paysage de Tanger : lotissements, haut standing, moyen standing et logements sociaux. Une histoire de famille devenue une référence du Nord du Maroc.",
+      "body": "Converti à la promotion immobilière à la fin des années 60, le groupe Abdelhai Sbai a façonné le paysage de Tanger : lotissements, haut standing, moyen standing et logements sociaux. Une histoire de famille devenue une référence du Nord du Maroc.",
       "stats": {
         "years": {
-          "value": "53",
+          "value": "57",
           "label": "ans d'expérience"
         },
         "buildings": {
@@ -139,7 +139,7 @@
         "context": "Fondateur — extrait de l'interview filmée"
       },
       "quote2": {
-        "text": "Faire du bon travail, avoir des rapports cordiaux avec nos clients : c'est ainsi que nous bâtissons depuis les années 70.",
+        "text": "Faire du bon travail, avoir des rapports cordiaux avec nos clients : c'est ainsi que nous bâtissons depuis 1969.",
         "author": "Sbai Abdelhai",
         "context": "Fondateur — extrait de l'interview filmée"
       }
@@ -475,10 +475,10 @@
   },
   "projectsIndex": {
     "metaTitle": "Nos projets immobiliers à Tanger",
-    "metaDescription": "Découvrez les réalisations SBAI Immobilier à Tanger : Triple Towers, Les Villas de la Colline et la Résidence Del Costa. Plus de 200 immeubles livrés depuis 1973.",
+    "metaDescription": "Découvrez les réalisations SBAI Immobilier à Tanger : Triple Towers, Les Villas de la Colline et la Résidence Del Costa. Plus de 200 immeubles livrés depuis 1969.",
     "label": "Nos réalisations",
     "title": "Cinq décennies de projets, à Tanger",
-    "intro": "Depuis 1973, nous construisons pour des familles qui restent. Lotissements, immeubles de haut et moyen standing, logements sociaux : plus de 200 immeubles portent notre signature. Voici les projets que vous pouvez visiter aujourd'hui.",
+    "intro": "Depuis 1969, nous construisons pour des familles qui restent. Lotissements, immeubles de haut et moyen standing, logements sociaux : plus de 200 immeubles portent notre signature. Voici les projets que vous pouvez visiter aujourd'hui.",
     "filterLabel": "Filtrer les projets",
     "filters": {
       "all": "Tous",
@@ -488,17 +488,17 @@
     "count": "{count} projets affichés"
   },
   "history": {
-    "metaTitle": "Notre histoire — 53 ans d'immobilier à Tanger",
-    "metaDescription": "De 1973 à aujourd'hui : l'histoire du groupe Abdelhai Sbai, plus de 200 immeubles réalisés à Tanger et trois générations au service du patrimoine des familles.",
+    "metaTitle": "Notre histoire — 57 ans d'immobilier à Tanger",
+    "metaDescription": "De 1969 à aujourd'hui : l'histoire du groupe Abdelhai Sbai, plus de 200 immeubles réalisés à Tanger et trois générations au service du patrimoine des familles.",
     "label": "Notre histoire",
-    "title": "Cinquante-trois ans à bâtir Tanger",
-    "intro": "Une entreprise familiale née dans les années 70, devenue l'une des signatures de référence du Nord du Maroc. Voici ce qui s'est passé entre-temps.",
+    "title": "Cinquante-sept ans à bâtir Tanger",
+    "intro": "Une entreprise familiale née à la fin des années 60, devenue l'une des signatures de référence du Nord du Maroc. Voici ce qui s'est passé entre-temps.",
     "heroImageAlt": "Immeuble SBAI face aux fontaines à Tanger, photographie d'archives",
     "timelineLabel": "Chronologie",
-    "timelineTitle": "De 1973 à aujourd'hui",
+    "timelineTitle": "De 1969 à aujourd'hui",
     "timeline": {
       "m1973": {
-        "year": "1973",
+        "year": "1969",
         "title": "M. Sbai Abdelhai fonde le groupe",
         "body": "Le groupe Abdelhai Sbai se tourne vers la promotion immobilière. Les premières années sont rudes : la commercialisation ne va pas de soi et certains appartements se vendent autour de trente mille dirhams. Ce qui se construit alors n'est pas encore un patrimoine — c'est une réputation, immeuble après immeuble.",
         "imageAlt": "Un des premiers immeubles réalisés par SBAI à Tanger, archives du groupe"
@@ -541,7 +541,7 @@
       },
       "m2026": {
         "year": "2026",
-        "title": "Cinquante-trois ans, et une ville hôte",
+        "title": "Cinquante-sept ans, et une ville hôte",
         "body": "Plus de deux cents immeubles réalisés, trois générations à la barre, et une ville qui s'apprête à recevoir le Mondial 2030. Tanger n'a jamais eu autant besoin de promoteurs qui pensent en décennies plutôt qu'en saisons.",
         "imageAlt": "Villas SBAI dominant la baie de Tanger"
       },
@@ -577,7 +577,7 @@
     "metaDescription": "Marocains résidant à l'étranger : achetez à Tanger sans vous déplacer. Visites en visioconférence, procuration notariale, aide Daam Sakane et accompagnement aux horaires européens.",
     "label": "Espace MRE",
     "title": "Achetez à Tanger sans vous déplacer",
-    "intro": "Vous vivez en France, en Belgique, aux Pays-Bas, en Espagne ou en Italie. Votre projet est ici. Nous avons construit un accompagnement fait pour la distance — parce que 53 ans d'expérience valent surtout quand on ne peut pas passer sur le chantier le samedi matin.",
+    "intro": "Vous vivez en France, en Belgique, aux Pays-Bas, en Espagne ou en Italie. Votre projet est ici. Nous avons construit un accompagnement fait pour la distance — parce que 57 ans d'expérience valent surtout quand on ne peut pas passer sur le chantier le samedi matin.",
     "heroImageAlt": "Villas SBAI dominant la baie de Tanger",
     "whatsappCta": "Parler à un conseiller",
     "whatsappMessage": "Bonjour, je suis MRE et je souhaite être accompagné pour un achat à Tanger.",
@@ -607,7 +607,7 @@
     },
     "trust": {
       "years": {
-        "value": "53 ans",
+        "value": "57 ans",
         "label": "d'expérience à Tanger"
       },
       "delivered": {
