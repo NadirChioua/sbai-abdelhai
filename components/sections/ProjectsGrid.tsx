@@ -29,7 +29,7 @@ export default function ProjectsGrid() {
             <RevealOnScroll key={p.slug} delay={i * 0.12}>
               <ProjectCard
                 href={`/projets/${p.slug}`}
-                image={p.hero.poster}
+                image={p.cardPoster ?? p.hero.poster}
                 imageAlt={t(`projects.items.${p.id}.heroAlt`)}
                 video={p.cardPreview}
                 title={t(`projects.items.${p.id}.name`)}

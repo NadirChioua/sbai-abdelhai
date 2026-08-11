@@ -25,6 +25,12 @@ export type Project = {
   /** 6s silent loop (~150-200 KB) that autoplays inside the project cards. */
   cardPreview: string;
   /**
+   * Still for the card, cut from ~30% into `cardPreview` itself. Without it the
+   * card falls back to the hero poster, which is a different moment and makes
+   * the card visibly jump when the loop starts.
+   */
+  cardPoster?: string;
+  /**
    * Drone sequence of the surrounding district, rendered full-width just above
    * the map so the visitor sees the neighbourhood before reading coordinates.
    * Optional — only projects with location footage get the section.
@@ -59,6 +65,7 @@ export const projects: Project[] = [
       poster: "/images/posters/tt-cinematic.jpg",
     },
     cardPreview: "/videos/triple-towers/card-preview.mp4",
+    cardPoster: "/images/posters/tt-card.jpg",
     neighbourhood: {
       video: "/videos/triple-towers/triple-towers-location.mp4",
       poster: "/images/posters/tt-quartier.jpg",
@@ -121,6 +128,7 @@ export const projects: Project[] = [
       poster: "/images/posters/vc-hero.jpg",
     },
     cardPreview: "/videos/villas-colline/card-preview.mp4",
+    cardPoster: "/images/posters/vc-card.jpg",
     videos: [
       {
         key: "interior",
@@ -171,6 +179,7 @@ export const projects: Project[] = [
       poster: "/images/posters/dc-cinematic.jpg",
     },
     cardPreview: "/videos/del-costa/card-preview.mp4",
+    cardPoster: "/images/posters/dc-card.jpg",
     videos: [
       {
         key: "interior",
