@@ -25,6 +25,25 @@ export const site = {
   mapQuery: process.env.NEXT_PUBLIC_MAP_QUERY ?? "SBAI Immobilier, Tanger, Maroc",
   mapImage: "/images/maps/tanger-centre.jpg",
 
+  /**
+   * Sales office ("bureau de vente") — the physical place a visitor can walk into.
+   *
+   * TODO(client-meeting-today): EVERY value below is a placeholder awaiting the
+   * client meeting of 2026-08-11. Replace `address`, `lat`, `lng`, and regenerate
+   * `mapImage` from OpenStreetMap tiles centred on the real coordinates (the
+   * current image is the generic Tanger-centre tile). Opening hours, spoken
+   * languages and the "comment nous trouver" directions live in
+   * messages/{fr,ar}.json under `bureau.*` and carry the same marker.
+   */
+  office: {
+    address: "Boulevard Mohammed VI, Tanger, Maroc",
+    lat: 35.7595,
+    lng: -5.834,
+    mapImage: "/images/maps/tanger-centre.jpg",
+    video: "/videos/bureau/bureau-location.mp4",
+    videoPoster: "/images/posters/bureau-location.jpg",
+  },
+
   social: {
     instagram: "https://www.instagram.com/sbaimmobiliertanger",
     tiktok: "https://www.tiktok.com/@sbaiimmobilier",

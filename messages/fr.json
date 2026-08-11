@@ -436,6 +436,25 @@
     "sendAnother": "Envoyer une autre demande",
     "errorBody": "L'envoi a échoué. Réessayez, ou contactez-nous directement sur WhatsApp."
   },
+  "bureau": {
+    "label": "— Notre bureau de vente —",
+    "title": "Venez nous rencontrer",
+    "addressTitle": "Notre adresse",
+    "hoursLabel": "Horaires",
+    "hoursWeekdays": "Lundi — Vendredi : 9h00 — 19h00",
+    "hoursSaturday": "Samedi : 9h00 — 13h00",
+    "hoursSunday": "Dimanche : sur rendez-vous",
+    "languagesLabel": "Langues parlées",
+    "languages": "Français · العربية · English",
+    "whatsappMessage": "Bonjour, je souhaite passer au bureau de vente. Quelles sont vos disponibilités ?",
+    "directionsTitle": "Comment nous trouver",
+    "directions": "À 5 minutes du [repère], en face de [repère], sur le [axe]. — Texte d'orientation à compléter avec le client (TODO client-meeting-today).",
+    "mapAlt": "Carte de localisation du bureau de vente SBAI à Tanger",
+    "mapAttribution": "Fond de carte © OpenStreetMap",
+    "openInMaps": "Ouvrir dans Google Maps",
+    "videoAlt": "Vue aérienne du quartier du bureau de vente SBAI à Tanger",
+    "videoCaption": "Le bureau et ses abords, vus du ciel."
+  },
   "projectPage": {
     "scrollCue": "Découvrir le projet",
     "status": {

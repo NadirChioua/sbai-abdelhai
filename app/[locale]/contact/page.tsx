@@ -3,7 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Clock, Languages, Mail, MapPin, Phone } from "lucide-react";
 import { routing } from "@/i18n/routing";
 import ContactSection from "@/components/sections/ContactSection";
-import LocationMap from "@/components/sections/LocationMap";
+import BureauDeVente from "@/components/sections/BureauDeVente";
 import RevealOnScroll from "@/components/motion/RevealOnScroll";
 import { site, whatsappLink } from "@/lib/config";
 import { WhatsAppIcon } from "@/components/ui/icons";
@@ -92,19 +92,12 @@ export default async function Page({ params }: PageProps<"/[locale]/contact">) {
         </div>
       </section>
 
-      <ContactSection />
+      {/* The sales office is the primary block on this page; the form follows.
+          It carries its own static map, so the generic <LocationMap /> that used
+          to close the page was removed rather than shown twice. */}
+      <BureauDeVente />
 
-      <LocationMap
-        label={t("mapLabel")}
-        title={t("mapTitle")}
-        body={t("mapBody")}
-        mapImage={site.mapImage}
-        mapQuery={site.mapQuery}
-        mapAlt={t("mapEmbedTitle")}
-        address={site.address}
-        externalLabel={t("openInMaps")}
-        attribution={t("mapAttribution")}
-      />
+      <ContactSection />
     </main>
   );
 }

@@ -437,6 +437,25 @@
     "sendAnother": "إرسال طلب آخر",
     "errorBody": "فشل الإرسال. حاولوا مجدداً أو راسلونا مباشرة على واتساب."
   },
+  "bureau": {
+    "label": "— مكتب البيع —",
+    "title": "تفضّلوا بزيارتنا",
+    "addressTitle": "عنواننا",
+    "hoursLabel": "أوقات العمل",
+    "hoursWeekdays": "الاثنين — الجمعة: 9:00 — 19:00",
+    "hoursSaturday": "السبت: 9:00 — 13:00",
+    "hoursSunday": "الأحد: بموعد مسبق",
+    "languagesLabel": "لغات التواصل",
+    "languages": "العربية · Français · English",
+    "whatsappMessage": "السلام عليكم، أودّ زيارة مكتب البيع. ما هي أوقات استقبالكم؟",
+    "directionsTitle": "كيف تصلون إلينا",
+    "directions": "على بعد 5 دقائق من [معلم]، مقابل [معلم]، في [الشارع]. — نص الإرشاد في انتظار معطيات العميل (TODO client-meeting-today).",
+    "mapAlt": "خريطة موقع مكتب البيع سباعي بطنجة",
+    "mapAttribution": "خلفية الخريطة © OpenStreetMap",
+    "openInMaps": "الفتح في خرائط غوغل",
+    "videoAlt": "منظر جوي لحي مكتب البيع سباعي بطنجة",
+    "videoCaption": "المكتب ومحيطه من الجو."
+  },
   "projectPage": {
     "scrollCue": "اكتشف المشروع",
     "status": {

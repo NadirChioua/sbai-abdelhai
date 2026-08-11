@@ -7,6 +7,7 @@ import FounderSection from "@/components/sections/FounderSection";
 import MRESection from "@/components/sections/MRESection";
 import CdM2030 from "@/components/sections/CdM2030";
 import Testimonials from "@/components/sections/Testimonials";
+import BureauDeVente from "@/components/sections/BureauDeVente";
 import ContactSection from "@/components/sections/ContactSection";
 
 export default function HomePage({ params }: PageProps<"/[locale]">) {
@@ -22,6 +23,7 @@ export default function HomePage({ params }: PageProps<"/[locale]">) {
       <MRESection />
       <CdM2030 />
       <Testimonials />
+      <BureauDeVente />
       <ContactSection />
     </main>
   );
