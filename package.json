@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "copy-review": "node scripts/generate-copy-review.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.5.7",
@@ -24,8 +25,10 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "docx": "^9.7.1",
     "eslint": "^9",
     "eslint-config-next": "16.2.12",
+    "pdf-lib": "^1.17.1",
     "playwright": "^1.62.0",
     "tailwindcss": "^4",
     "typescript": "^5"
