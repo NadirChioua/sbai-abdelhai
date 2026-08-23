@@ -121,15 +121,22 @@ export const projects: Project[] = [
       { src: "/images/triple-towers/interieur-4.jpg", altKey: "g6" },
       { src: "/images/triple-towers/reel-2.jpg", altKey: "g8" },
     ],
+    // Per client review 2026-08-23 (Mod 12): "Ascenseurs" -> "Ascenseurs
+    // panoramiques" and "Parking" -> "Parking optionnel" (renamed, new keys
+    // in messages/{fr,ar}.json — old "elevator"/"parking" keys kept for
+    // delCosta/villasColline, which still use them). "Terrasse" removed
+    // ("non accessible" per client annotation); "Proche du centre" picked
+    // over Conciergerie/Proche de la plage as most relevant to Malabata
+    // front-de-mer (client approved all three).
     amenities: [
       "airConditioning",
       "doubleGlazing",
       "marble",
       "seaView",
-      "elevator",
-      "parking",
+      "panoramicElevators",
+      "optionalParking",
       "security",
-      "terrace",
+      "nearCity",
     ],
     facts: ["floors", "typologies", "delivery", "price"],
     // TODO(client-clarify-Q5): M. Sbai marked "non" next to FAQ q5 ("Puis-je
