@@ -15,8 +15,9 @@ import { site, whatsappLink } from "@/lib/config";
  * Maps link that only fires on an explicit click in a new tab. Do not swap this
  * for an embedded iframe (see HANDOFF-ANALYSIS §12).
  *
- * TODO(client-meeting-today): address, coordinates, hours, languages and the
- * orientation sentences are placeholders — see lib/config.ts `office`.
+ * Address confirmed by client 2026-08-23 — see lib/config.ts `office`.
+ * TODO(coordinates): lat/lng, mapImage and the "comment nous trouver"
+ * orientation sentence are still placeholders awaiting the real coordinates.
  */
 export default function BureauDeVente() {
   const t = useTranslations("bureau");
