@@ -237,16 +237,16 @@
       "villasColline": {
         "name": "Les Villas de la Colline",
         "location": "Tanger — Les hauteurs",
-        "tagline": "Villas avec piscines et jardins, sur les hauteurs qui dominent la baie de Tanger.",
+        "tagline": "Villas avec piscine et jardins, sur les hauteurs qui dominent la baie de Tanger.",
         "heroAlt": "Les Villas de la Colline et leurs jardins, vue drone sur la baie de Tanger",
         "metaTitle": "Les Villas de la Colline — Villas avec piscine, Tanger",
         "metaDescription": "Les Villas de la Colline : villas livrées avec piscines et jardins, sur les hauteurs de Tanger. Un projet SBAI Immobilier. Visite sur rendez-vous.",
         "presentationTitle": "Vivre en hauteur, à dix minutes de tout",
         "description1": "Les Villas de la Colline occupent l'une des plus belles positions de Tanger : une colline qui domine la baie, assez haute pour que le bruit de la ville ne monte pas, assez proche pour que tout reste accessible. Le projet est livré et habité — c'est un quartier vivant, pas une promesse sur plan.",
-        "description2": "Chaque villa dispose de son jardin, et le complexe s'organise autour de ses piscines et de ses allées plantées. Nous avons dessiné les implantations pour que personne ne regarde chez son voisin : les vues portent sur la mer, la colline ou les jardins. C'est un projet pensé pour les familles qui veulent de l'espace sans quitter Tanger.",
+        "description2": "Chaque villa dispose d'un jardin commun, et le complexe s'organise autour de sa piscine et de ses allées plantées. L'intimité de chaque villa est respectée par notre choix d'implantation, avec des vues portant sur la mer, la colline ou les jardins. C'est un projet pensé pour les familles qui veulent de l'espace sans quitter Tanger.",
         "locationTitle": "Sur les hauteurs de Tanger",
         "locationBody": "Le secteur des collines, vers Cap Spartel, offre le meilleur compromis de la ville : le calme et les vues d'un environnement résidentiel, avec le centre de Tanger accessible en quelques minutes de voiture.",
-        "stickyDetail": "Villas avec piscines · Livré",
+        "stickyDetail": "Villas avec piscine · Livré",
         "facts": {
           "typology": {
             "label": "Typologie",
@@ -254,7 +254,7 @@
           },
           "surface": {
             "label": "Extérieurs",
-            "value": "Jardin privatif et piscines"
+            "value": "Jardin et piscine communs"
           },
           "status": {
             "label": "Statut",
@@ -271,16 +271,16 @@
             "caption": "L'intérieur d'une villa"
           },
           "poolGarden": {
-            "title": "Les piscines et les jardins des Villas de la Colline",
-            "caption": "Piscines et jardins du complexe"
+            "title": "La piscine et les jardins des Villas de la Colline",
+            "caption": "Piscine et jardins du complexe"
           }
         },
         "gallery": {
           "g1": "Allée privée et végétation des Villas de la Colline",
           "g2": "Vue aérienne des Villas de la Colline et de leurs toitures en tuiles",
           "g3": "Les villas et leurs jardins vus du ciel",
-          "g4": "Piscine du complexe entourée de villas",
-          "g5": "Vue aérienne sur une piscine des Villas de la Colline",
+          "g4": "La piscine au centre du complexe des Villas de la Colline",
+          "g5": "Vue aérienne sur la piscine des Villas de la Colline",
           "g6": "Le complexe des Villas de la Colline vu du ciel",
           "g7": "Chambre principale d'une villa de la Colline",
           "g8": "Chambre d'enfants d'une villa de la Colline",
@@ -293,7 +293,7 @@
           },
           "q2": {
             "q": "Chaque villa a-t-elle son jardin ?",
-            "a": "Oui, chaque villa dispose de son espace extérieur privatif, en complément des piscines et des allées paysagères partagées par le complexe."
+            "a": "Oui, chaque villa dispose de son espace extérieur privatif, en complément de la piscine et des allées paysagères partagées par le complexe."
           },
           "q3": {
             "q": "À quelle distance se trouve le centre de Tanger ?",
@@ -557,7 +557,7 @@
       "m2020": {
         "year": "2020",
         "title": "Les Villas de la Colline",
-        "body": "Le savoir-faire monte sur les hauteurs. Des villas avec jardins et piscines, implantées pour que personne ne regarde chez son voisin : les vues portent sur la mer, la colline ou les jardins. Le projet est livré, habité, et se visite encore.",
+        "body": "Le savoir-faire monte sur les hauteurs. Des villas avec jardin et piscine communs, implantées pour que personne ne regarde chez son voisin : les vues portent sur la mer, la colline ou les jardins. Le projet est livré, habité, et se visite encore.",
         "imageAlt": "Vue aérienne des Villas de la Colline et de leurs jardins"
       },
       "m2024": {
