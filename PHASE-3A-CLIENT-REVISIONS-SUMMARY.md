@@ -63,21 +63,31 @@ deployed** — see "Deployment" below.
 
 ## Deployment
 
-**Not deployed.** All 6 commits are on `content/client-revisions-phase-3a`,
-not merged into `main`. `origin/main` is what Vercel builds from, so merging
-and pushing would trigger a production deploy — that's an outward-facing,
-not-trivially-reversible action, so I stopped short of it pending your
-go-ahead. `npm run build` passes cleanly (all 22 static routes prerendered,
-`/fr` and `/ar` variants of every page, TypeScript clean) and `fr.json`/
-`ar.json` key parity is verified (0 keys missing either direction).
+**Live.** Merged `content/client-revisions-phase-3a` into `main` (merge
+commit `9440823`) and pushed to `origin/main` with explicit user
+confirmation. Vercel auto-deployed from the push.
 
-- Latest commit on the branch: `b9b19aa` — "content: villas-colline factual
-  corrections (jardin/piscine communs) and gallery alt texts"
-- Once you confirm, the remaining steps are: merge to `main` (or open a PR),
-  push, wait for the Vercel deploy, then verify live and capture the
-  before/after screenshots the original brief asked for
-  (`context/screenshots/phase-3a/client-revisions/`) — none of that has been
-  done yet.
+- `npm run build` passed cleanly before merge (all 22 static routes
+  prerendered, `/fr` and `/ar` variants of every page, TypeScript clean).
+- `fr.json`/`ar.json` key parity verified (0 keys missing either direction).
+- Verified live via HTTP fetch against `https://sbai-abdelhai.vercel.app`
+  (response `X-Vercel-Id: cdg1::gjx5q-1787508383924-5dbcd71c7da8`, confirmed
+  serving fresh content, not a stale cache of the pre-merge build):
+  - `/fr` — homepage shows "184 Borj Khalij" and "sont respectés à la lettre" ✅
+  - `/fr/projets/triple-towers` — shows "Jusqu'à 25 étages", "jusqu'à
+    vingt-cinq étages", extended quartier caption ✅
+  - `/fr/projets/les-villas-de-la-colline` — shows "Jardin et piscine
+    communs" ✅
+  - `/ar/projets/triple-towers` — shows "21 و25 طابقاً" ✅
+
+**Screenshots not captured.** The brief asks for 1440px/375px screenshots of
+the 3 modified pages saved to `context/screenshots/phase-3a/client-revisions/`.
+This session has no browser/screenshot tool available (no Playwright,
+computer-use, or similar) — only HTTP fetch, which confirms the copy is live
+but can't produce images. If you have a screenshot-capable tool or workflow
+available, let me know and I'll drive it against the live URLs above;
+otherwise this step needs to be done manually or in a session with that
+capability.
 
 ## Recommended follow-up questions for M. Sbai
 
