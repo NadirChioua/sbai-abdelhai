@@ -57,7 +57,7 @@
   "founder": {
     "sectionTitle": "L'homme derrière 57 ans d'histoire",
     "headline": "57 ans. Trois générations. Une seule promesse.",
-    "quote": "Le client est toujours satisfait par nos engagements, lesquels nous respectons à la lettre.",
+    "quote": "Le client est toujours satisfait par nos engagements, lesquels sont respectés à la lettre.",
     "name": "Sbai Abdelhai",
     "role": "Fondateur du Groupe Abdelhai Sbai",
     "videoTitle": "Interview de M. Sbai Abdelhai, fondateur du groupe"
@@ -95,14 +95,14 @@
     "mre": {
       "label": "Espace MRE",
       "title": "Investir au pays, en toute confiance",
-      "body": "Vous vivez en France, en Belgique, aux Pays-Bas, en Espagne ? Votre projet immobilier à Tanger se construit à distance, avec un interlocuteur unique qui vous connaît.",
+      "body": "Vous vivez en France, en Belgique, aux Pays-Bas, en Espagne, ou autres pays à l'étranger ? Votre projet immobilier à Tanger se construit à distance, avec un interlocuteur unique qui vous connaît.",
       "points": {
         "remote": "Accompagnement 100 % à distance : visites vidéo en direct, dossiers dématérialisés, signature lors de votre passage au Maroc.",
         "daam": "Programme Daam Sakane : jusqu'à 100 000 MAD d'aide directe de l'État, accessible aussi aux Marocains résidant à l'étranger.",
-        "hours": "Disponibilité aux horaires européens, en français, en arabe et en darija."
+        "hours": "Disponibilité aux horaires européens, en français, en arabe, en darija, en espagnol et en anglais."
       },
       "whatsappMessage": "Bonjour, je suis MRE et je souhaite des informations sur vos projets à Tanger.",
-      "imageAlt": "Piscine et palmiers d'une résidence SBAI à Tanger"
+      "imageAlt": "Piscine et palmiers d'une résidence SBAI Abdelhai à Tanger"
     },
     "cdm": {
       "label": "Cap sur 2030",
@@ -123,7 +123,7 @@
         },
         "tgv": {
           "value": "Al Boraq",
-          "label": "le TGV marocain, étendu vers le sud"
+          "label": "le TGV marocain qui relie Tanger à Casablanca, fait l'objet d'une extension jusqu'à Marrakech"
         }
       },
       "cta": "Investir avant 2030"
@@ -134,7 +134,7 @@
       "videoTitle": "Témoignage vidéo filmé aux Triple Towers",
       "videoCaption": "Témoignage filmé — Triple Towers, Tanger",
       "quote1": {
-        "text": "Le client est toujours satisfait par nos engagements, lesquels nous respectons à la lettre.",
+        "text": "Le client est toujours satisfait par nos engagements, lesquels sont respectés à la lettre.",
         "author": "Sbai Abdelhai",
         "context": "Fondateur — extrait de l'interview filmée"
       },
@@ -150,25 +150,25 @@
       "tripleTowers": {
         "name": "Triple Towers",
         "location": "Tanger — Front de mer",
-        "tagline": "25 étages face à la Méditerranée : climatisation intégrée, double vitrage, marbre et vue panoramique.",
-        "heroAlt": "Les Triple Towers en construction face à la baie de Tanger, vue drone",
+        "tagline": "Jusqu'à 25 étages face à la Méditerranée : climatisation intégrée, double vitrage, marbre et vue panoramique.",
+        "heroAlt": "Les Triple Towers face à la baie de Tanger, vue drone",
         "metaTitle": "Triple Towers — Appartements neufs face à la mer, Tanger",
-        "metaDescription": "Triple Towers : 25 étages face à la Méditerranée à Tanger. Climatisation intégrée, double vitrage, marbre et vue panoramique. Réservez votre visite.",
+        "metaDescription": "Triple Towers : jusqu'à 25 étages face à la Méditerranée à Tanger. Climatisation intégrée, double vitrage, marbre et vue panoramique. Réservez votre visite.",
         "presentationTitle": "Le projet qui fait notre fierté",
-        "description1": "Triple Towers est l'aboutissement de cinq décennies de métier. Vingt-cinq étages qui s'élèvent face à la Méditerranée, sur le front de mer de Tanger, là où la ville regarde l'Europe. Chaque appartement a été pensé pour que la vue ne soit jamais un supplément, mais le point de départ.",
+        "description1": "Triple Towers est l'aboutissement de cinq décennies de métier. Jusqu'à vingt-cinq étages qui s'élèvent face à la Méditerranée, sur le front de mer de Tanger, là où la ville regarde l'Europe. Chaque appartement a été pensé pour que la vue ne soit jamais un supplément, mais le point de départ.",
         "description2": "À l'intérieur, nous avons retenu les produits les plus performants : climatisation intégrée, double vitrage, marbre. Ce sont des choix qui ne se voient pas sur une plaquette mais qui se vivent chaque jour — le silence quand la ville s'agite, la fraîcheur en août, la lumière qui entre sans la chaleur. C'est notre définition du confort : ce dont on ne parle plus une fois qu'on y habite.",
         "neighbourhoodTitle": "Ce que vous avez autour",
-        "neighbourhoodCaption": "Vue drone du quartier : le boulevard qui dessert les tours, le centre commercial et sa salle de cinéma, les hôtels, et les commerces en pied d'immeuble — la mer au bout de l'avenue.",
+        "neighbourhoodCaption": "Vue drone du quartier : le boulevard qui dessert les tours, le centre commercial et sa salle de cinéma, les hôtels, la Corniche de Tanger, la proximité de la gare TGV et les commerces en pied d'immeuble — la mer au bout de l'avenue.",
         "neighbourhoodAlt": "Vue aérienne du quartier autour des Triple Towers : boulevard, commerces et front de mer",
         "amenityVideoAlt": "Vue drone des ascenseurs panoramiques entre les tours",
         "amenityVideoCaption": "Les ascenseurs panoramiques vus de l'extérieur : la cage vitrée court sur toute la hauteur, entre les deux tours.",
         "locationTitle": "Sur le front de mer, à Tanger",
-        "locationBody": "Le quartier Malabata concentre ce qui fait la valeur d'un bien à Tanger : la mer en face, le centre-ville à quelques minutes, et une dynamique de quartier portée par les grands chantiers de la ville. C'est l'une des zones les plus recherchées du marché tangérois.",
-        "stickyDetail": "25 étages · Front de mer · En cours",
+        "locationBody": "Le quartier Malabata concentre ce qui fait la valeur d'un bien à Tanger : la mer en face, le centre-ville à quelques minutes, et une dynamique de quartier portée par les grands chantiers de la ville. C'est l'une des zones les plus recherchées du marché tangérois. Les visites des appartements disponibles sont réalisées à tout moment ; un responsable est en place en permanence.",
+        "stickyDetail": "Jusqu'à 25 étages · Front de mer · En cours",
         "facts": {
           "floors": {
             "label": "Hauteur",
-            "value": "25 étages"
+            "value": "21 & 25 étages"
           },
           "typologies": {
             "label": "Typologies",
@@ -176,7 +176,7 @@
           },
           "delivery": {
             "label": "Livraison",
-            "value": "Chantier en cours d'achèvement"
+            "value": "Livraison finale en cours"
           },
           "price": {
             "label": "Prix",
@@ -193,12 +193,12 @@
             "caption": "La tour, vue du sol"
           },
           "ugc": {
-            "title": "Visite guidée du chantier des Triple Towers",
+            "title": "Immeuble terminé — Triple Towers",
             "caption": "Visite guidée sur place"
           }
         },
         "gallery": {
-          "g1": "Balcons et terrasses des Triple Towers, façade achevée en lumière du soir",
+          "g1": "Balcons et terrasses des Triple Towers, façade illuminée le soir",
           "g2": "Les Triple Towers achevées face à la baie de Tanger, vue aérienne",
           "g3": "Séjour de l'appartement témoin, canapé et cuisine ouverte",
           "g4": "Coin salon de l'appartement témoin des Triple Towers",
@@ -214,11 +214,11 @@
           },
           "q2": {
             "q": "Quelles typologies d'appartements sont disponibles ?",
-            "a": "Des appartements de deux à quatre pièces, répartis sur vingt-cinq étages. Les disponibilités évoluent régulièrement : contactez-nous pour connaître les lots encore ouverts à la réservation."
+            "a": "Des appartements de deux à quatre pièces, répartis sur vingt-et-un à vingt-cinq étages. Les disponibilités s'amenuisent : contactez-nous pour connaître les lots encore ouverts à la vente."
           },
           "q3": {
             "q": "Quel est le prix d'un appartement ?",
-            "a": "Les prix dépendent de l'étage, de la typologie et de l'orientation. Nous les communiquons sur demande, avec le détail du plan de paiement — appelez-nous ou écrivez-nous sur WhatsApp."
+            "a": "Les prix dépendent de l'étage, de la typologie et de l'orientation. Nous les communiquons sur demande. Contactez-nous ou écrivez-nous sur WhatsApp."
           },
           "q4": {
             "q": "Quelles prestations sont incluses ?",
@@ -237,16 +237,16 @@
       "villasColline": {
         "name": "Les Villas de la Colline",
         "location": "Tanger — Les hauteurs",
-        "tagline": "Villas avec piscines et jardins, sur les hauteurs qui dominent la baie de Tanger.",
+        "tagline": "Villas avec piscine et jardins, sur les hauteurs qui dominent la baie de Tanger.",
         "heroAlt": "Les Villas de la Colline et leurs jardins, vue drone sur la baie de Tanger",
         "metaTitle": "Les Villas de la Colline — Villas avec piscine, Tanger",
         "metaDescription": "Les Villas de la Colline : villas livrées avec piscines et jardins, sur les hauteurs de Tanger. Un projet SBAI Immobilier. Visite sur rendez-vous.",
         "presentationTitle": "Vivre en hauteur, à dix minutes de tout",
         "description1": "Les Villas de la Colline occupent l'une des plus belles positions de Tanger : une colline qui domine la baie, assez haute pour que le bruit de la ville ne monte pas, assez proche pour que tout reste accessible. Le projet est livré et habité — c'est un quartier vivant, pas une promesse sur plan.",
-        "description2": "Chaque villa dispose de son jardin, et le complexe s'organise autour de ses piscines et de ses allées plantées. Nous avons dessiné les implantations pour que personne ne regarde chez son voisin : les vues portent sur la mer, la colline ou les jardins. C'est un projet pensé pour les familles qui veulent de l'espace sans quitter Tanger.",
+        "description2": "Chaque villa dispose d'un jardin commun, et le complexe s'organise autour de sa piscine et de ses allées plantées. L'intimité de chaque villa est respectée par notre choix d'implantation, avec des vues portant sur la mer, la colline ou les jardins. C'est un projet pensé pour les familles qui veulent de l'espace sans quitter Tanger.",
         "locationTitle": "Sur les hauteurs de Tanger",
         "locationBody": "Le secteur des collines, vers Cap Spartel, offre le meilleur compromis de la ville : le calme et les vues d'un environnement résidentiel, avec le centre de Tanger accessible en quelques minutes de voiture.",
-        "stickyDetail": "Villas avec piscines · Livré",
+        "stickyDetail": "Villas avec piscine · Livré",
         "facts": {
           "typology": {
             "label": "Typologie",
@@ -254,7 +254,7 @@
           },
           "surface": {
             "label": "Extérieurs",
-            "value": "Jardin privatif et piscines"
+            "value": "Jardin et piscine communs"
           },
           "status": {
             "label": "Statut",
@@ -271,16 +271,16 @@
             "caption": "L'intérieur d'une villa"
           },
           "poolGarden": {
-            "title": "Les piscines et les jardins des Villas de la Colline",
-            "caption": "Piscines et jardins du complexe"
+            "title": "La piscine et les jardins des Villas de la Colline",
+            "caption": "Piscine et jardins du complexe"
           }
         },
         "gallery": {
           "g1": "Allée privée et végétation des Villas de la Colline",
           "g2": "Vue aérienne des Villas de la Colline et de leurs toitures en tuiles",
           "g3": "Les villas et leurs jardins vus du ciel",
-          "g4": "Piscine du complexe entourée de villas",
-          "g5": "Vue aérienne sur une piscine des Villas de la Colline",
+          "g4": "La piscine au centre du complexe des Villas de la Colline",
+          "g5": "Vue aérienne sur la piscine des Villas de la Colline",
           "g6": "Le complexe des Villas de la Colline vu du ciel",
           "g7": "Chambre principale d'une villa de la Colline",
           "g8": "Chambre d'enfants d'une villa de la Colline",
@@ -293,7 +293,7 @@
           },
           "q2": {
             "q": "Chaque villa a-t-elle son jardin ?",
-            "a": "Oui, chaque villa dispose de son espace extérieur privatif, en complément des piscines et des allées paysagères partagées par le complexe."
+            "a": "Oui, chaque villa dispose de son espace extérieur privatif, en complément de la piscine et des allées paysagères partagées par le complexe."
           },
           "q3": {
             "q": "À quelle distance se trouve le centre de Tanger ?",
@@ -487,6 +487,8 @@
     "seaView": "Vue mer",
     "elevator": "Ascenseurs",
     "parking": "Parking",
+    "panoramicElevators": "Ascenseurs panoramiques",
+    "optionalParking": "Parking optionnel",
     "security": "Sécurité 24/7",
     "terrace": "Terrasse",
     "pool": "Piscine",
@@ -555,12 +557,12 @@
       "m2020": {
         "year": "2020",
         "title": "Les Villas de la Colline",
-        "body": "Le savoir-faire monte sur les hauteurs. Des villas avec jardins et piscines, implantées pour que personne ne regarde chez son voisin : les vues portent sur la mer, la colline ou les jardins. Le projet est livré, habité, et se visite encore.",
+        "body": "Le savoir-faire monte sur les hauteurs. Des villas avec jardin et piscine communs, implantées pour que personne ne regarde chez son voisin : les vues portent sur la mer, la colline ou les jardins. Le projet est livré, habité, et se visite encore.",
         "imageAlt": "Vue aérienne des Villas de la Colline et de leurs jardins"
       },
       "m2024": {
         "year": "2024",
-        "title": "Triple Towers, vingt-cinq étages",
+        "title": "Triple Towers, jusqu'à vingt-cinq étages",
         "body": "Sur le front de mer, la tour qui fait notre fierté s'élève : climatisation intégrée, double vitrage, marbre, vue panoramique sur toute la hauteur. C'est l'aboutissement technique de cinq décennies de chantiers.",
         "imageAlt": "Les Triple Towers face à la baie de Tanger, vue aérienne"
       },
@@ -586,7 +588,7 @@
       },
       "trust": {
         "title": "Confiance",
-        "body": "« Le client est toujours satisfait par nos engagements, lesquels nous respectons à la lettre. » Cette phrase du fondateur est la seule règle commerciale que nous ayons jamais eu besoin d'écrire."
+        "body": "« Le client est toujours satisfait par nos engagements, lesquels sont respectés à la lettre. » Cette phrase du fondateur est la seule règle commerciale que nous ayons jamais eu besoin d'écrire."
       },
       "roots": {
         "title": "Ancrage",

@@ -28,15 +28,20 @@ export const site = {
   /**
    * Sales office ("bureau de vente") — the physical place a visitor can walk into.
    *
-   * TODO(client-meeting-today): EVERY value below is a placeholder awaiting the
-   * client meeting of 2026-08-11. Replace `address`, `lat`, `lng`, and regenerate
-   * `mapImage` from OpenStreetMap tiles centred on the real coordinates (the
-   * current image is the generic Tanger-centre tile). Opening hours, spoken
-   * languages and the "comment nous trouver" directions live in
-   * messages/{fr,ar}.json under `bureau.*` and carry the same marker.
+   * `address` confirmed by client review, 2026-08-23 (annotated copy PDF, Mod 2):
+   * real address replaces the Boulevard Mohammed VI placeholder.
+   *
+   * TODO(coordinates): `lat`/`lng` and `mapImage` are still the old
+   * Tanger-centre placeholder — we don't have verified coordinates for
+   * "184 Borj Khalij, Tanger" yet. Do not guess; get them from the client or
+   * geocode the confirmed address, then regenerate `mapImage` from OpenStreetMap
+   * tiles centred on the real point. Opening hours, spoken languages and the
+   * "comment nous trouver" directions live in messages/{fr,ar}.json under
+   * `bureau.*` — the directions string there still has [repère] placeholders,
+   * see TODO(client-orientation) in that file's neighbourhood.
    */
   office: {
-    address: "Boulevard Mohammed VI, Tanger, Maroc",
+    address: "184 Borj Khalij, Tanger",
     lat: 35.7595,
     lng: -5.834,
     mapImage: "/images/maps/tanger-centre.jpg",

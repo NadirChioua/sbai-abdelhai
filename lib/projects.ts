@@ -57,6 +57,14 @@ export const projects: Project[] = [
   {
     id: "tripleTowers",
     slug: "triple-towers",
+    // TODO(client-confirm-delivery-status): M. Sbai's 2026-08-23 review says
+    // the building is "immeuble terminé" (finished), which pushed the video
+    // title and gallery/hero alt text away from "chantier"/"en construction"
+    // framing (see messages/{fr,ar}.json). Whether that means fully delivered
+    // (-> "delivered") or in final finishing (-> stays "ongoing") is unclear,
+    // so `status` and the "Livraison" fact value ("Livraison finale en
+    // cours") were left as the conservative middle ground rather than
+    // switched to "delivered" — confirm with the client.
     status: "ongoing",
     // Graded CapCut cinematic (2026-08) replaces the raw drone rush; the old
     // hero-drone.mp4 stays on disk as a backup but is no longer referenced.
@@ -113,17 +121,31 @@ export const projects: Project[] = [
       { src: "/images/triple-towers/interieur-4.jpg", altKey: "g6" },
       { src: "/images/triple-towers/reel-2.jpg", altKey: "g8" },
     ],
+    // Per client review 2026-08-23 (Mod 12): "Ascenseurs" -> "Ascenseurs
+    // panoramiques" and "Parking" -> "Parking optionnel" (renamed, new keys
+    // in messages/{fr,ar}.json — old "elevator"/"parking" keys kept for
+    // delCosta/villasColline, which still use them). "Terrasse" removed
+    // ("non accessible" per client annotation); "Proche du centre" picked
+    // over Conciergerie/Proche de la plage as most relevant to Malabata
+    // front-de-mer (client approved all three).
     amenities: [
       "airConditioning",
       "doubleGlazing",
       "marble",
       "seaView",
-      "elevator",
-      "parking",
+      "panoramicElevators",
+      "optionalParking",
       "security",
-      "terrace",
+      "nearCity",
     ],
     facts: ["floors", "typologies", "delivery", "price"],
+    // TODO(client-clarify-Q5): M. Sbai marked "non" next to FAQ q5 ("Puis-je
+    // acheter depuis l'étranger ?") on the reviewed copy, but the current
+    // answer says "Oui" with a full MRE-process explanation, consistent with
+    // the rest of the Espace MRE strategy. Left unchanged (his "non" is
+    // ambiguous — could mean "this answer is wrong" or "no change needed") —
+    // confirm intent with the client before touching q5. See
+    // PHASE-3A-CLIENT-REVISIONS-SUMMARY.md.
     faq: ["q1", "q2", "q3", "q4", "q5", "q6"],
     mapImage: "/images/maps/malabata.jpg",
     mapQuery: "Malabata, Tanger, Maroc",
