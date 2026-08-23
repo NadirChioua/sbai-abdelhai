@@ -37,6 +37,7 @@ Dernière mise à jour : 2026-07-27 (Phase 2 en cours).
 15. **~~Carte Google~~ — RÉSOLU en Phase 7** : les iframes Google ont été supprimées pour non-conformité CNDP. Cartes désormais statiques et auto-hébergées (OpenStreetMap). Voir « Conformité & vie privée ».
 16. **Numéro CNDP** : marqueur `[EN COURS D'ENREGISTREMENT]` dans les Mentions légales — à remplacer par le vrai numéro de déclaration.
 17. **Adresses exactes pour les épingles de carte** : les cartes sont centrées au niveau du quartier (Malabata, Cap Spartel, Tanger sud, centre-ville). Fournir les adresses précises pour recentrer.
+18. **⚠️ Risque de mise en page — carte "Cap sur 2030" (`CdM2030.tsx`)** : suite à la revue client du 2026-08-23 (Mod 5), le libellé de la 4ᵉ statistique (Al Boraq) est passé de « le TGV marocain, étendu vers le sud » (36 caractères) à « le TGV marocain qui relie Tanger à Casablanca, fait l'objet d'une extension jusqu'à Marrakech » (~95 caractères). Le conteneur (`max-w-[22ch]`, `dt` dans une grille `grid-cols-2 lg:grid-cols-4`) absorbe le texte par retour à la ligne sans troncature, mais cette carte sera visuellement bien plus haute que ses 3 voisines sur la même rangée. À vérifier visuellement à 1440 px et 375 px ; si le déséquilibre est trop marqué, envisager de raccourcir le libellé ou de passer la grille en hauteurs indépendantes (déjà le cas) avec un alignement `items-start` explicite.
 
 ## Déviations techniques assumées
 

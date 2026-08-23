@@ -57,7 +57,7 @@
   "founder": {
     "sectionTitle": "L'homme derrière 57 ans d'histoire",
     "headline": "57 ans. Trois générations. Une seule promesse.",
-    "quote": "Le client est toujours satisfait par nos engagements, lesquels nous respectons à la lettre.",
+    "quote": "Le client est toujours satisfait par nos engagements, lesquels sont respectés à la lettre.",
     "name": "Sbai Abdelhai",
     "role": "Fondateur du Groupe Abdelhai Sbai",
     "videoTitle": "Interview de M. Sbai Abdelhai, fondateur du groupe"
@@ -95,11 +95,11 @@
     "mre": {
       "label": "Espace MRE",
       "title": "Investir au pays, en toute confiance",
-      "body": "Vous vivez en France, en Belgique, aux Pays-Bas, en Espagne ? Votre projet immobilier à Tanger se construit à distance, avec un interlocuteur unique qui vous connaît.",
+      "body": "Vous vivez en France, en Belgique, aux Pays-Bas, en Espagne, ou autres pays à l'étranger ? Votre projet immobilier à Tanger se construit à distance, avec un interlocuteur unique qui vous connaît.",
       "points": {
         "remote": "Accompagnement 100 % à distance : visites vidéo en direct, dossiers dématérialisés, signature lors de votre passage au Maroc.",
         "daam": "Programme Daam Sakane : jusqu'à 100 000 MAD d'aide directe de l'État, accessible aussi aux Marocains résidant à l'étranger.",
-        "hours": "Disponibilité aux horaires européens, en français, en arabe et en darija."
+        "hours": "Disponibilité aux horaires européens, en français, en arabe, en darija, en espagnol et en anglais."
       },
       "whatsappMessage": "Bonjour, je suis MRE et je souhaite des informations sur vos projets à Tanger.",
       "imageAlt": "Piscine et palmiers d'une résidence SBAI Abdelhai à Tanger"
@@ -123,7 +123,7 @@
         },
         "tgv": {
           "value": "Al Boraq",
-          "label": "le TGV marocain, étendu vers le sud"
+          "label": "le TGV marocain qui relie Tanger à Casablanca, fait l'objet d'une extension jusqu'à Marrakech"
         }
       },
       "cta": "Investir avant 2030"
@@ -134,7 +134,7 @@
       "videoTitle": "Témoignage vidéo filmé aux Triple Towers",
       "videoCaption": "Témoignage filmé — Triple Towers, Tanger",
       "quote1": {
-        "text": "Le client est toujours satisfait par nos engagements, lesquels nous respectons à la lettre.",
+        "text": "Le client est toujours satisfait par nos engagements, lesquels sont respectés à la lettre.",
         "author": "Sbai Abdelhai",
         "context": "Fondateur — extrait de l'interview filmée"
       },
@@ -586,7 +586,7 @@
       },
       "trust": {
         "title": "Confiance",
-        "body": "« Le client est toujours satisfait par nos engagements, lesquels nous respectons à la lettre. » Cette phrase du fondateur est la seule règle commerciale que nous ayons jamais eu besoin d'écrire."
+        "body": "« Le client est toujours satisfait par nos engagements, lesquels sont respectés à la lettre. » Cette phrase du fondateur est la seule règle commerciale que nous ayons jamais eu besoin d'écrire."
       },
       "roots": {
         "title": "Ancrage",

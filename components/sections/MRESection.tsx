@@ -39,6 +39,11 @@ export default function MRESection() {
           <p className="mt-5 max-w-lg text-body font-light text-secondary">
             {t("body")}
           </p>
+          {/* TODO(client-confirm-financial-figures): M. Sbai annotated "300 000"
+              / "700 000 dh" next to Point 1 (remote accompaniment) on the
+              reviewed copy PDF — intent unclear (Daam Sakane threshold?
+              acquisition amount range?). Left unchanged pending clarification;
+              see PHASE-3A-CLIENT-REVISIONS-SUMMARY.md. */}
           <ul className="mt-8 space-y-4">
             {(["remote", "daam", "hours"] as const).map((k) => (
               <li key={k} className="flex items-start gap-3">
