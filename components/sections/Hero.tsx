@@ -4,7 +4,7 @@ import VideoPlayer from "@/components/ui/VideoPlayer";
 import { ButtonLink, ButtonAnchor } from "@/components/ui/Button";
 
 /**
- * Full-viewport drone-video hero, on the graded Triple Towers cinematic.
+ * Full-viewport drone-video hero, on the morning Triple Towers cinematic.
  * Ambient autoplay (muted, loops, pauses off-screen); text sits in the lower
  * third per the brand board video spec.
  */
@@ -16,8 +16,8 @@ export default function Hero() {
       <div className="absolute inset-0">
         <VideoPlayer
           mode="ambient"
-          src="/videos/triple-towers/triple-towers-cinematic.mp4"
-          poster="/images/posters/tt-cinematic.jpg"
+          src="/videos/triple-towers/triple-towers-morning.mp4"
+          poster="/images/posters/tt-morning.jpg"
           title={t("home.heroAlt")}
           showMuteToggle={false}
           className="h-full w-full"

@@ -66,14 +66,14 @@ export const projects: Project[] = [
     // cours") were left as the conservative middle ground rather than
     // switched to "delivered" — confirm with the client.
     status: "ongoing",
-    // Graded CapCut cinematic (2026-08) replaces the raw drone rush; the old
-    // hero-drone.mp4 stays on disk as a backup but is no longer referenced.
+    // Morning drone cinematic (2026-08) replaces the darker cinematic pass; the
+    // older hero files stay on disk as backups but are no longer referenced.
     hero: {
-      video: "/videos/triple-towers/triple-towers-cinematic.mp4",
-      poster: "/images/posters/tt-cinematic.jpg",
+      video: "/videos/triple-towers/triple-towers-morning.mp4",
+      poster: "/images/posters/tt-morning.jpg",
     },
-    cardPreview: "/videos/triple-towers/card-preview.mp4",
-    cardPoster: "/images/posters/tt-card.jpg",
+    cardPreview: "/videos/triple-towers/card-preview-morning.mp4",
+    cardPoster: "/images/posters/tt-card-morning.jpg",
     neighbourhood: {
       video: "/videos/triple-towers/triple-towers-location.mp4",
       poster: "/images/posters/tt-quartier.jpg",
@@ -102,19 +102,16 @@ export const projects: Project[] = [
         mode: "feature",
       },
     ],
-    // The two exterior stills below replace drone-1.jpg and drone-2.jpg, which
-    // showed the towers in shell state (bare concrete, crane, no glazing).
+    // The exterior stills below are selected from the same morning drone video
+    // as the hero so the Triple Towers page keeps one clean visual language.
     //
-    // The street-level slot (reel-1.jpg -> gallery-location-1.jpg) is dropped
-    // rather than refilled: triple-towers-location.mp4 is a boulevard flyover,
-    // and every one of its 20 sampled frames contains moving or parked traffic,
-    // so no frame clears the quiet-luxury bar. interior.mp4 is not an
-    // alternative either — every frame carries the old-logo watermark and most
-    // carry burned-in captions. Needs new photography; see PHASE-2A-SUMMARY.md.
-    // All unused files remain on disk.
+    // A base/street-level exterior slot is now filled from the morning drone
+    // pass. Interior images stay separate because this video only covers the
+    // exterior. All unused files remain on disk as backups.
     gallery: [
-      { src: "/images/triple-towers/gallery-cinematic-1.jpg", altKey: "g1" },
-      { src: "/images/triple-towers/gallery-cinematic-2.jpg", altKey: "g2" },
+      { src: "/images/triple-towers/gallery-morning-1.jpg", altKey: "g1" },
+      { src: "/images/triple-towers/gallery-morning-2.jpg", altKey: "g2" },
+      { src: "/images/triple-towers/gallery-morning-3.jpg", altKey: "g7" },
       { src: "/images/triple-towers/interieur-1.jpg", altKey: "g3" },
       { src: "/images/triple-towers/interieur-2.jpg", altKey: "g4" },
       { src: "/images/triple-towers/interieur-3.jpg", altKey: "g5" },
