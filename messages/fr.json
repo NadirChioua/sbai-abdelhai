@@ -131,8 +131,8 @@
     "testimonials": {
       "label": "Ils nous font confiance",
       "title": "La parole de ceux qui nous connaissent",
-      "videoTitle": "Témoignage vidéo filmé aux Triple Towers",
-      "videoCaption": "Témoignage filmé — Triple Towers, Tanger",
+      "videoTitle": "Les Triple Towers en lumière du matin",
+      "videoCaption": "Vue aérienne — Triple Towers, Tanger",
       "quote1": {
         "text": "Le client est toujours satisfait par nos engagements, lesquels sont respectés à la lettre.",
         "author": "Sbai Abdelhai",
@@ -160,8 +160,8 @@
         "neighbourhoodTitle": "Ce que vous avez autour",
         "neighbourhoodCaption": "Vue drone du quartier : le boulevard qui dessert les tours, le centre commercial et sa salle de cinéma, les hôtels, la Corniche de Tanger, la proximité de la gare TGV et les commerces en pied d'immeuble — la mer au bout de l'avenue.",
         "neighbourhoodAlt": "Vue aérienne du quartier autour des Triple Towers : boulevard, commerces et front de mer",
-        "amenityVideoAlt": "Vue drone des ascenseurs panoramiques entre les tours",
-        "amenityVideoCaption": "Les ascenseurs panoramiques vus de l'extérieur : la cage vitrée court sur toute la hauteur, entre les deux tours.",
+        "amenityVideoAlt": "Vue rapprochée de la façade et des balcons des Triple Towers",
+        "amenityVideoCaption": "La façade et les balcons des Triple Towers, révélés par la lumière du matin.",
         "locationTitle": "Sur le front de mer, à Tanger",
         "locationBody": "Le quartier Malabata concentre ce qui fait la valeur d'un bien à Tanger : la mer en face, le centre-ville à quelques minutes, et une dynamique de quartier portée par les grands chantiers de la ville. C'est l'une des zones les plus recherchées du marché tangérois. Les visites des appartements disponibles sont réalisées à tout moment ; un responsable est en place en permanence.",
         "stickyDetail": "Jusqu'à 25 étages · Front de mer · En cours",
@@ -184,17 +184,17 @@
           }
         },
         "videos": {
-          "interior": {
-            "title": "Visite de l'appartement témoin des Triple Towers",
-            "caption": "Visite de l'appartement témoin"
+          "wide": {
+            "title": "Les Triple Towers et la baie de Tanger",
+            "caption": "Vue aérienne du front de mer"
           },
-          "reel": {
-            "title": "Les Triple Towers en images",
-            "caption": "La tour, vue du sol"
+          "facade": {
+            "title": "La façade et ses balcons",
+            "caption": "Détails architecturaux en lumière du matin"
           },
-          "ugc": {
-            "title": "Immeuble terminé — Triple Towers",
-            "caption": "Visite guidée sur place"
+          "panoramic": {
+            "title": "Une adresse ouverte sur la mer",
+            "caption": "Les tours dans leur environnement"
           }
         },
         "gallery": {

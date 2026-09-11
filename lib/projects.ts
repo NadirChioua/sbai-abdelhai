@@ -66,8 +66,8 @@ export const projects: Project[] = [
     // cours") were left as the conservative middle ground rather than
     // switched to "delivered" — confirm with the client.
     status: "ongoing",
-    // Morning drone cinematic (2026-08) replaces the darker cinematic pass; the
-    // older hero files stay on disk as backups but are no longer referenced.
+    // Morning drone cinematic (2026-09) is the approved Triple Towers source;
+    // derivative clips below keep every exterior placement consistent and fast.
     hero: {
       video: "/videos/triple-towers/triple-towers-morning.mp4",
       poster: "/images/posters/tt-morning.jpg",
@@ -75,30 +75,30 @@ export const projects: Project[] = [
     cardPreview: "/videos/triple-towers/card-preview-morning.mp4",
     cardPoster: "/images/posters/tt-card-morning.jpg",
     neighbourhood: {
-      video: "/videos/triple-towers/triple-towers-location.mp4",
-      poster: "/images/posters/tt-quartier.jpg",
+      video: "/videos/triple-towers/triple-towers-location-morning.mp4",
+      poster: "/images/posters/tt-location-morning.jpg",
     },
     amenityVideo: {
-      video: "/videos/triple-towers/triple-towers-sensors.mp4",
-      poster: "/images/posters/tt-sensors.jpg",
+      video: "/videos/triple-towers/triple-towers-facade-morning.mp4",
+      poster: "/images/posters/tt-facade-morning.jpg",
     },
     videos: [
       {
-        key: "interior",
-        src: "/videos/triple-towers/interior.mp4",
-        poster: "/images/posters/tt-interior.jpg",
+        key: "wide",
+        src: "/videos/triple-towers/triple-towers-location-morning.mp4",
+        poster: "/images/posters/tt-location-morning.jpg",
         mode: "feature",
       },
       {
-        key: "reel",
-        src: "/videos/triple-towers/reel.mp4",
-        poster: "/images/posters/tt-reel.jpg",
+        key: "facade",
+        src: "/videos/triple-towers/triple-towers-facade-morning.mp4",
+        poster: "/images/posters/tt-facade-morning.jpg",
         mode: "ambient",
       },
       {
-        key: "ugc",
-        src: "/videos/triple-towers/ugc.mp4",
-        poster: "/images/posters/tt-ugc.jpg",
+        key: "panoramic",
+        src: "/videos/triple-towers/triple-towers-showcase-morning.mp4",
+        poster: "/images/posters/tt-showcase-morning.jpg",
         mode: "feature",
       },
     ],

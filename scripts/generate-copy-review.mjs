@@ -792,7 +792,12 @@ function romanNumeral(n) {
     [10, "X"], [9, "IX"], [5, "V"], [4, "IV"], [1, "I"],
   ];
   let out = "";
-  for (const [v, sym] of map) while (n >= v) (out += sym), (n -= v);
+  for (const [v, sym] of map) {
+    while (n >= v) {
+      out += sym;
+      n -= v;
+    }
+  }
   return out;
 }
 

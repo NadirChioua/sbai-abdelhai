@@ -4,9 +4,9 @@ import RevealOnScroll from "@/components/motion/RevealOnScroll";
 import { Card } from "@/components/ui/Card";
 
 /**
- * Social proof. The Triple Towers UGC video is a real client-side testimonial
- * asset; the two written slots quote the founder's own filmed words until
- * client testimonials are cleared.
+ * Social proof. The visual is the approved Triple Towers morning film, while
+ * the written slots quote the founder's own filmed words until client
+ * testimonials are cleared.
  *
  * TODO(client): Del Costa "client satisfait" photos exist in the archive but
  * usage rights are unconfirmed (PROGRESS.md #4) — swap them in here once
@@ -26,15 +26,15 @@ export default function Testimonials() {
         </RevealOnScroll>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
-          <RevealOnScroll className="mx-auto w-full max-w-sm lg:mx-0">
+          <RevealOnScroll className="mx-auto w-full max-w-lg lg:mx-0">
             <div className="overflow-hidden rounded-lg">
               <VideoPlayer
                 mode="feature"
-                src="/videos/triple-towers/ugc.mp4"
-                poster="/images/posters/tt-ugc.jpg"
+                src="/videos/triple-towers/triple-towers-showcase-morning.mp4"
+                poster="/images/posters/tt-showcase-morning.jpg"
                 title={t("videoTitle")}
                 fullscreenOnMobilePlay
-                className="aspect-[9/16] w-full"
+                className="aspect-video w-full"
               />
             </div>
             <p className="eyebrow mt-4 text-secondary">{t("videoCaption")}</p>

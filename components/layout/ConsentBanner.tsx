@@ -19,7 +19,10 @@ export default function ConsentBanner() {
 
   useEffect(() => {
     // Only render once we know the stored answer — avoids a flash on repeat visits.
-    if (readConsent() === null) setOpen(true);
+    const timer = window.setTimeout(() => {
+      if (readConsent() === null) setOpen(true);
+    }, 0);
+    return () => window.clearTimeout(timer);
   }, []);
 
   function decide(value: "granted" | "denied") {

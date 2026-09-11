@@ -54,7 +54,10 @@ export function ProjectCard({
     const conn = (
       navigator as Navigator & { connection?: { saveData?: boolean } }
     ).connection;
-    setAllowed(Boolean(video) && !prefersReduced && !conn?.saveData);
+    const timer = window.setTimeout(() => {
+      setAllowed(Boolean(video) && !prefersReduced && !conn?.saveData);
+    }, 0);
+    return () => window.clearTimeout(timer);
   }, [video, prefersReduced]);
 
   // Autoplay while visible, pause when scrolled away.
