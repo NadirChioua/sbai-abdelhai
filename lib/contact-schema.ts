@@ -12,6 +12,7 @@ export const contactSchema = z.object({
     "triple-towers",
     "les-villas-de-la-colline",
     "del-costa",
+    "del-costa-2",
     "autre",
   ]),
   budget: z.enum(["lt1m", "1m-2m", "2m-4m", "gt4m", "nd"]),

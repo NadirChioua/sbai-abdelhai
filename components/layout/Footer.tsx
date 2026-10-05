@@ -16,6 +16,7 @@ const PROJECT_LINKS = [
   { label: "Triple Towers", href: "/projets/triple-towers" },
   { label: "Les Villas de la Colline", href: "/projets/les-villas-de-la-colline" },
   { label: "Résidence Del Costa", href: "/projets/del-costa" },
+  { label: "Del Costa 2", href: "/projets/del-costa-2" },
 ] as const;
 
 export default function Footer() {

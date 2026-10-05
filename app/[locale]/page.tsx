@@ -3,6 +3,7 @@ import { use } from "react";
 import Hero from "@/components/sections/Hero";
 import HeritageStrip from "@/components/sections/HeritageStrip";
 import ProjectsGrid from "@/components/sections/ProjectsGrid";
+import DelCosta2Teaser from "@/components/sections/DelCosta2Teaser";
 import FounderSection from "@/components/sections/FounderSection";
 import MRESection from "@/components/sections/MRESection";
 import CdM2030 from "@/components/sections/CdM2030";
@@ -19,6 +20,7 @@ export default function HomePage({ params }: PageProps<"/[locale]">) {
       <Hero />
       <HeritageStrip />
       <ProjectsGrid />
+      <DelCosta2Teaser />
       <FounderSection />
       <MRESection />
       <CdM2030 />

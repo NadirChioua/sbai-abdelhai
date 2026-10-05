@@ -148,6 +148,7 @@ export default function ContactSection({
                   Les Villas de la Colline
                 </option>
                 <option value="del-costa">Résidence Del Costa</option>
+                <option value="del-costa-2">Del Costa 2</option>
               </Select>
               <Select
                 label={t("fields.budget")}

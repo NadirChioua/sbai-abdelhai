@@ -785,5 +785,154 @@
     "readMore": "Lire notre politique de confidentialité",
     "accept": "Accepter",
     "refuse": "Refuser"
+  },
+  "delCosta2": {
+    "metaTitle": "Del Costa 2 — Projection 3D du projet, Achakkar · Tanger",
+    "metaDescription": "Del Costa 2 par SBAI Immobilier : huit blocs en R+2 avec étage en retrait autour de deux piscines, un café-restaurant et des cours-jardins. Découvrez la projection 3D du projet.",
+    "watermark": "Projection 3D du projet",
+    "label": "Nouveau projet · Achakkar, Tanger",
+    "title": "Del Costa 2",
+    "intro": "La suite de la Résidence Del Costa : une résidence fermée de huit blocs blancs, organisée autour d'une grande cour plantée et de deux piscines.",
+    "heroAlt": "Projection 3D aérienne de Del Costa 2 au coucher du soleil",
+    "ctaVisit": "Réserver une visite",
+    "ctaCatalogue": "Télécharger le catalogue",
+    "disclaimer": "Toutes les images de cette page sont des projections 3D réalisées d'après les plans du projet. Elles sont non contractuelles ; aménagements paysagers, mobilier et finitions sont indicatifs.",
+    "filmTitle": "Del Costa 2 — le film",
+    "filmLabel": "Film",
+    "filmHeading": "Traverser la résidence",
+    "presentationLabel": "Le projet",
+    "presentationTitle": "Une résidence de jardin, dans la continuité de Del Costa",
+    "p1": "Del Costa 2 prolonge la Résidence Del Costa, livrée et habitée, dans le même secteur d'Achakkar. Même promoteur, même architecte, même vocabulaire : façades blanches, arcades, grilles en éventail et couvertines en terre cuite.",
+    "p2": "Huit blocs (A à H) s'alignent le long de la Rue N° 244 puis se referment autour d'une cour de 22 m de large. Au cœur de cette cour : deux piscines, leurs plages et des alignements de palmiers. Deux cours-jardins avec fontaine traversent la barre principale.",
+    "facts": [
+      {
+        "label": "Blocs",
+        "value": "8 (A → H)"
+      },
+      {
+        "label": "Niveaux",
+        "value": "RDC + 2 étages + étage en retrait"
+      },
+      {
+        "label": "Piscines",
+        "value": "2, au centre de la cour"
+      },
+      {
+        "label": "Café / Restaurant",
+        "value": "335 m² en rez-de-chaussée"
+      },
+      {
+        "label": "Stationnement",
+        "value": "Sous-sols sous G et H + parking extérieur"
+      },
+      {
+        "label": "Terrasses",
+        "value": "Étage en retrait avec terrasses de 2,75 m"
+      }
+    ],
+    "galleryLabel": "Galerie",
+    "galleryTitle": "Projections 3D",
+    "gallery": {
+      "aerien": "Vue aérienne de la résidence au coucher du soleil",
+      "piscines": "Les deux piscines vues depuis le ciel",
+      "entree": "Entrée principale sur la Rue N° 244",
+      "rue": "Façades sur la Rue N° 244",
+      "piscine": "Bord de piscine, vue à hauteur des yeux",
+      "cour": "Cour-jardin avec fontaine",
+      "terrasse": "Terrasse de l'étage en retrait",
+      "cafe": "Le café-restaurant sur la cour des piscines",
+      "nuitFacade": "Façades éclairées la nuit",
+      "nuitPiscine": "Les piscines la nuit",
+      "angle": "Vue aérienne depuis l'angle F–G"
+    },
+    "planLabel": "Plan d'ensemble",
+    "planTitle": "Huit blocs autour d'une cour",
+    "planAlt": "Vue zénithale de Del Costa 2",
+    "planLegend": [
+      "A–E : barre principale sur la Rue N° 244",
+      "C et E : cours-jardins avec fontaine",
+      "F–G : blocs d'angle",
+      "H : bloc + café-restaurant",
+      "Au centre : deux piscines"
+    ],
+    "visitLabel": "Visite 360°",
+    "visitTitle": "Regarder autour de soi",
+    "visitHint": "Glissez pour regarder autour · molette pour zoomer",
+    "visitLoad": "Lancer la visite 360°",
+    "views": {
+      "entree": "Entrée",
+      "piscine": "Piscines",
+      "cour_jardin": "Cour-jardin",
+      "terrasse_retrait": "Terrasse du retrait"
+    },
+    "modelLabel": "Maquette interactive",
+    "modelTitle": "Explorer la résidence bloc par bloc",
+    "modelHint": "Faites pivoter · zoomez · touchez un bloc",
+    "modelLoad": "Charger la maquette 3D",
+    "modelReset": "Recentrer",
+    "blocks": {
+      "Bloc_A": {
+        "label": "Bloc A",
+        "desc": "Aile ouest et demi-module sur la Rue N° 244."
+      },
+      "Bloc_B": {
+        "label": "Bloc B",
+        "desc": "Demi-module de 14,79 × 23,60 m, 4 logements par étage courant."
+      },
+      "Bloc_C": {
+        "label": "Bloc C",
+        "desc": "Deux demi-modules autour d'une cour-jardin avec fontaine."
+      },
+      "Bloc_D": {
+        "label": "Bloc D",
+        "desc": "Demi-module de 14,79 × 23,60 m, 4 logements par étage courant."
+      },
+      "Bloc_E": {
+        "label": "Bloc E",
+        "desc": "Deux demi-modules autour d'une cour-jardin avec fontaine."
+      },
+      "Bloc_F": {
+        "label": "Bloc F",
+        "desc": "Bloc d'angle et liaison vers G."
+      },
+      "Bloc_G": {
+        "label": "Bloc G",
+        "desc": "Bloc d'angle, parking en sous-sol."
+      },
+      "Bloc_H": {
+        "label": "Bloc H",
+        "desc": "Demi-module sur la cour, parking en sous-sol."
+      },
+      "Cafe_Restaurant": {
+        "label": "Café / Restaurant",
+        "desc": "335 m² en rez-de-chaussée, ouvert sur la cour des piscines."
+      },
+      "Piscines": {
+        "label": "Piscines",
+        "desc": "Deux bassins au centre de la cour plantée."
+      }
+    },
+    "catalogueLabel": "Catalogue",
+    "catalogueTitle": "Le projet en 12 pages",
+    "catalogueBody": "Plan d'ensemble, façades, espaces communs, typologies et terrasses : toutes les projections 3D dans un seul document PDF.",
+    "badge": "Nouveau projet",
+    "reelsLabel": "En vidéo",
+    "reelsTitle": "Trois instants de la résidence",
+    "reels": {
+      "piscine": "La cour des piscines",
+      "facade": "Les façades sur la Rue N° 244",
+      "cafe": "Le café-restaurant"
+    },
+    "locationLabel": "Localisation",
+    "locationTitle": "Achakkar, à l'ouest de Tanger",
+    "locationBody": "Secteur C2, le long de la Rue N° 244, à côté de la Résidence Del Costa, sur la route de Mediouna – Achakkar. Un environnement de maquis méditerranéen, à quelques minutes du centre de Tanger.",
+    "locationAddress": "Secteur C2, Rue N° 244 — Achakkar, Tanger",
+    "mapAlt": "Carte de situation de Del Costa 2 à Achakkar, Tanger",
+    "teaserLabel": "Nouveau projet",
+    "teaserTitle": "Del Costa 2",
+    "teaserBody": "Huit blocs autour d'une cour plantée et de deux piscines, à Achakkar. Découvrez le projet en projection 3D : film, visite 360° et maquette interactive.",
+    "teaserCta": "Découvrir le projet",
+    "cardTagline": "Huit blocs autour de deux piscines — projection 3D du projet.",
+    "cardLocation": "Achakkar, Tanger"
   }
 }

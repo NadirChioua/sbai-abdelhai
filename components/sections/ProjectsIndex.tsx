@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { projects, type ProjectStatus } from "@/lib/projects";
 import { ProjectCard } from "@/components/ui/Card";
 import RevealOnScroll from "@/components/motion/RevealOnScroll";
+import { DC2_STILLS } from "@/lib/dc2-media";
 
 type Filter = "all" | ProjectStatus;
 const FILTERS: Filter[] = ["all", "ongoing", "delivered"];
@@ -61,6 +62,22 @@ export default function ProjectsIndex() {
       <section className="bg-ivory">
         <div className="mx-auto max-w-screen-2xl px-4 pb-24 md:px-8 md:pb-32">
           <div className="grid gap-5 md:grid-cols-3 md:gap-6">
+            {filter !== "delivered" && (
+              <RevealOnScroll>
+                <ProjectCard
+                  href="/projets/del-costa-2"
+                  image={`${DC2_STILLS}/DC2_R01_Aerien_45.jpg`}
+                  imageAlt={t("delCosta2.heroAlt")}
+                  video="/videos/del-costa-2/reel_piscine.mp4"
+                  title={t("delCosta2.title")}
+                  location={t("delCosta2.cardLocation")}
+                  tagline={t("delCosta2.cardTagline")}
+                  badge={t("delCosta2.badge")}
+                  className="aspect-[4/5]"
+                  priority
+                />
+              </RevealOnScroll>
+            )}
             {visible.map((p, i) => (
               <RevealOnScroll key={p.slug} delay={i * 0.1}>
                 <ProjectCard
