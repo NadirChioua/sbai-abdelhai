@@ -251,9 +251,6 @@ export default function ProjectModel3D({
           <p className="mt-1 text-sm text-secondary">{selected.desc}</p>
         </div>
       )}
-      <p className="pointer-events-none absolute bottom-3 right-3 bg-charcoal/85 px-3 py-1.5 text-xs tracking-wide text-gold">
-        {watermark}
-      </p>
     </div>
   );
 }

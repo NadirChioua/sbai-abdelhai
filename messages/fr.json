@@ -787,16 +787,16 @@
     "refuse": "Refuser"
   },
   "delCosta2": {
-    "metaTitle": "Del Costa 2 — Projection 3D du projet, Achakkar · Tanger",
-    "metaDescription": "Del Costa 2 par SBAI Immobilier : huit blocs en R+2 avec étage en retrait autour de deux piscines, un café-restaurant et des cours-jardins. Découvrez la projection 3D du projet.",
+    "metaTitle": "Del Costa 2 — Nouvelle résidence à Achakkar, Tanger",
+    "metaDescription": "Del Costa 2 par SBAI Immobilier : huit blocs en R+2 avec étage en retrait autour de deux piscines, un café-restaurant et des cours-jardins, à Achakkar.",
     "watermark": "Projection 3D du projet",
     "label": "Nouveau projet · Achakkar, Tanger",
     "title": "Del Costa 2",
     "intro": "La suite de la Résidence Del Costa : une résidence fermée de huit blocs blancs, organisée autour d'une grande cour plantée et de deux piscines.",
-    "heroAlt": "Projection 3D aérienne de Del Costa 2 au coucher du soleil",
+    "heroAlt": "Vue aérienne de Del Costa 2 au coucher du soleil",
     "ctaVisit": "Réserver une visite",
     "ctaCatalogue": "Télécharger le catalogue",
-    "disclaimer": "Toutes les images de cette page sont des projections 3D réalisées d'après les plans du projet. Elles sont non contractuelles ; aménagements paysagers, mobilier et finitions sont indicatifs.",
+    "disclaimer": "Images et vidéos non contractuelles, à caractère illustratif. Aménagements paysagers, mobilier et finitions indicatifs.",
     "filmTitle": "Del Costa 2 — le film",
     "filmLabel": "Film",
     "filmHeading": "Traverser la résidence",
@@ -843,7 +843,8 @@
       "cafe": "Le café-restaurant sur la cour des piscines",
       "nuitFacade": "Façades éclairées la nuit",
       "nuitPiscine": "Les piscines la nuit",
-      "angle": "Vue aérienne depuis l'angle F–G"
+      "angle": "Vue aérienne depuis l'angle F–G",
+      "mer": "La résidence, Del Costa 1 et l'océan Atlantique"
     },
     "planLabel": "Plan d'ensemble",
     "planTitle": "Huit blocs autour d'une cour",
@@ -914,7 +915,7 @@
     },
     "catalogueLabel": "Catalogue",
     "catalogueTitle": "Le projet en 12 pages",
-    "catalogueBody": "Plan d'ensemble, façades, espaces communs, typologies et terrasses : toutes les projections 3D dans un seul document PDF.",
+    "catalogueBody": "Plan d'ensemble, façades, espaces communs, typologies et terrasses dans un seul document PDF.",
     "badge": "Nouveau projet",
     "reelsLabel": "En vidéo",
     "reelsTitle": "Trois instants de la résidence",
@@ -930,9 +931,9 @@
     "mapAlt": "Carte de situation de Del Costa 2 à Achakkar, Tanger",
     "teaserLabel": "Nouveau projet",
     "teaserTitle": "Del Costa 2",
-    "teaserBody": "Huit blocs autour d'une cour plantée et de deux piscines, à Achakkar. Découvrez le projet en projection 3D : film, visite 360° et maquette interactive.",
+    "teaserBody": "Huit blocs autour d'une cour plantée et de deux piscines, à Achakkar. Film, visite 360° et maquette interactive.",
     "teaserCta": "Découvrir le projet",
-    "cardTagline": "Huit blocs autour de deux piscines — projection 3D du projet.",
+    "cardTagline": "Huit blocs autour de deux piscines, à Achakkar.",
     "cardLocation": "Achakkar, Tanger"
   }
 }

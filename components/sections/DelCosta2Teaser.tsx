@@ -10,7 +10,7 @@ export default function DelCosta2Teaser() {
   return (
     <section className="relative isolate overflow-hidden bg-charcoal">
       <Image
-        src={`${DC2_STILLS}/DC2_R01_Aerien_45.jpg`}
+        src={`${DC2_STILLS}/DC2_R13_Aerien_Mer.jpg`}
         alt={t("heroAlt")}
         fill
         sizes="100vw"
@@ -26,9 +26,6 @@ export default function DelCosta2Teaser() {
             <ButtonLink href="/projets/del-costa-2" size="lg">
               {t("teaserCta")}
             </ButtonLink>
-            <span className="border border-gold/60 px-3 py-1.5 text-xs uppercase tracking-[0.18em] text-gold">
-              {t("watermark")}
-            </span>
           </div>
         </RevealOnScroll>
       </div>

@@ -37,7 +37,6 @@ export default function VerticalReels({
                 {/* top caption: the bottom-right corner carries the burned-in "Projection 3D du projet" */}
                 <figcaption className="pointer-events-none absolute inset-x-0 top-0 bg-gradient-to-b from-charcoal/85 to-transparent p-4 pb-12">
                   <span className="heading-display text-lg text-on-dark">{r.title}</span>
-                  <span className="sr-only"> — {watermark}</span>
                 </figcaption>
               </figure>
             </RevealOnScroll>

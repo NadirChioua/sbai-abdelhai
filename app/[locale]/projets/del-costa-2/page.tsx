@@ -19,6 +19,7 @@ import { DC2_MEDIA as MEDIA, DC2_STILLS as STILLS } from "@/lib/dc2-media";
  * Each visual carries the "Projection 3D du projet" marking.
  */
 const GALLERY = [
+  ["DC2_R13_Aerien_Mer", "mer"],
   ["DC2_R01_Aerien_45", "aerien"],
   ["DC2_R02_Aerien_Piscines", "piscines"],
   ["DC2_R03_Entree", "entree"],
@@ -49,7 +50,7 @@ export async function generateMetadata({
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
-    openGraph: { images: [`${STILLS}/DC2_R01_Aerien_45.jpg`] },
+    openGraph: { images: [`${STILLS}/DC2_R13_Aerien_Mer.jpg`] },
   };
 }
 
@@ -64,7 +65,7 @@ export default async function Page({
   const facts = (t.raw("facts") as { label: string; value: string }[]).map((f) => f);
   const photos = GALLERY.map(([file, key]) => ({
     src: `${STILLS}/${file}.jpg`,
-    alt: `${t(`gallery.${key}`)} — ${t("watermark")}`,
+    alt: t(`gallery.${key}`),
   }));
   const views = PANOS.map((id) => ({ id, label: t(`views.${id}`), src: `/panos/del-costa-2/pano_${id}.jpg` }));
   const blocks = BLOCKS.map((id) => ({
@@ -77,7 +78,7 @@ export default async function Page({
   return (
     <main className="flex-1">
       <PageHero
-        image={`${STILLS}/DC2_R01_Aerien_45.jpg`}
+        image={`${STILLS}/DC2_R13_Aerien_Mer.jpg`}
         imageAlt={t("heroAlt")}
         label={t("label")}
         title={t("title")}
@@ -90,9 +91,6 @@ export default async function Page({
           <ButtonAnchor href="/docs/del-costa-2-catalogue.pdf" variant="outline-light" size="lg" download>
             {t("ctaCatalogue")}
           </ButtonAnchor>
-          <span className="border border-gold/60 px-3 py-1.5 text-xs uppercase tracking-[0.18em] text-gold">
-            {t("watermark")}
-          </span>
         </div>
       </PageHero>
 

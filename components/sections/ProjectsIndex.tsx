@@ -66,7 +66,7 @@ export default function ProjectsIndex() {
               <RevealOnScroll>
                 <ProjectCard
                   href="/projets/del-costa-2"
-                  image={`${DC2_STILLS}/DC2_R01_Aerien_45.jpg`}
+                  image={`${DC2_STILLS}/DC2_R13_Aerien_Mer.jpg`}
                   imageAlt={t("delCosta2.heroAlt")}
                   video="/videos/del-costa-2/reel_piscine.mp4"
                   title={t("delCosta2.title")}

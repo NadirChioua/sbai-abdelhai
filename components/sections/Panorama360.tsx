@@ -133,9 +133,6 @@ export default function Panorama360({
             {hint}
           </p>
         )}
-        <p className="pointer-events-none absolute bottom-3 right-3 bg-charcoal/85 px-3 py-1.5 text-xs tracking-wide text-gold">
-          {watermark}
-        </p>
       </div>
       <div className="mt-4 flex flex-wrap gap-2" role="tablist">
         {views.map((v, i) => (
