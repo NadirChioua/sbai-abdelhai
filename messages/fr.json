@@ -789,7 +789,7 @@
   "delCosta2": {
     "metaTitle": "Del Costa 2 — Nouvelle résidence à Achakkar, Tanger",
     "metaDescription": "Del Costa 2 par SBAI Immobilier : huit blocs en R+2 avec étage en retrait autour de deux piscines, un café-restaurant et des cours-jardins, à Achakkar.",
-    "watermark": "Projection 3D du projet",
+    "watermark": "",
     "label": "Nouveau projet · Achakkar, Tanger",
     "title": "Del Costa 2",
     "intro": "La suite de la Résidence Del Costa : une résidence fermée de huit blocs blancs, organisée autour d'une grande cour plantée et de deux piscines.",
@@ -921,8 +921,8 @@
     "reelsTitle": "Trois instants de la résidence",
     "reels": {
       "piscine": "La cour des piscines",
-      "facade": "Les façades sur la Rue N° 244",
-      "cafe": "Le café-restaurant"
+      "drone": "La résidence vue du ciel",
+      "teaser": "Del Costa 2 en 20 secondes"
     },
     "locationLabel": "Localisation",
     "locationTitle": "Achakkar, à l'ouest de Tanger",
@@ -934,6 +934,10 @@
     "teaserBody": "Huit blocs autour d'une cour plantée et de deux piscines, à Achakkar. Film, visite 360° et maquette interactive.",
     "teaserCta": "Découvrir le projet",
     "cardTagline": "Huit blocs autour de deux piscines, à Achakkar.",
-    "cardLocation": "Achakkar, Tanger"
+    "cardLocation": "Achakkar, Tanger",
+    "clips": {
+      "nuit": "La piscine à la tombée de la nuit",
+      "terrasse": "Vue sur les piscines depuis les terrasses"
+    }
   }
 }

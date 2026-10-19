@@ -101,11 +101,22 @@ export default async function Page({
           <h2 className="heading-display mt-3 text-h2 text-on-dark">{t("filmHeading")}</h2>
           <VideoPlayer
             className="mt-10"
-            src="/videos/del-costa-2/del-costa-2-film.mp4"
-            poster={`${MEDIA}/DC2_film_poster.jpg`}
+            src="/videos/del-costa-2/del-costa-2-film-v2.mp4"
+            poster={`${MEDIA}/DC2_film_v2_poster.jpg`}
             mode="feature"
             title={t("filmTitle")}
           />
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            {(["nuit", "terrasse"] as const).map((k) => (
+              <VideoPlayer
+                key={k}
+                src={`/videos/del-costa-2/clip_${k}.mp4`}
+                poster={`${MEDIA}/clip_${k}_poster.jpg`}
+                mode="feature"
+                title={t(`clips.${k}`)}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -130,9 +141,15 @@ export default async function Page({
         label={t("reelsLabel")}
         title={t("reelsTitle")}
         watermark={t("watermark")}
-        reels={(["piscine", "facade", "cafe"] as const).map((k) => ({
-          src: `/videos/del-costa-2/reel_${k}.mp4`,
-          poster: `${MEDIA}/reel_${k}_poster.jpg`,
+        reels={(
+          [
+            ["piscine", "piscine_v2"],
+            ["drone", "drone"],
+            ["teaser", "teaser"],
+          ] as const
+        ).map(([k, f]) => ({
+          src: `/videos/del-costa-2/reel_${f}.mp4`,
+          poster: `${MEDIA}/reel_${f}_poster.jpg`,
           title: t(`reels.${k}`),
         }))}
       />
