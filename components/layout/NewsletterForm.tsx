@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { submitLead } from "@/lib/lead";
 
-/** Footer newsletter form, posting to /api/newsletter. */
+/** Footer newsletter form; the sign-up is emailed to the sales inbox. */
 export default function NewsletterForm() {
   const t = useTranslations("footer");
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
@@ -13,12 +14,11 @@ export default function NewsletterForm() {
     e.preventDefault();
     setStatus("sending");
     try {
-      const res = await fetch("/api/newsletter", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, company: "" }),
+      await submitLead({
+        subject: `Inscription newsletter : ${email}`,
+        fields: { Inscription: "Newsletter du site", "E-mail": email },
+        replyTo: email,
       });
-      if (!res.ok) throw new Error(String(res.status));
       setStatus("sent");
       setEmail("");
     } catch {

@@ -4,12 +4,13 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Input } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
+import { submitLead } from "@/lib/lead";
 
 /**
  * Email capture for the MRE guide.
- * TODO(client): the PDF itself does not exist yet — the endpoint records the
- * request and the confirmation says the guide will be sent by email, so no
- * broken download is ever promised.
+ * TODO(client): the PDF itself does not exist yet — the request is emailed to
+ * the sales inbox and the confirmation says the guide will be sent by email,
+ * so no broken download is ever promised.
  */
 export default function GuideForm() {
   const t = useTranslations("mre.guide");
@@ -20,20 +21,11 @@ export default function GuideForm() {
     e.preventDefault();
     setStatus("sending");
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: "Demande guide MRE",
-          phone: "+212000000000",
-          email,
-          project: "autre",
-          budget: "nd",
-          message: "[GUIDE MRE] Demande de réception du guide PDF",
-          company: "",
-        }),
+      await submitLead({
+        subject: `Demande du guide MRE : ${email}`,
+        fields: { Demande: "Guide MRE (PDF)", "E-mail": email },
+        replyTo: email,
       });
-      if (!res.ok) throw new Error();
       setStatus("sent");
       setEmail("");
     } catch {

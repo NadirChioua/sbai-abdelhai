@@ -10,6 +10,7 @@ import { Input, Select, Textarea } from "@/components/ui/Input";
 import { Button, ButtonAnchor } from "@/components/ui/Button";
 import { WhatsAppIcon } from "@/components/ui/icons";
 import { site, whatsappLink } from "@/lib/config";
+import { contactLeadFields, submitLead } from "@/lib/lead";
 import RevealOnScroll from "@/components/motion/RevealOnScroll";
 
 type Status = "idle" | "sending" | "sent" | "error";
@@ -38,12 +39,8 @@ export default function ContactSection({
   async function onSubmit(data: ContactPayload) {
     setStatus("sending");
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-      if (!res.ok) throw new Error(String(res.status));
+      // Honeypot tripped: pretend success, send nothing.
+      if (!data.company) await submitLead(contactLeadFields(data));
       setStatus("sent");
       reset();
     } catch {
