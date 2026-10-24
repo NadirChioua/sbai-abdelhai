@@ -64,6 +64,7 @@ export function organizationJsonLd(locale: string, description: string) {
         description,
         foundingDate: String(site.foundingYear),
         telephone: site.phone,
+        email: site.email,
         address: {
           "@type": "PostalAddress",
           streetAddress: "184 avenue Mohammed VI, Résidence Borj Khalij",

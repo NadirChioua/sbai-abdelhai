@@ -9,7 +9,7 @@ import Footer from "@/components/layout/Footer";
 import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
 import ConsentBanner from "@/components/layout/ConsentBanner";
 import { SITE_URL, organizationJsonLd } from "@/lib/seo";
-import ConsentedAnalytics from "@/components/layout/ConsentedAnalytics";
+import { Analytics } from "@vercel/analytics/next";
 import "../globals.css";
 
 const marcellus = localFont({
@@ -109,7 +109,9 @@ export default async function LocaleLayout({
           <Footer />
           <WhatsAppFloat />
           <ConsentBanner />
-          <ConsentedAnalytics />
+          {/* Cookieless, no personal identifier: runs for every visitor
+              (disclosed in the privacy notice and the banner). */}
+          <Analytics />
         </NextIntlClientProvider>
       </body>
     </html>

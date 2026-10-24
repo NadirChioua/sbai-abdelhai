@@ -773,7 +773,7 @@
       },
       "cookies": {
         "title": "Cookies, mesure d'audience et services tiers",
-        "body": "Ce site ne dépose aucun cookie publicitaire. Les polices de caractères sont hébergées sur notre propre domaine, les fonds de carte sont des images statiques que nous servons nous-mêmes (© OpenStreetMap), et les vidéos sont diffusées depuis nos serveurs. Aucune donnée n'est transmise à Google, à un réseau social ou à un régisseur publicitaire lorsque vous consultez ces pages. Le lien « Voir sur Google Maps » ouvre volontairement un nouvel onglet : c'est vous qui décidez de vous rendre chez Google, et rien n'est envoyé avant ce clic. Si vous l'acceptez dans le bandeau de consentement, nous mesurons l'audience avec Vercel Web Analytics, l'outil de notre hébergeur : sans cookie, sans identifiant personnel, en statistiques agrégées uniquement (pages vues, pays, type d'appareil). Si vous refusez, rien n'est mesuré. Votre choix est révocable à tout moment en effaçant les données de ce site dans votre navigateur.",
+        "body": "Ce site ne dépose aucun cookie publicitaire. Les polices de caractères sont hébergées sur notre propre domaine, les fonds de carte sont des images statiques que nous servons nous-mêmes (© OpenStreetMap), et les vidéos sont diffusées depuis nos serveurs. Aucune donnée n'est transmise à Google, à un réseau social ou à un régisseur publicitaire lorsque vous consultez ces pages. Le lien « Voir sur Google Maps » ouvre volontairement un nouvel onglet : c'est vous qui décidez de vous rendre chez Google, et rien n'est envoyé avant ce clic. Pour améliorer le site, nous mesurons sa fréquentation avec Vercel Web Analytics, l'outil de notre hébergeur : sans cookie, sans identifiant personnel et sans suivi d'un site à l'autre. Nous ne voyons que des statistiques agrégées (pages vues, pays, type d'appareil, site d'origine), jamais l'identité d'un visiteur.",
         "fields": []
       },
       "contact": {
@@ -785,7 +785,7 @@
   },
   "consent": {
     "title": "Vos données, votre choix",
-    "body": "Ce site n'utilise aucun cookie publicitaire : nos polices, nos cartes et nos vidéos sont hébergées sur nos propres serveurs. Si vous acceptez, nous mesurons l'audience de façon anonyme et sans cookie (Vercel Web Analytics) ; si vous refusez, rien n'est mesuré.",
+    "body": "Ce site n'utilise aucun cookie publicitaire : nos polices, nos cartes et nos vidéos sont hébergées sur nos propres serveurs. Nous mesurons la fréquentation de façon anonyme et sans cookie (Vercel Web Analytics). Votre réponse encadre l'usage d'éventuels cookies à l'avenir.",
     "readMore": "Lire notre politique de confidentialité",
     "accept": "Accepter",
     "refuse": "Refuser"
