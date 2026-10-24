@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { routing } from "@/i18n/routing";
 import { site } from "@/lib/config";
+import { GUIDES } from "@/lib/guides";
 
 /** Canonical origin. www is primary: the apex and the .ma domain redirect here. */
 export const SITE_URL = "https://www.sbai-abdelhai.com";
@@ -17,9 +18,11 @@ export const PAGES = [
   "/espace-mre",
   "/contact",
   "/mentions-legales",
-] as const;
+  "/guides",
+  ...GUIDES.map((g) => `/guides/${g.slug}`),
+];
 
-export type PagePath = (typeof PAGES)[number];
+export type PagePath = string;
 
 /** fr → /fr/contact, ar → /ar/contact, plus x-default on the French page. */
 export function languageUrls(path: PagePath) {

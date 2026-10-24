@@ -157,6 +157,14 @@ export default function Footer() {
             </li>
             <li>
               <Link
+                href="/guides"
+                className="transition-colors hover:text-gold"
+              >
+                {t("nav.guides")}
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/contact"
                 className="transition-colors hover:text-gold"
               >
