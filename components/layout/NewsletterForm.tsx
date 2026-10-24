@@ -18,6 +18,7 @@ export default function NewsletterForm() {
         subject: `Inscription newsletter : ${email}`,
         fields: { Inscription: "Newsletter du site", "E-mail": email },
         replyTo: email,
+        record: { kind: "newsletter", email },
       });
       setStatus("sent");
       setEmail("");

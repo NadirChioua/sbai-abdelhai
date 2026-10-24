@@ -5,6 +5,6 @@ import { routing } from "./i18n/routing";
 export default createIntlMiddleware(routing);
 
 export const config = {
-  // Skip internals, API routes and static files (anything with an extension)
-  matcher: "/((?!api|_next|_vercel|.*\\..*).*)",
+  // Skip internals, API routes, the admin area and static files (anything with an extension)
+  matcher: "/((?!api|admin|_next|_vercel|.*\\..*).*)",
 };

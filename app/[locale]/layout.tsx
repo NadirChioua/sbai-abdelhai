@@ -8,6 +8,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
 import ConsentBanner from "@/components/layout/ConsentBanner";
+import Tracker from "@/components/analytics/Tracker";
 import { SITE_URL, organizationJsonLd } from "@/lib/seo";
 import { Analytics } from "@vercel/analytics/next";
 import "../globals.css";
@@ -112,6 +113,7 @@ export default async function LocaleLayout({
           {/* Cookieless, no personal identifier: runs for every visitor
               (disclosed in the privacy notice and the banner). */}
           <Analytics />
+          <Tracker />
         </NextIntlClientProvider>
       </body>
     </html>

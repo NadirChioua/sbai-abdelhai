@@ -25,6 +25,7 @@ export default function GuideForm() {
         subject: `Demande du guide MRE : ${email}`,
         fields: { Demande: "Guide MRE (PDF)", "E-mail": email },
         replyTo: email,
+        record: { kind: "guide", email },
       });
       setStatus("sent");
       setEmail("");

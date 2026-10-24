@@ -2,9 +2,10 @@
  * Consent gate (loi 09-08 / CNDP).
  *
  * The site sets NO cookie: fonts are self-hosted, maps are static local
- * images, videos are served from our own origin. Vercel Web Analytics runs
- * for every visitor because it is cookieless and stores no personal
- * identifier (disclosed in the privacy notice). Anything that would set a
+ * images, videos are served from our own origin. Vercel Web Analytics and
+ * the first-party tracker (components/analytics/Tracker.tsx, random id in
+ * localStorage, no IP stored) run for every visitor; both are disclosed in
+ * the privacy notice. Anything that would set a
  * cookie or load a third-party embed must call `hasConsent()` first.
  */
 export const CONSENT_KEY = "sbai-consent-v1";

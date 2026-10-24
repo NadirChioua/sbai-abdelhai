@@ -1,5 +1,6 @@
 import { site } from "@/lib/config";
 import type { ContactPayload } from "@/lib/contact-schema";
+import { send, sessionId, visitorId } from "@/lib/visitor";
 
 /**
  * Lead delivery: every form on the site posts straight from the visitor's
@@ -24,17 +25,39 @@ export const BUDGET_LABELS: Record<ContactPayload["budget"], string> = {
   nd: "Non précisé",
 };
 
-/** Resolves when FormSubmit accepted the lead; throws otherwise. */
+export type LeadRecord = {
+  kind: "contact" | "guide" | "newsletter";
+  name?: string;
+  phone?: string;
+  email?: string;
+  project?: string;
+  budget?: string;
+  message?: string;
+};
+
+/**
+ * Resolves when FormSubmit accepted the lead; throws otherwise. The lead is
+ * also copied to the admin database (fire-and-forget, never blocks the form).
+ */
 export async function submitLead({
   subject,
   fields,
   replyTo,
+  record,
 }: {
   subject: string;
   /** Label → value, in display order. */
   fields: Record<string, string>;
   replyTo?: string;
+  record: LeadRecord;
 }) {
+  send("/api/lead", {
+    ...record,
+    vid: visitorId(),
+    sid: sessionId().sid,
+    page: window.location.pathname,
+  });
+
   const res = await fetch(`https://formsubmit.co/ajax/${site.leadEmail}`, {
     method: "POST",
     headers: { "Content-Type": "application/json", Accept: "application/json" },
@@ -66,5 +89,14 @@ export function contactLeadFields(data: ContactPayload) {
       WhatsApp: `https://wa.me/${data.phone.replace(/[^0-9]/g, "")}`,
     },
     replyTo: data.email || undefined,
+    record: {
+      kind: "contact" as const,
+      name: data.name,
+      phone: data.phone,
+      email: data.email || undefined,
+      project: PROJECT_LABELS[data.project],
+      budget: BUDGET_LABELS[data.budget],
+      message: data.message || undefined,
+    },
   };
 }
