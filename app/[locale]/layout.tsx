@@ -8,6 +8,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
 import ConsentBanner from "@/components/layout/ConsentBanner";
+import { SITE_URL, organizationJsonLd } from "@/lib/seo";
 import "../globals.css";
 
 const marcellus = localFont({
@@ -31,6 +32,8 @@ const amiri = localFont({
   ],
   variable: "--font-amiri",
   display: "swap",
+  // Arabic faces only matter on /ar: no preload, so /fr does not fetch them.
+  preload: false,
 });
 
 const notoArabic = localFont({
@@ -38,6 +41,7 @@ const notoArabic = localFont({
   weight: "100 900",
   variable: "--font-noto-arabic",
   display: "swap",
+  preload: false,
 });
 
 export function generateStaticParams() {
@@ -50,11 +54,23 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata" });
   return {
+    metadataBase: new URL(SITE_URL),
     title: {
       default: t("title"),
       template: `%s | SBAI Immobilier`,
     },
     description: t("description"),
+    applicationName: "SBAI Immobilier",
+    openGraph: {
+      type: "website",
+      siteName: "SBAI Immobilier",
+      title: t("title"),
+      description: t("description"),
+      images: [{ url: "/images/posters/tt-morning.jpg", alt: t("title") }],
+    },
+    twitter: { card: "summary_large_image" },
+    robots: { index: true, follow: true },
+    formatDetection: { telephone: false },
   };
 }
 
@@ -69,6 +85,8 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   const dir = locale === "ar" ? "rtl" : "ltr";
+  const t = await getTranslations({ locale, namespace: "metadata" });
+  const jsonLd = organizationJsonLd(locale, t("description"));
 
   return (
     <html
@@ -77,6 +95,13 @@ export default async function LocaleLayout({
       className={`${marcellus.variable} ${jost.variable} ${amiri.variable} ${notoArabic.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
+        <script
+          type="application/ld+json"
+          // JSON-LD must be inline; content is our own static data.
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
         <NextIntlClientProvider>
           <Header />
           {children}

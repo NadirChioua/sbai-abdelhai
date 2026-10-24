@@ -20,7 +20,7 @@ export default function TopBar() {
         <div className="flex items-center gap-5">
           <a
             href={`tel:${site.phone}`}
-            className="eyebrow flex items-center gap-2 transition-colors hover:text-gold"
+            className="eyebrow flex items-center gap-2 text-on-dark transition-colors hover:text-gold"
           >
             <Phone size={12} aria-hidden />
             <span dir="ltr">{site.phoneDisplay}</span>
@@ -29,12 +29,12 @@ export default function TopBar() {
             href={whatsappLink(t("common.whatsappMessage"))}
             target="_blank"
             rel="noopener noreferrer"
-            className="eyebrow flex items-center gap-2 transition-colors hover:text-gold"
+            className="eyebrow flex items-center gap-2 text-on-dark transition-colors hover:text-gold"
           >
             <WhatsAppIcon size={12} />
             {t("common.cta.whatsapp")}
           </a>
-          <LocaleSwitcher className="" />
+          <LocaleSwitcher className="text-on-dark" />
         </div>
       </div>
     </div>

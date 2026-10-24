@@ -65,7 +65,7 @@ export default function MRESection() {
               variant="outline"
             >
               <WhatsAppIcon size={15} />
-              {tc("cta.whatsapp")}
+              {t("whatsappLabel")}
             </ButtonAnchor>
           </div>
         </RevealOnScroll>

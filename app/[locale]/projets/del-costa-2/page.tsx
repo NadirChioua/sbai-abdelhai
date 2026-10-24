@@ -12,6 +12,7 @@ import DelCosta2Interactive from "@/components/sections/DelCosta2Interactive";
 import VerticalReels from "@/components/sections/VerticalReels";
 import LocationMap from "@/components/sections/LocationMap";
 import { DC2_MEDIA as MEDIA, DC2_STILLS as STILLS } from "@/lib/dc2-media";
+import { pageMeta } from "@/lib/seo";
 
 /**
  * Del Costa 2 — every image, video, panorama and the 3D model on this page is
@@ -47,10 +48,12 @@ export async function generateMetadata({
 }: PageProps<"/[locale]/projets/del-costa-2">): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "delCosta2" });
+  const meta = pageMeta(locale, "/projets/del-costa-2");
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
-    openGraph: { images: [`${STILLS}/DC2_R13_Aerien_Mer.jpg`] },
+    ...meta,
+    openGraph: { ...meta.openGraph, images: [`${STILLS}/DC2_R13_Aerien_Mer.jpg`] },
   };
 }
 
@@ -112,6 +115,7 @@ export default async function Page({
                 key={k}
                 src={`/videos/del-costa-2/clip_${k}.mp4`}
                 poster={`${MEDIA}/clip_${k}_poster.jpg`}
+                sizes="(min-width: 768px) 50vw, 100vw"
                 mode="feature"
                 title={t(`clips.${k}`)}
               />

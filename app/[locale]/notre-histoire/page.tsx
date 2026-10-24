@@ -7,6 +7,7 @@ import FounderSection from "@/components/sections/FounderSection";
 import RevealOnScroll from "@/components/motion/RevealOnScroll";
 import ContactSection from "@/components/sections/ContactSection";
 import { Card } from "@/components/ui/Card";
+import { pageMeta } from "@/lib/seo";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -17,7 +18,11 @@ export async function generateMetadata({
 }: PageProps<"/[locale]/notre-histoire">): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "history" });
-  return { title: t("metaTitle"), description: t("metaDescription") };
+  return {
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+    ...pageMeta(locale, "/notre-histoire"),
+  };
 }
 
 const CHAPTERS = [

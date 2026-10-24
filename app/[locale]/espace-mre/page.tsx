@@ -10,6 +10,7 @@ import GuideForm from "@/components/sections/GuideForm";
 import { ButtonAnchor } from "@/components/ui/Button";
 import { WhatsAppIcon } from "@/components/ui/icons";
 import { whatsappLink } from "@/lib/config";
+import { pageMeta } from "@/lib/seo";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -20,7 +21,11 @@ export async function generateMetadata({
 }: PageProps<"/[locale]/espace-mre">): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "mre" });
-  return { title: t("metaTitle"), description: t("metaDescription") };
+  return {
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+    ...pageMeta(locale, "/espace-mre"),
+  };
 }
 
 const STEPS = ["s1", "s2", "s3", "s4", "s5"] as const;

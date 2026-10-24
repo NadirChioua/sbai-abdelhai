@@ -6,6 +6,7 @@ import {
   useRef,
   useState,
 } from "react";
+import Image from "next/image";
 import { useReducedMotion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Maximize, Pause, Play, Volume2, VolumeX } from "lucide-react";
@@ -29,10 +30,17 @@ type Mode = "ambient" | "feature";
  *   (play/pause, scrubber, mute, fullscreen), lazy `preload="none"`.
  *
  * Always: poster required, fade-in on first frame, WebVTT captions slot.
+ * The poster is a next/image (AVIF/WebP, responsive), so it doubles as the
+ * LCP image for heroes (`preload`). Ambient videos get their `src` only once
+ * the page has loaded and they scroll into view, so they never compete with
+ * the first paint; `srcMobile` swaps in a lighter portrait cut on phones.
  */
 export default function VideoPlayer({
   src,
+  srcMobile,
   poster,
+  preload = false,
+  sizes = "100vw",
   mode = "feature",
   captions = [],
   className = "",
@@ -43,7 +51,13 @@ export default function VideoPlayer({
   fullscreenOnMobilePlay = false,
 }: {
   src: string;
+  /** Lighter cut for screens under 768px (ambient mode only). */
+  srcMobile?: string;
   poster: string;
+  /** Preload the poster at high priority: set it on the above-the-fold hero. */
+  preload?: boolean;
+  /** `sizes` for the poster image. */
+  sizes?: string;
   mode?: Mode;
   captions?: Caption[];
   className?: string;
@@ -86,18 +100,28 @@ export default function VideoPlayer({
     const video = videoRef.current;
     const wrap = wrapRef.current;
     if (!video || !wrap) return;
+    let inView = false;
     const io = new IntersectionObserver(
       ([entry]) => {
+        inView = entry.isIntersecting;
         if (entry.isIntersecting) {
-          setStarted(true);
-          video.muted = true; // enforce before play() — autoplay policy
-          const p = video.play();
-          if (p !== undefined) {
-            p.then(() => setAutoplayBlocked(false)).catch(() => {
-              // Safari Low Power Mode, strict policies, extensions…
-              setAutoplayBlocked(true);
-            });
-          }
+          whenLoaded(() => {
+            if (!inView) return; // scrolled away before the page finished loading
+            if (!video.getAttribute("src")) {
+              const phone =
+                srcMobile && window.matchMedia("(max-width: 767px)").matches;
+              video.src = phone ? srcMobile : src;
+            }
+            setStarted(true);
+            video.muted = true; // enforce before play() — autoplay policy
+            const p = video.play();
+            if (p !== undefined) {
+              p.then(() => setAutoplayBlocked(false)).catch(() => {
+                // Safari Low Power Mode, strict policies, extensions…
+                setAutoplayBlocked(true);
+              });
+            }
+          });
         } else {
           video.pause();
         }
@@ -106,12 +130,13 @@ export default function VideoPlayer({
     );
     io.observe(wrap);
     return () => io.disconnect();
-  }, [ambientAuto]);
+  }, [ambientAuto, src, srcMobile]);
 
   const togglePlay = useCallback(() => {
     const video = videoRef.current;
     if (!video) return;
     if (video.paused) {
+      if (!video.getAttribute("src")) video.src = src;
       setStarted(true);
       if (mode === "feature") setMuted(false);
       video.play().catch(() => {});
@@ -129,7 +154,7 @@ export default function VideoPlayer({
     } else {
       video.pause();
     }
-  }, [mode, fullscreenOnMobilePlay]);
+  }, [mode, src, fullscreenOnMobilePlay]);
 
   const toggleMute = useCallback(() => setMuted((m) => !m), []);
 
@@ -158,14 +183,13 @@ export default function VideoPlayer({
     >
       <video
         ref={videoRef}
-        src={src}
-        poster={poster}
+        src={mode === "feature" ? src : undefined}
         muted={muted}
-        autoPlay={ambientAuto}
         loop={mode === "ambient"}
         playsInline
         preload={mode === "ambient" ? "auto" : "none"}
-        aria-label={title}
+        aria-label={mode === "feature" ? title : undefined}
+        aria-hidden={mode === "ambient" ? true : undefined}
         onLoadedData={() => setReady(true)}
         onCanPlay={() => setReady(true)}
         onPlay={() => {
@@ -197,11 +221,21 @@ export default function VideoPlayer({
       {/* Poster layer (fades out once video paints) */}
       <div
         aria-hidden
-        className={`absolute inset-0 bg-cover bg-center transition-opacity duration-500 ${
+        className={`absolute inset-0 transition-opacity duration-500 ${
           showPoster ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
-        style={{ backgroundImage: `url(${poster})` }}
-      />
+      >
+        <Image
+          src={poster}
+          alt=""
+          fill
+          sizes={sizes}
+          preload={preload}
+          fetchPriority={preload ? "high" : undefined}
+          loading={preload ? "eager" : "lazy"}
+          className="object-cover"
+        />
+      </div>
 
       {cornerVignette && (
         <div
@@ -322,4 +356,10 @@ export default function VideoPlayer({
       )}
     </div>
   );
+}
+
+/** Run `fn` once the window `load` event has fired (immediately if it has). */
+function whenLoaded(fn: () => void) {
+  if (document.readyState === "complete") fn();
+  else window.addEventListener("load", fn, { once: true });
 }

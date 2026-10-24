@@ -21,7 +21,7 @@ export type Project = {
   id: ProjectId;
   slug: string;
   status: ProjectStatus;
-  hero: { video: string; poster: string };
+  hero: { video: string; videoMobile?: string; poster: string };
   /** 6s silent loop (~150-200 KB) that autoplays inside the project cards. */
   cardPreview: string;
   /**
@@ -70,6 +70,7 @@ export const projects: Project[] = [
     // derivative clips below keep every exterior placement consistent and fast.
     hero: {
       video: "/videos/triple-towers/triple-towers-morning.mp4",
+      videoMobile: "/videos/triple-towers/triple-towers-morning-mobile.mp4",
       poster: "/images/posters/tt-morning.jpg",
     },
     cardPreview: "/videos/triple-towers/card-preview-morning.mp4",
@@ -153,6 +154,7 @@ export const projects: Project[] = [
     status: "delivered",
     hero: {
       video: "/videos/villas-colline/hero-drone.mp4",
+      videoMobile: "/videos/villas-colline/hero-drone-mobile.mp4",
       poster: "/images/posters/vc-hero.jpg",
     },
     cardPreview: "/videos/villas-colline/card-preview.mp4",
@@ -204,6 +206,7 @@ export const projects: Project[] = [
     // Graded CapCut cinematic (2026-08); hero-exterior.mp4 kept on disk unwired.
     hero: {
       video: "/videos/del-costa/del-costa-cinematic.mp4",
+      videoMobile: "/videos/del-costa/del-costa-cinematic-mobile.mp4",
       poster: "/images/posters/dc-cinematic.jpg",
     },
     cardPreview: "/videos/del-costa/card-preview.mp4",

@@ -3,6 +3,7 @@ import VideoPlayer from "@/components/ui/VideoPlayer";
 
 export default function ProjectHero({
   video,
+  videoMobile,
   poster,
   title,
   location,
@@ -11,6 +12,7 @@ export default function ProjectHero({
   statusLabel,
 }: {
   video: string;
+  videoMobile?: string;
   poster: string;
   title: string;
   location: string;
@@ -24,7 +26,9 @@ export default function ProjectHero({
         <VideoPlayer
           mode="ambient"
           src={video}
+          srcMobile={videoMobile}
           poster={poster}
+          preload
           title={videoTitle}
           showMuteToggle={false}
           className="h-full w-full"

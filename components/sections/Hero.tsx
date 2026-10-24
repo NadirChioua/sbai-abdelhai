@@ -17,7 +17,9 @@ export default function Hero() {
         <VideoPlayer
           mode="ambient"
           src="/videos/triple-towers/triple-towers-morning.mp4"
+          srcMobile="/videos/triple-towers/triple-towers-morning-mobile.mp4"
           poster="/images/posters/tt-morning.jpg"
+          preload
           title={t("home.heroAlt")}
           showMuteToggle={false}
           className="h-full w-full"

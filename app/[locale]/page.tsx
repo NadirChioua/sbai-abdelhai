@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
 import Hero from "@/components/sections/Hero";
@@ -10,6 +11,14 @@ import CdM2030 from "@/components/sections/CdM2030";
 import Testimonials from "@/components/sections/Testimonials";
 import BureauDeVente from "@/components/sections/BureauDeVente";
 import ContactSection from "@/components/sections/ContactSection";
+import { pageMeta } from "@/lib/seo";
+
+export async function generateMetadata({
+  params,
+}: PageProps<"/[locale]">): Promise<Metadata> {
+  const { locale } = await params;
+  return pageMeta(locale, "");
+}
 
 export default function HomePage({ params }: PageProps<"/[locale]">) {
   const { locale } = use(params);

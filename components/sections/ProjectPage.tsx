@@ -55,6 +55,7 @@ export default async function ProjectPage({
     <main className="flex-1">
       <ProjectHero
         video={project.hero.video}
+        videoMobile={project.hero.videoMobile}
         poster={project.hero.poster}
         title={t("name")}
         location={t("location")}

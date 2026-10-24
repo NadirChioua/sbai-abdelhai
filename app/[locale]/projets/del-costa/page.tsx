@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { projectBySlug } from "@/lib/projects";
 import ProjectPage from "@/components/sections/ProjectPage";
+import { pageMeta } from "@/lib/seo";
 
 const SLUG = "del-costa";
 
@@ -15,7 +16,11 @@ export async function generateMetadata({
 }: PageProps<"/[locale]/projets/del-costa">): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "projects.items.delCosta" });
-  return { title: t("metaTitle"), description: t("metaDescription") };
+  return {
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+    ...pageMeta(locale, "/projets/del-costa"),
+  };
 }
 
 export default async function Page({

@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import ProjectsIndex from "@/components/sections/ProjectsIndex";
 import ContactSection from "@/components/sections/ContactSection";
+import { pageMeta } from "@/lib/seo";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -13,7 +14,11 @@ export async function generateMetadata({
 }: PageProps<"/[locale]/projets">): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "projectsIndex" });
-  return { title: t("metaTitle"), description: t("metaDescription") };
+  return {
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+    ...pageMeta(locale, "/projets"),
+  };
 }
 
 export default async function Page({ params }: PageProps<"/[locale]/projets">) {

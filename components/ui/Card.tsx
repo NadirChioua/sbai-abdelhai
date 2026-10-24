@@ -108,7 +108,6 @@ export function ProjectCard({
         <video
           ref={videoRef}
           src={video}
-          poster={image}
           muted
           loop
           autoPlay

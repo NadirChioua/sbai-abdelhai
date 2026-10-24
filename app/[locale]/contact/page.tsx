@@ -7,6 +7,7 @@ import BureauDeVente from "@/components/sections/BureauDeVente";
 import RevealOnScroll from "@/components/motion/RevealOnScroll";
 import { site, whatsappLink } from "@/lib/config";
 import { WhatsAppIcon } from "@/components/ui/icons";
+import { pageMeta } from "@/lib/seo";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -17,7 +18,11 @@ export async function generateMetadata({
 }: PageProps<"/[locale]/contact">): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "contactPage" });
-  return { title: t("metaTitle"), description: t("metaDescription") };
+  return {
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+    ...pageMeta(locale, "/contact"),
+  };
 }
 
 export default async function Page({ params }: PageProps<"/[locale]/contact">) {
