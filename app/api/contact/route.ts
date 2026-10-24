@@ -52,27 +52,24 @@ export async function POST(request: Request) {
   const subject = isGuide
     ? `Demande du guide MRE : ${email}`
     : `Nouveau contact site : ${name} · ${PROJECTS[project]}`;
-  const text = isGuide
-    ? `Un visiteur demande le guide MRE.\n\nE-mail : ${email}\n\nRépondre à ce message pour lui écrire.`
-    : [
-        `Nom : ${name}`,
-        `Téléphone : ${phone}`,
-        `E-mail : ${email || "non renseigné"}`,
-        `Projet : ${PROJECTS[project]}`,
-        `Budget : ${BUDGETS[budget]}`,
-        "",
-        `Message :`,
-        message || "(aucun)",
-        "",
-        `WhatsApp : https://wa.me/${phone.replace(/[^0-9]/g, "")}`,
-      ].join("\n");
+  const fields: Record<string, string> = isGuide
+    ? { Demande: "Guide MRE (PDF)", "E-mail": email || "-" }
+    : {
+        Nom: name,
+        "Téléphone": phone,
+        "E-mail": email || "non renseigné",
+        Projet: PROJECTS[project],
+        Budget: BUDGETS[budget],
+        Message: message || "(aucun)",
+        WhatsApp: `https://wa.me/${phone.replace(/[^0-9]/g, "")}`,
+      };
 
   if (!mailerConfigured()) {
     console.error(`[contact-lead] email not configured, lead not delivered: ${subject}`);
     return NextResponse.json({ ok: false }, { status: 503 });
   }
 
-  const sent = await sendLeadEmail({ subject, text, replyTo: email || undefined });
+  const sent = await sendLeadEmail({ subject, fields, replyTo: email || undefined });
   if (!sent) return NextResponse.json({ ok: false }, { status: 503 });
   return NextResponse.json({ ok: true });
 }

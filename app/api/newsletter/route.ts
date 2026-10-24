@@ -23,7 +23,7 @@ export async function POST(request: Request) {
   if (!mailerConfigured()) return NextResponse.json({ ok: false }, { status: 503 });
   const sent = await sendLeadEmail({
     subject: `Inscription newsletter : ${parsed.data.email}`,
-    text: `Nouvelle inscription à la newsletter du site.\n\nE-mail : ${parsed.data.email}`,
+    fields: { Inscription: "Newsletter du site", "E-mail": parsed.data.email },
     replyTo: parsed.data.email,
   });
   return NextResponse.json({ ok: sent }, { status: sent ? 200 : 503 });
