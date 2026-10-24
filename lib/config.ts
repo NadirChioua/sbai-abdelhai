@@ -17,8 +17,9 @@ export const site = {
   mobile: process.env.NEXT_PUBLIC_MOBILE ?? "+212661748547",
   mobileDisplay: "+212 6 61 74 85 47",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "212661748547",
-  // TODO(client): confirm email address before launch
-  email: process.env.NEXT_PUBLIC_EMAIL ?? "contact@immobiliersbai.net",
+  // Mailbox on the site's own domain (Hostinger email). The old
+  // immobiliersbai.net domain no longer exists, so mail to it bounced.
+  email: process.env.NEXT_PUBLIC_EMAIL ?? "contact@sbai-abdelhai.com",
   // TODO(client): exact street address needed for the footer, contact page,
   // map pin and schema.org LocalBusiness.
   address: process.env.NEXT_PUBLIC_ADDRESS ?? "Tanger, Maroc",

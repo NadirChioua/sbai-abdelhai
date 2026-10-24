@@ -11,6 +11,7 @@ import {
   YouTubeIcon,
 } from "@/components/ui/icons";
 import LocaleSwitcher from "./LocaleSwitcher";
+import NewsletterForm from "./NewsletterForm";
 
 const PROJECT_LINKS = [
   { label: "Triple Towers", href: "/projets/triple-towers" },
@@ -36,26 +37,7 @@ export default function Footer() {
               {t("footer.newsletterHint")}
             </p>
           </div>
-          {/* TODO(phase-8): wire submission to /api/newsletter */}
-          <form className="flex w-full max-w-md gap-3" action="#" method="post">
-            <label htmlFor="newsletter-email" className="sr-only">
-              {t("footer.newsletterLabel")}
-            </label>
-            <input
-              id="newsletter-email"
-              type="email"
-              required
-              autoComplete="email"
-              placeholder={t("footer.newsletterPlaceholder")}
-              className="h-12 w-full border border-on-dark/20 bg-transparent px-4 text-caption font-light text-white placeholder:text-on-dark-muted focus:border-gold focus:outline-none"
-            />
-            <button
-              type="submit"
-              className="eyebrow h-12 shrink-0 bg-gold px-6 text-gold-on transition-colors hover:bg-gold-dark hover:text-ivory"
-            >
-              {t("footer.newsletterSubmit")}
-            </button>
-          </form>
+          <NewsletterForm />
         </div>
       </div>
 

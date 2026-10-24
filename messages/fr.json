@@ -53,7 +53,9 @@
     "newsletterHint": "Nouveaux projets, avancement des chantiers, conseils d'investissement.",
     "newsletterLabel": "Votre adresse e-mail",
     "newsletterPlaceholder": "Votre adresse e-mail",
-    "newsletterSubmit": "S'inscrire"
+    "newsletterSubmit": "S'inscrire",
+    "newsletterSuccess": "Merci, votre inscription est bien reçue.",
+    "newsletterError": "L'inscription a échoué. Réessayez ou écrivez-nous sur WhatsApp."
   },
   "founder": {
     "sectionTitle": "L'homme derrière 57 ans d'histoire",

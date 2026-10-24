@@ -1,14 +1,29 @@
 import { NextResponse } from "next/server";
 import { contactSchema } from "@/lib/contact-schema";
+import { mailerConfigured, sendLeadEmail } from "@/lib/mailer";
+
+const PROJECTS: Record<string, string> = {
+  "triple-towers": "Triple Towers",
+  "les-villas-de-la-colline": "Les Villas de la Colline",
+  "del-costa": "Résidence Del Costa",
+  "del-costa-2": "Del Costa 2",
+  autre: "Autre / non précisé",
+};
+
+const BUDGETS: Record<string, string> = {
+  lt1m: "Moins de 1 M DH",
+  "1m-2m": "1 à 2 M DH",
+  "2m-4m": "2 à 4 M DH",
+  gt4m: "Plus de 4 M DH",
+  nd: "Non précisé",
+};
 
 /**
- * Contact form handler.
+ * Contact form handler: emails each lead to the sales inbox (lib/mailer.ts).
  *
- * TODO(client): plug an email provider (Resend recommended on Vercel) once
- * an API key + destination inbox are provided — see the marked block below.
- * Until then submissions are validated and logged server-side so nothing
- * fake is promised to the visitor (the UI presents WhatsApp as the fastest
- * channel).
+ * If email delivery is not configured or fails, it answers 503 so the form
+ * shows its error message, which points the visitor to WhatsApp. A lead is
+ * never acknowledged unless it was actually delivered.
  */
 export async function POST(request: Request) {
   let body: unknown;
@@ -32,12 +47,32 @@ export async function POST(request: Request) {
   }
 
   const { name, phone, email, project, budget, message } = parsed.data;
+  const isGuide = (message ?? "").startsWith("[GUIDE MRE]");
 
-  // TODO(client): replace with Resend/SendGrid dispatch:
-  //   await resend.emails.send({ to: site.email, subject: `Lead ${project}`, ... })
-  console.log(
-    `[contact-lead] ${new Date().toISOString()} project=${project} budget=${budget} name=${name} phone=${phone} email=${email || "-"} message=${(message || "").slice(0, 200)}`,
-  );
+  const subject = isGuide
+    ? `Demande du guide MRE : ${email}`
+    : `Nouveau contact site : ${name} · ${PROJECTS[project]}`;
+  const text = isGuide
+    ? `Un visiteur demande le guide MRE.\n\nE-mail : ${email}\n\nRépondre à ce message pour lui écrire.`
+    : [
+        `Nom : ${name}`,
+        `Téléphone : ${phone}`,
+        `E-mail : ${email || "non renseigné"}`,
+        `Projet : ${PROJECTS[project]}`,
+        `Budget : ${BUDGETS[budget]}`,
+        "",
+        `Message :`,
+        message || "(aucun)",
+        "",
+        `WhatsApp : https://wa.me/${phone.replace(/[^0-9]/g, "")}`,
+      ].join("\n");
 
+  if (!mailerConfigured()) {
+    console.error(`[contact-lead] email not configured, lead not delivered: ${subject}`);
+    return NextResponse.json({ ok: false }, { status: 503 });
+  }
+
+  const sent = await sendLeadEmail({ subject, text, replyTo: email || undefined });
+  if (!sent) return NextResponse.json({ ok: false }, { status: 503 });
   return NextResponse.json({ ok: true });
 }

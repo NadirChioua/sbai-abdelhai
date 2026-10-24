@@ -54,7 +54,9 @@
     "newsletterHint": "مشاريع جديدة، تقدّم الأوراش، ونصائح استثمارية.",
     "newsletterLabel": "بريدك الإلكتروني",
     "newsletterPlaceholder": "بريدك الإلكتروني",
-    "newsletterSubmit": "اشترك"
+    "newsletterSubmit": "اشترك",
+    "newsletterSuccess": "شكراً، تم تسجيلك بنجاح.",
+    "newsletterError": "فشل التسجيل. حاول مرة أخرى أو راسلنا على واتساب."
   },
   "founder": {
     "sectionTitle": "الرجل وراء 57 سنة من التاريخ",
